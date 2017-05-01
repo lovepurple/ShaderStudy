@@ -1,4 +1,6 @@
-﻿// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
 
 Shader "NPR/Wireframe" {
 	Properties {
@@ -42,7 +44,7 @@ Shader "NPR/Wireframe" {
 
 			v2g vert(appdata_base v) {
     			v2g o;
-    			o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+    			o.pos = UnityObjectToClipPos(v.vertex);
     			o.uv = v.texcoord;
     			o.worldPos = mul(unity_ObjectToWorld, v.vertex);
     			return o;

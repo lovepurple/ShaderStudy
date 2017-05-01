@@ -1,4 +1,6 @@
-﻿// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
 // Upgrade NOTE: replaced '_World2Object' with 'unity_WorldToObject'
 
 ///
@@ -102,7 +104,7 @@ Shader "NPR/Cartoon/Antialiased Cel Shading" {
 			v2f vert (a2v v) {
 				v2f o;
 				
-				o.pos = mul( UNITY_MATRIX_MVP, v.vertex); 
+				o.pos = UnityObjectToClipPos( v.vertex); 
 				o.worldNormal  = mul(v.normal, (float3x3)unity_WorldToObject);
 				o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
 				o.uv = TRANSFORM_TEX (v.texcoord, _MainTex);
@@ -202,7 +204,7 @@ Shader "NPR/Cartoon/Antialiased Cel Shading" {
 			v2f vert (a2v v) {
 				v2f o;
 			
-				o.pos = mul( UNITY_MATRIX_MVP, v.vertex); 
+				o.pos = UnityObjectToClipPos( v.vertex); 
 				o.worldNormal  = mul(v.normal, (float3x3)unity_WorldToObject);
 				o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
 				o.uv = TRANSFORM_TEX (v.texcoord, _MainTex);

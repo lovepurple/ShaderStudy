@@ -1,4 +1,6 @@
-﻿Shader "Unlit/OutlineWithMask"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Unlit/OutlineWithMask"
 {
 	Properties
 	{
@@ -41,7 +43,7 @@
 			v2f vert(appdata i)
 			{
 				v2f o;
-				o.pos = mul(UNITY_MATRIX_MVP,i.vertex);
+				o.pos = UnityObjectToClipPos(i.vertex);
 				float3 normalInViewSpace = mul((float3x3)UNITY_MATRIX_IT_MV,i.normal);
 				float2 normalOffsetInProjection = TransformViewToProjection(normalInViewSpace.xy);
 
@@ -81,7 +83,7 @@
 			v2f_img vert(appdata_img i)
 			{
 				v2f_img o;
-				o.pos = mul(UNITY_MATRIX_MVP,i.vertex);
+				o.pos = UnityObjectToClipPos(i.vertex);
 				o.uv = i.texcoord;
 
 				return o;

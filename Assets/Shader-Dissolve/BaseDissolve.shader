@@ -1,4 +1,6 @@
-﻿Shader "Unlit/BaseDissolve"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Unlit/BaseDissolve"
 {
 	Properties
 	{
@@ -40,7 +42,7 @@
 			v2f vert (appdata_base v)
 			{
 				v2f o;
-				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.pos = UnityObjectToClipPos(v.vertex);
 				o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
 
 				float3 normalInWorldPos = UnityObjectToWorldNormal(v.normal);

@@ -1,4 +1,6 @@
-﻿Shader "Unlit/X-Ray"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Unlit/X-Ray"
 {
 	Properties
 	{
@@ -37,7 +39,7 @@
 			v2f vert (appdata_base v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				float3 normalInWorldSpace = UnityObjectToWorldNormal(v.normal);
 				float4 vertexInWorldSpace =mul(unity_ObjectToWorld,v.vertex);
 				float3 viewToVertexDir = UnityWorldSpaceViewDir(vertexInWorldSpace.xyz);

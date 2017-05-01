@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 Shader "Water/CartoonWater"
 {
 	Properties
@@ -63,7 +65,7 @@ Shader "Water/CartoonWater"
 			v2f vert(appdata v)
 			{
 				v2f o;
-				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.pos = UnityObjectToClipPos(v.vertex);
 				o.posWorld = mul(unity_ObjectToWorld,v.vertex);
 				o.uv = v.uv;
 				o.worldNormal = normalize(UnityObjectToWorldNormal(v.normal));

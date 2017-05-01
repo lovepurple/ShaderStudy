@@ -1,4 +1,6 @@
-﻿/*
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+/*
 	流光效果
 */
 
@@ -42,7 +44,7 @@ Shader "Unlit/X-RayAdvance2"
 			v2f vert (appdata_base v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
 				
 				float3 viewSpaceNormal = mul(UNITY_MATRIX_IT_MV,v.normal);

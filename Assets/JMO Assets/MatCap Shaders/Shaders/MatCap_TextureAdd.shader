@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 // Upgrade NOTE: replaced '_World2Object' with 'unity_WorldToObject'
 
 // MatCap Shader, (c) 2015 Jean Moreno
@@ -36,7 +38,7 @@ Shader "MatCap/Vertex/Textured Add"
 				v2f vert (appdata_base v)
 				{
 					v2f o;
-					o.pos = mul (UNITY_MATRIX_MVP, v.vertex);
+					o.pos = UnityObjectToClipPos (v.vertex);
 					o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
 					
 					float3 worldNorm = normalize(unity_WorldToObject[0].xyz * v.normal.x + unity_WorldToObject[1].xyz * v.normal.y + unity_WorldToObject[2].xyz * v.normal.z);

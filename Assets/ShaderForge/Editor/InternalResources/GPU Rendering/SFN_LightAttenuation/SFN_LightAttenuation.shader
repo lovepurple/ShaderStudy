@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 Shader "Hidden/Shader Forge/SFN_LightAttenuation" {
     Properties {
         _OutputMask ("Output Mask", Vector) = (1,1,1,1)
@@ -28,7 +30,7 @@ Shader "Hidden/Shader Forge/SFN_LightAttenuation" {
             };
             VertexOutput vert (VertexInput v) {
                 VertexOutput o = (VertexOutput)0;
-                o.pos = mul(UNITY_MATRIX_MVP, v.vertex );
+                o.pos = UnityObjectToClipPos(v.vertex );
                 TRANSFER_VERTEX_TO_FRAGMENT(o)
                 return o;
             }

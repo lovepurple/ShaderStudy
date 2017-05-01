@@ -1,4 +1,6 @@
-﻿/*
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+/*
 	最基本的描边效果
 	1. 根据法线扩大模型的顶点 o.pos = mul(UNITY_MATRIX_MVP,float4(v.vertex.xyz + v.normal) * factor,1.0))
 	2. 再使用另一个Pass处理本身的颜色   
@@ -54,7 +56,7 @@ Shader "Unlit/SimpleOutline"
 			{
 				v2f o;
 				float4 targetVertex =float4( (v.vertex.xyz + v.normal * _OutlineFactor * 0.1),1.0);
-				o.vertex = mul(UNITY_MATRIX_MVP,targetVertex);
+				o.vertex = UnityObjectToClipPos(targetVertex);
 				
 
 				return o;
@@ -85,7 +87,7 @@ Shader "Unlit/SimpleOutline"
 			v2f vert(appdata_full v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP,v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				return o;
 			}
 

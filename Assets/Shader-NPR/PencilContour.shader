@@ -1,4 +1,6 @@
-﻿///
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+///
 ///  Reference: 	Lee H, Kwon S, Lee S. Real-time pencil rendering[C]
 ///						Proceedings of the 4th international symposium on Non-photorealistic animation and rendering. ACM, 2006: 37-45.
 /// 
@@ -44,7 +46,7 @@ Shader "NPR/Pencil Sketch/Pencil Contour" {
 		  
 		v2fRoberts vertRobertsCrossDepthAndNormal(appdata_img v) {
 			v2fRoberts o;
-			o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+			o.pos = UnityObjectToClipPos(v.vertex);
 			
 			half2 uv = v.texcoord;
 			o.uv[0] = uv;
@@ -105,7 +107,7 @@ Shader "NPR/Pencil Sketch/Pencil Contour" {
 		
 		v2fSobel vertSobel(appdata_img v) {
 			v2fSobel o;
-			o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+			o.pos = UnityObjectToClipPos(v.vertex);
 			
 			half2 uv = v.texcoord;
 			o.uv[0] = uv;
@@ -200,7 +202,7 @@ Shader "NPR/Pencil Sketch/Pencil Contour" {
 		  
 		v2fContour vertContour(appdata_img v) {
 			v2fContour o;
-			o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+			o.pos = UnityObjectToClipPos(v.vertex);
 			
 			half2 uv = v.texcoord;
 			o.uv[0] = uv;

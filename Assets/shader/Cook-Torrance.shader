@@ -1,4 +1,6 @@
-﻿// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
 // Upgrade NOTE: replaced '_World2Object' with 'unity_WorldToObject'
 
 Shader "JQM/Cook-Torrance"
@@ -53,7 +55,7 @@ Shader "JQM/Cook-Torrance"
 	VertexOutput vert(appdata_full v)
 	{
 		VertexOutput o;
-		o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+		o.pos = UnityObjectToClipPos(v.vertex);
 		o.posWorld = mul(unity_ObjectToWorld, v.vertex);
 		o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
 		o.normal = v.normal;

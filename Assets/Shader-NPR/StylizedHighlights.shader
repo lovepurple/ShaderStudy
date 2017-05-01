@@ -1,4 +1,6 @@
-﻿// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
 
 ///
 ///  Reference: 	Anjyo K, Hiramitsu K. Stylized highlights for cartoon rendering and animation[J]. 
@@ -88,7 +90,7 @@ Shader "NPR/Cartoon/Stylized Highlights" {
 			v2f vert (a2v v) {
 				v2f o;
 								
-				o.pos = mul( UNITY_MATRIX_MVP, v.vertex);
+				o.pos = UnityObjectToClipPos( v.vertex);
 				TANGENT_SPACE_ROTATION;
 				o.tangentNormal  = mul(rotation, v.normal); // Equal to (0, 0, 1)
 				o.tangentLightDir = mul(rotation, ObjSpaceLightDir(v.vertex));
@@ -234,7 +236,7 @@ Shader "NPR/Cartoon/Stylized Highlights" {
 			v2f vert (a2v v) {
 				v2f o;
 				
-				o.pos = mul( UNITY_MATRIX_MVP, v.vertex);
+				o.pos = UnityObjectToClipPos( v.vertex);
 				TANGENT_SPACE_ROTATION;
 				o.tangentNormal  = mul(rotation, v.normal); // Equal to (0, 0, 1)
 				o.tangentLightDir = mul(rotation, ObjSpaceLightDir(v.vertex));

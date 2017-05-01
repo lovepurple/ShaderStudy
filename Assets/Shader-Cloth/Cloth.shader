@@ -1,4 +1,6 @@
-﻿/*
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+/*
 	布料的反射算法叫“Fresnel 反射算法”，视线垂直平面，反射弱，视线与平面越小，返现越明显
 	，当你站在水边观察水面时，水是透明的，反射很弱，但是当你离水面越远时，基本就看不到河面以下的部分了，反射很强
 */
@@ -57,7 +59,7 @@ Shader "Unlit/Cloth"
 				v2f vert(appdata_base v)
 				{
 					v2f o;
-					o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+					o.vertex = UnityObjectToClipPos(v.vertex);
 
 					float3 lightDir = WorldSpaceLightDir(v.vertex);
 					float3 viewDir = WorldSpaceViewDir(v.vertex);

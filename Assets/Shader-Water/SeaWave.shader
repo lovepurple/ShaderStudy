@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 Shader "Water/SeaWave" {
 	Properties {
 		_WaterTex ("WaterTex", 2D) = "black" {} 
@@ -73,7 +75,7 @@ Shader "Water/SeaWave" {
 		void vert (inout appdata_full v, out Input i) {
 			UNITY_INITIALIZE_OUTPUT(Input, i);
 
-			i.proj = ComputeScreenPos(mul(UNITY_MATRIX_MVP, v.vertex));
+			i.proj = ComputeScreenPos(UnityObjectToClipPos(v.vertex));
 			COMPUTE_EYEDEPTH(i.proj.z);
 		}
 

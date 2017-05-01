@@ -1,4 +1,6 @@
-﻿Shader "Unlit/ToonDiscrete"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Unlit/ToonDiscrete"
 {
 	Properties
 	{
@@ -33,7 +35,7 @@
 			v2f vert(appdata_base v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 
 				float3 worldNormal = UnityObjectToWorldNormal(v.normal);
 				o.normal = normalize( worldNormal);

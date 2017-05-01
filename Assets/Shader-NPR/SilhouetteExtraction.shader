@@ -1,4 +1,6 @@
-﻿// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
 // Upgrade NOTE: replaced '_World2Object' with 'unity_WorldToObject'
 
 Shader "NPR/Silhouette Extraction" {
@@ -37,7 +39,7 @@ Shader "NPR/Silhouette Extraction" {
 			v2g vert(appdata_base v) {
     			v2g o;
     			v.vertex = float4(v.vertex.x, v.vertex.y, _Outline * v.vertex.z, v.vertex.w);
-    			o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+    			o.pos = UnityObjectToClipPos(v.vertex);
     			return o;
 			}
 			
@@ -98,7 +100,7 @@ Shader "NPR/Silhouette Extraction" {
 			v2f vert (a2v v) {
 				v2f o;
 								
-				o.pos = mul( UNITY_MATRIX_MVP, v.vertex);
+				o.pos = UnityObjectToClipPos( v.vertex);
 				o.uv = TRANSFORM_TEX (v.texcoord, _MainTex);
 				o.worldNormal = mul(v.normal, unity_WorldToObject);
 				o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;

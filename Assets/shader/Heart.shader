@@ -1,4 +1,6 @@
-﻿Shader "Unlit/Heart"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Unlit/Heart"
 {
 	Properties
 	{
@@ -42,7 +44,7 @@
 			v2f vert(appdata_base v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 
 				//ComputeScreenPos Projection坐标系里的顶点在屏幕中的位置
 				o.srcPos = ComputeScreenPos(o.vertex);

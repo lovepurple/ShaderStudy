@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 //基本的描边
 
 Shader "Outlined/Diffuse" 
@@ -43,7 +45,7 @@ Shader "Outlined/Diffuse"
         	v2f vert(appdata v)
         	{
         		v2f o;
-        		o.pos = mul(UNITY_MATRIX_MVP,v.vertex);
+        		o.pos = UnityObjectToClipPos(v.vertex);
 
         		//ViewSpace里，z是向外，右手坐标系
         		//注意法线的变换跟正常顶点不一样
@@ -90,7 +92,7 @@ Shader "Outlined/Diffuse"
             v2f vert(appdata v)
             {
                 v2f o;
-                o.pos =mul(UNITY_MATRIX_MVP,v.vertex);
+                o.pos =UnityObjectToClipPos(v.vertex);
                 o.uv = v.texcoord;
 
                 return o;

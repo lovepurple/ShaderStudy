@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 // Shader created with Shader Forge v1.25 
 // Shader Forge (c) Neat Corporation / Joachim Holmer - http://www.acegikmo.com/shaderforge/
 // Note: Manually altering this data may prevent you from opening it in Shader Forge
@@ -36,7 +38,7 @@ Shader "Shader Forge/NewShader" {
             };
             VertexOutput vert (VertexInput v) {
                 VertexOutput o = (VertexOutput)0;
-                o.pos = mul(UNITY_MATRIX_MVP, float4(v.vertex.xyz + v.normal*_node_3835,1) );
+                o.pos = UnityObjectToClipPos(float4(v.vertex.xyz + v.normal*_node_3835,1) );
                 return o;
             }
             float4 frag(VertexOutput i) : COLOR {
@@ -75,7 +77,7 @@ Shader "Shader Forge/NewShader" {
                 VertexOutput o = (VertexOutput)0;
                 o.uv0 = v.texcoord0;
                 float3 lightColor = _LightColor0.rgb;
-                o.pos = mul(UNITY_MATRIX_MVP, v.vertex );
+                o.pos = UnityObjectToClipPos(v.vertex );
                 TRANSFER_VERTEX_TO_FRAGMENT(o)
                 return o;
             }
@@ -122,7 +124,7 @@ Shader "Shader Forge/NewShader" {
                 VertexOutput o = (VertexOutput)0;
                 o.uv0 = v.texcoord0;
                 float3 lightColor = _LightColor0.rgb;
-                o.pos = mul(UNITY_MATRIX_MVP, v.vertex );
+                o.pos = UnityObjectToClipPos(v.vertex );
                 TRANSFER_VERTEX_TO_FRAGMENT(o)
                 return o;
             }

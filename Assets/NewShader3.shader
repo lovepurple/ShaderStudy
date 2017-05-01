@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 /*
     最基本的描边效果
     1. 根据法线扩大模型的顶点 o.pos = mul(UNITY_MATRIX_MVP,float4(v.vertex.xyz + v.normal) * factor,1.0))
@@ -49,7 +51,7 @@ Shader "Outlined/Diffuse"
             v2f vert(appdata i)
             {
                 v2f o;
-                o.pos = mul(UNITY_MATRIX_MVP,i.vertex);
+                o.pos = UnityObjectToClipPos(i.vertex);
                 o.uv = i.uv;
 
                 return o;
@@ -103,7 +105,7 @@ Shader "Outlined/Diffuse"
             v2f vert(appdata i)
             {
                 v2f o;
-                o.pos = mul(UNITY_MATRIX_MVP,i.vertex);
+                o.pos = UnityObjectToClipPos(i.vertex);
 
                 //法线的摄像机坐标系
                 float3 normalInViewSpace = mul((float3x3)UNITY_MATRIX_IT_MV,i.normal);

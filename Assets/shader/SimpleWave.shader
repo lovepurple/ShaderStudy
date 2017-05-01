@@ -1,4 +1,6 @@
-﻿Shader "SimpleWave"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "SimpleWave"
 {
 	Properties
 	{
@@ -36,7 +38,7 @@
 				float waveValueA = cos(time);
 				v.vertex.y+=waveValueA;
 
-				o.pos = mul(UNITY_MATRIX_MVP,v.vertex);
+				o.pos = UnityObjectToClipPos(v.vertex);
 				o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
 
 				return o;

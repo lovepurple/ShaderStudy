@@ -1,4 +1,6 @@
-﻿/*
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+/*
 	最基本简化颜色的卡通渲染Shader
 */
 Shader "Unlit/ToonBase"
@@ -44,7 +46,7 @@ Shader "Unlit/ToonBase"
 			v2f vert (appdata v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
 
 				float4 vertexWorldPos = mul(unity_ObjectToWorld, v.vertex);

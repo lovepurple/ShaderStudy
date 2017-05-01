@@ -1,4 +1,6 @@
-﻿/**
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+/**
  * @author dizgid Kenji Inokuchi / http://www.dizgid.com/
  *
  * MatCap Shader
@@ -40,7 +42,7 @@ Shader "Custom/MatCap"
 				v2f vert (appdata_base v)
 				{
 					v2f o;
-					o.pos = mul (UNITY_MATRIX_MVP, v.vertex);
+					o.pos = UnityObjectToClipPos (v.vertex);
 					
 
 					// float4 worldVertexPos = mul(unity_ObjectToWorld,v.vertex);

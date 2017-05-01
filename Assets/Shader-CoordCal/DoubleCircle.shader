@@ -1,4 +1,6 @@
-﻿/*
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+/*
 	画两个圆
 */
 Shader "Unlit/DoubleCircle"
@@ -52,7 +54,7 @@ Shader "Unlit/DoubleCircle"
 			v2f vert(appdata v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 				float4 vertexInScreenPos = ComputeScreenPos(o.vertex);
 				float2 normalizeVertexInScreenPos = vertexInScreenPos.xy / vertexInScreenPos.w;
 				o.vertexInScreenSpacePos = normalizeVertexInScreenPos;

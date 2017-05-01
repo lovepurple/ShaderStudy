@@ -1,4 +1,6 @@
-﻿///
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+///
 ///  Reference: 	Lake A, Marshall C, Harris M, et al. Stylized rendering techniques for scalable real-time 3D animation[C]
 ///						Proceedings of the 1st international symposium on Non-photorealistic animation and rendering. ACM, 2000: 13-20.
 ///
@@ -50,7 +52,7 @@ Shader "NPR/Background Shading" {
 			v2f vert (a2v v) {
 				v2f o;
 				
-				o.pos = mul( UNITY_MATRIX_MVP, v.vertex);
+				o.pos = UnityObjectToClipPos( v.vertex);
 				o.scrPos = ComputeScreenPos(o.pos);
 				
 				return o;

@@ -1,4 +1,6 @@
-﻿Shader "NPR/Wireframe Transparent" {
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "NPR/Wireframe Transparent" {
 	Properties {
 		_Color ("Color Tint", Color) = (1, 1, 1, 1)
 		_BackWireColor ("Back Wire Color", Color) = (0, 0, 0, 1)
@@ -38,7 +40,7 @@
 
 			v2g vert(appdata_base v) {
     			v2g o;
-    			o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+    			o.pos = UnityObjectToClipPos(v.vertex);
     			return o;
 			}
 			
@@ -115,7 +117,7 @@
 
 			v2g vert(appdata_base v) {
     			v2g o;
-    			o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+    			o.pos = UnityObjectToClipPos(v.vertex);
     			return o;
 			}
 			

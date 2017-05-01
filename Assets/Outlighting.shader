@@ -1,4 +1,6 @@
-﻿// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
 
 Shader "Faye/OutLightting"
 {
@@ -50,7 +52,7 @@ Shader "Faye/OutLightting"
                 {
                     v2f o;
                    
-                    o.pos = mul (UNITY_MATRIX_MVP, v.vertex);
+                    o.pos = UnityObjectToClipPos (v.vertex);
                     o.normal = v.normal;
                     o.worldvertpos = mul(unity_ObjectToWorld, v.vertex).xyz;
                     o.texcoord = TRANSFORM_TEX(v.texcoord, _MainTex);
@@ -109,7 +111,7 @@ Shader "Faye/OutLightting"
                     v2f o;
                    
                     v.vertex.xyz += v.normal*_Size;
-                    o.pos = mul (UNITY_MATRIX_MVP, v.vertex);
+                    o.pos = UnityObjectToClipPos (v.vertex);
                     o.normal = v.normal;
                     o.worldvertpos = mul(unity_ObjectToWorld, v.vertex);
                    

@@ -1,4 +1,6 @@
-﻿Shader "Unlit/OutlineWithViewDirAndNormal"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Unlit/OutlineWithViewDirAndNormal"
 {
 	Properties
 	{
@@ -42,9 +44,9 @@
 				
 				// Shader传到Fragment里的都是Projection 坐标系
 				//在计算光照的时候，只是使用系数，可根据习惯把中间的转换到世界坐标系便于理解	
-				o.pos = mul(UNITY_MATRIX_MVP,v.vertex);
+				o.pos = UnityObjectToClipPos(v.vertex);
 
-				float2 offset = mul(UNITY_MATRIX_MVP,v.normal).xy;
+				float2 offset = UnityObjectToClipPos(v.normal).xy;
 
 				o.pos.xy += offset * o.pos.z * _OutlineWidth;
 				o.color = _OutlineColor;

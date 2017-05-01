@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 Shader "Custom/Sea" 
 {
 	Properties 
@@ -36,7 +38,7 @@ Shader "Custom/Sea"
 		v2f o;
 		o.uv0 		= TRANSFORM_TEX (v.texcoord, _SeaTex);
 		o.uv1 		= TRANSFORM_TEX (v.texcoord, _FoamTex);
-		o.pos 		= mul(UNITY_MATRIX_MVP, v.vertex);
+		o.pos 		= UnityObjectToClipPos(v.vertex);
 		o.projPos 	= ComputeScreenPos(o.pos); 
 		return o;
 	}

@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 Shader "Hidden/Shader Forge/SFN_NormalVector" {
     Properties {
         _OutputMask ("Output Mask", Vector) = (1,1,1,1)
@@ -30,7 +32,7 @@ Shader "Hidden/Shader Forge/SFN_NormalVector" {
             VertexOutput vert (VertexInput v) {
                 VertexOutput o = (VertexOutput)0;
                 o.uv = v.texcoord0;
-                o.pos = mul(UNITY_MATRIX_MVP, v.vertex );
+                o.pos = UnityObjectToClipPos(v.vertex );
                 o.normalDir = UnityObjectToWorldNormal(v.normal);
                 return o;
             }

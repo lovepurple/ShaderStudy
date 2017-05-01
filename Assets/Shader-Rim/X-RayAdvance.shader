@@ -1,4 +1,6 @@
-﻿/*
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+/*
 	带有遮挡效果的X-Ray
 */
 Shader "Unlit/X-RayAdvance"
@@ -45,7 +47,7 @@ Shader "Unlit/X-RayAdvance"
 			v2f vert(appdata_base v)
 			{
 				v2f o;
-				o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.vertex = UnityObjectToClipPos(v.vertex);
 
 				//Model->view相当于直接投在屏幕上，画面脑补
 
@@ -91,7 +93,7 @@ Shader "Unlit/X-RayAdvance"
 			v2f_img vert(appdata_img i)
 			{
 				v2f_img o;
-				o.pos = mul(UNITY_MATRIX_MVP,i.vertex);
+				o.pos = UnityObjectToClipPos(i.vertex);
 				o.uv = i.texcoord;
 
 				return o;
