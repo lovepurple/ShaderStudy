@@ -47,18 +47,33 @@
 				{
 					fixed4 col = tex2D(_MainTex, i.uv);
 
-				float2 vertexToCenter = i.uv - float2(0.5, 0.5);
-				float lenVertexToCenter = length(vertexToCenter);
-				float alpha = step(lenVertexToCenter, _Radius);			//step函数 step(a,b)  b<a = 0 否则 1 smoothstep
+				//计算圆角，UV坐标转换取余和减的作用
+
+				//将UV坐标原点移动到中心
+				fixed2 uvCenter = i.uv - fixed2(0.5, 0.5);
+
+				fixed radiusX = fmod(uvCenter.x, 0.4);			//建立四个角的坐标系(脑补)
+				fixed radiusY = fmod(uvCenter.y, 0.4);
+				fixed absoluteXArea = step(0.4, abs(uvCenter.x));			//在-0.4~0.4 之间的x y像素都是显示部分（alpha = 0）
+				fixed absoluteYArea = step(0.4, abs(uvCenter.y));
+
+				//用Alpha控制显示还是不显示
 
 
+				/*
+					在[-0.4,0.4] 区域，absoluteXArea = 0,absoluteYArea = 0  ，alpha = 1 - 0 = 1，所以内部0.4正方形区域alpha = 1
+					在[0.4~0.5] 区域 ，判断radiusX 及radiusY 到四个角坐标系坐标原点(0,0)的值，超出半径0.1 部分的值为1， alpha = 1 - 1 * 1 * 1 = 0
 
 
+				*/
+				fixed alpha = 1 - absoluteXArea * absoluteYArea * step(0.1, length(float2(radiusX, radiusY)));			//裁剪掉的alpha为1 这步
 
-					return fixed4(col.rgb, alpha);
+				float hui = atan2(uvCenter.y, uvCenter.x);
 
-				}
-				ENDCG
+				return fixed4(hui, hui, hui, alpha);
+
 			}
+			ENDCG
+		}
 		}
 }

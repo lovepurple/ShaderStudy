@@ -1,0 +1,414 @@
+fileFormatVersion: 2
+guid: ca5f686166c602746b8b6cdfb60eaaf1
+timeCreated: 1487328489
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Bip01
+    100004: Bip01 Head
+    100006: Bip01 Head01
+    100008: Bip01 Head02
+    100010: Bip01 Head03
+    100012: Bip01 Head04
+    100014: Bip01 L Calf
+    100016: Bip01 L Clavicle
+    100018: Bip01 L Foot
+    100020: Bip01 L Forearm
+    100022: Bip01 L Hand
+    100024: Bip01 L HorseLink
+    100026: Bip01 L Thigh
+    100028: Bip01 L Toe0
+    100030: Bip01 L UpperArm
+    100032: Bip01 Neck
+    100034: Bip01 Neck1
+    100036: Bip01 Neck2
+    100038: Bip01 Neck3
+    100040: Bip01 Pelvis
+    100042: Bip01 R Calf
+    100044: Bip01 R Clavicle
+    100046: Bip01 R Foot
+    100048: Bip01 R Forearm
+    100050: Bip01 R Hand
+    100052: Bip01 R HorseLink
+    100054: Bip01 R Thigh
+    100056: Bip01 R Toe0
+    100058: Bip01 R UpperArm
+    100060: Bip01 Spine
+    100062: Bip01 Spine1
+    100064: Bip01 Spine1_01
+    100066: Bip01 Spine1_02
+    100068: Bip01 Spine1_03
+    100070: Bip01 Spine1_04
+    100072: Bip01 Spine1_05
+    100074: Bip01 Spine1_06
+    100076: Bip01 Spine1_07
+    100078: Bip01 Spine1_08
+    100080: skin_L chibang02_01
+    100082: skin_L chibang02_02
+    100084: skin_L chibang02_03
+    100086: skin_L chibang02_04
+    100088: skin_L chibang02_05
+    100090: skin_L chibang02_06
+    100092: skin_L chibang02_07
+    100094: skin_L chibang02_08
+    100096: skin_L chibang02_09
+    100098: skin_R chibang02_01
+    100100: skin_R chibang02_02
+    100102: skin_R chibang02_03
+    100104: skin_R chibang02_04
+    100106: skin_R chibang02_05
+    100108: skin_R chibang02_06
+    100110: skin_R chibang02_07
+    100112: skin_R chibang02_08
+    100114: skin_R chibang02_09
+    100116: skin_weiba01
+    100118: skin_weiba02
+    100120: skin_weiba03
+    100122: skin_weiba04
+    100124: skin_weiba05
+    100126: skin_weiba05_01
+    100128: skin_weiba05_02
+    100130: skin_weiba05_03
+    100132: skin_weiba06
+    100134: skin_weiba06_01
+    100136: skin_weiba06_02
+    100138: skin_weiba06_03
+    100140: skin_weiba06_04
+    100142: skin_zui
+    400000: //RootNode
+    400002: Bip01
+    400004: Bip01 Head
+    400006: Bip01 Head01
+    400008: Bip01 Head02
+    400010: Bip01 Head03
+    400012: Bip01 Head04
+    400014: Bip01 L Calf
+    400016: Bip01 L Clavicle
+    400018: Bip01 L Foot
+    400020: Bip01 L Forearm
+    400022: Bip01 L Hand
+    400024: Bip01 L HorseLink
+    400026: Bip01 L Thigh
+    400028: Bip01 L Toe0
+    400030: Bip01 L UpperArm
+    400032: Bip01 Neck
+    400034: Bip01 Neck1
+    400036: Bip01 Neck2
+    400038: Bip01 Neck3
+    400040: Bip01 Pelvis
+    400042: Bip01 R Calf
+    400044: Bip01 R Clavicle
+    400046: Bip01 R Foot
+    400048: Bip01 R Forearm
+    400050: Bip01 R Hand
+    400052: Bip01 R HorseLink
+    400054: Bip01 R Thigh
+    400056: Bip01 R Toe0
+    400058: Bip01 R UpperArm
+    400060: Bip01 Spine
+    400062: Bip01 Spine1
+    400064: Bip01 Spine1_01
+    400066: Bip01 Spine1_02
+    400068: Bip01 Spine1_03
+    400070: Bip01 Spine1_04
+    400072: Bip01 Spine1_05
+    400074: Bip01 Spine1_06
+    400076: Bip01 Spine1_07
+    400078: Bip01 Spine1_08
+    400080: skin_L chibang02_01
+    400082: skin_L chibang02_02
+    400084: skin_L chibang02_03
+    400086: skin_L chibang02_04
+    400088: skin_L chibang02_05
+    400090: skin_L chibang02_06
+    400092: skin_L chibang02_07
+    400094: skin_L chibang02_08
+    400096: skin_L chibang02_09
+    400098: skin_R chibang02_01
+    400100: skin_R chibang02_02
+    400102: skin_R chibang02_03
+    400104: skin_R chibang02_04
+    400106: skin_R chibang02_05
+    400108: skin_R chibang02_06
+    400110: skin_R chibang02_07
+    400112: skin_R chibang02_08
+    400114: skin_R chibang02_09
+    400116: skin_weiba01
+    400118: skin_weiba02
+    400120: skin_weiba03
+    400122: skin_weiba04
+    400124: skin_weiba05
+    400126: skin_weiba05_01
+    400128: skin_weiba05_02
+    400130: skin_weiba05_03
+    400132: skin_weiba06
+    400134: skin_weiba06_01
+    400136: skin_weiba06_02
+    400138: skin_weiba06_03
+    400140: skin_weiba06_04
+    400142: skin_zui
+    7400000: binglong_Skill04
+    9500000: //RootNode
+    11100000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: binglong_Skill04
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 78
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bip01
+        weight: 1
+      - path: Bip01/Bip01 Pelvis
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 L Thigh
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 L Thigh/Bip01 L Calf
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 L Thigh/Bip01 L Calf/Bip01 L HorseLink
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 L Thigh/Bip01 L Calf/Bip01 L HorseLink/Bip01
+          L Foot
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 L Thigh/Bip01 L Calf/Bip01 L HorseLink/Bip01
+          L Foot/Bip01 L Toe0
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 R Thigh
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 R Thigh/Bip01 R Calf
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 R Thigh/Bip01 R Calf/Bip01 R HorseLink
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 R Thigh/Bip01 R Calf/Bip01 R HorseLink/Bip01
+          R Foot
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 R Thigh/Bip01 R Calf/Bip01 R HorseLink/Bip01
+          R Foot/Bip01 R Toe0
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 L Clavicle
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 L Clavicle/Bip01
+          L UpperArm
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 L Clavicle/Bip01
+          L UpperArm/Bip01 L Forearm
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 L Clavicle/Bip01
+          L UpperArm/Bip01 L Forearm/Bip01 L Hand
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 L Clavicle/Bip01
+          L UpperArm/Bip01 L Forearm/skin_L chibang02_01
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 L Clavicle/Bip01
+          L UpperArm/Bip01 L Forearm/skin_L chibang02_02
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 L Clavicle/Bip01
+          L UpperArm/Bip01 L Forearm/skin_L chibang02_02/skin_L chibang02_03
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 L Clavicle/Bip01
+          L UpperArm/Bip01 L Forearm/skin_L chibang02_04
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 L Clavicle/Bip01
+          L UpperArm/Bip01 L Forearm/skin_L chibang02_04/skin_L chibang02_05
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 L Clavicle/Bip01
+          L UpperArm/Bip01 L Forearm/skin_L chibang02_06
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 L Clavicle/Bip01
+          L UpperArm/Bip01 L Forearm/skin_L chibang02_06/skin_L chibang02_07
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 L Clavicle/Bip01
+          L UpperArm/Bip01 L Forearm/skin_L chibang02_08
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 L Clavicle/Bip01
+          L UpperArm/Bip01 L Forearm/skin_L chibang02_08/skin_L chibang02_09
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 Neck1
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 Neck1/Bip01
+          Neck2
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 Neck1/Bip01
+          Neck2/Bip01 Neck3
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 Neck1/Bip01
+          Neck2/Bip01 Neck3/Bip01 Head
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 Neck1/Bip01
+          Neck2/Bip01 Neck3/Bip01 Head/Bip01 Head01
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 Neck1/Bip01
+          Neck2/Bip01 Neck3/Bip01 Head/Bip01 Head01/Bip01 Head02
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 Neck1/Bip01
+          Neck2/Bip01 Neck3/Bip01 Head/Bip01 Head03
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 Neck1/Bip01
+          Neck2/Bip01 Neck3/Bip01 Head/Bip01 Head03/Bip01 Head04
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 Neck1/Bip01
+          Neck2/Bip01 Neck3/Bip01 Head/skin_zui
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 Neck1/Bip01
+          Spine1_07
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 Neck1/Bip01
+          Spine1_07/Bip01 Spine1_08
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 R Clavicle
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 R Clavicle/Bip01
+          R UpperArm
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 R Clavicle/Bip01
+          R UpperArm/Bip01 R Forearm
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 R Clavicle/Bip01
+          R UpperArm/Bip01 R Forearm/Bip01 R Hand
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 R Clavicle/Bip01
+          R UpperArm/Bip01 R Forearm/skin_R chibang02_01
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 R Clavicle/Bip01
+          R UpperArm/Bip01 R Forearm/skin_R chibang02_02
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 R Clavicle/Bip01
+          R UpperArm/Bip01 R Forearm/skin_R chibang02_02/skin_R chibang02_03
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 R Clavicle/Bip01
+          R UpperArm/Bip01 R Forearm/skin_R chibang02_04
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 R Clavicle/Bip01
+          R UpperArm/Bip01 R Forearm/skin_R chibang02_04/skin_R chibang02_05
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 R Clavicle/Bip01
+          R UpperArm/Bip01 R Forearm/skin_R chibang02_06
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 R Clavicle/Bip01
+          R UpperArm/Bip01 R Forearm/skin_R chibang02_06/skin_R chibang02_07
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 R Clavicle/Bip01
+          R UpperArm/Bip01 R Forearm/skin_R chibang02_08
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Neck/Bip01 R Clavicle/Bip01
+          R UpperArm/Bip01 R Forearm/skin_R chibang02_08/skin_R chibang02_09
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine1_01
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine1_01/Bip01 Spine1_02
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine1_03
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine1_03/Bip01 Spine1_04
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine1_05
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/Bip01 Spine/Bip01 Spine1/Bip01 Spine1_05/Bip01 Spine1_06
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/skin_weiba01
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/skin_weiba01/skin_weiba02
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/skin_weiba01/skin_weiba02/skin_weiba03
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/skin_weiba01/skin_weiba02/skin_weiba03/skin_weiba04
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/skin_weiba01/skin_weiba02/skin_weiba03/skin_weiba04/skin_weiba05
+        weight: 1
+      - path: Bip01/Bip01 Pelvis/skin_weiba01/skin_weiba02/skin_weiba03/skin_weiba04/skin_weiba05/skin_weiba06
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

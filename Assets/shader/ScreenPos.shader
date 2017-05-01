@@ -14,6 +14,7 @@
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
+#include"UnityCG.cginc"
 
 			struct v2f
 			{
@@ -25,8 +26,7 @@
 			{
 				v2f o;
 				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
-				o.posInScreenSpace = CompulateScreenPos(o.pos);
-				o.w = o.pos.w;
+				o.posInScreenSpace = ComputeScreenPos(o.pos);
 
 				return o;
 			}
@@ -63,7 +63,7 @@
 					float2 pos = (2* pixelCoord.xy - _ScreenParams.xy) / min(ScreenParams.x,ScreenParams.y)    If iResolution.x > iResolution.y, pos.x ~ (-1.xx, 1.xx), pos.y ~ (-1, 1)  
 
 				*/
-
+				return float4(1, 1, 1, 1);
 
 
 			}

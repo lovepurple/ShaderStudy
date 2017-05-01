@@ -6,37 +6,20 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 [ExecuteInEditMode]
-public class Cao : MonoBehaviour
+public class Cao : UIBehaviour
 {
-    public Slider SliderObject;
-    public float ToValue;
-    public float Duration;
+    public GameObject TemplateObject = null;
 
-    public bool StartMove = false;
-
-    float startTime;
-    public void Start()
-    {
-        ToValue = Mathf.Clamp01(ToValue);
-
-        
-    }
-
-    float elapsed = 0;
+    public GameObject ContentObject = null;
 
     public void Update()
     {
-        if (StartMove)
+        if(Input.GetKeyDown(KeyCode.A))
         {
-            elapsed += Time.deltaTime;
-
-            SliderObject.value = Mathf.Lerp(0, ToValue, elapsed / 10);
+           GameObject newObj =  GameObject.Instantiate(TemplateObject);
+            newObj.transform.parent = ContentObject.transform;
         }
 
     }
 
-    public void OnEnable()
-    {
-        startTime = Time.time;
-    }
 }
