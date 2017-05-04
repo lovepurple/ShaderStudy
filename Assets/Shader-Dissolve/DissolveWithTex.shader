@@ -1,11 +1,11 @@
-﻿Shader "Dissolve/BaseDissolve"
+﻿Shader "Dissolve/DissolveWithTex"
 {
 	Properties
 	{
 		_MainTex("Texture", 2D) = "white" {}
 		_DissolveTex("Dissolve Tex",2D) = "white"{}
 		_DissolvePercentage("Dissolve Percentage",Range(0,1)) = 0
-		_DissolveEdgeColor("Edge Color",Color) = (1,0.5,0,1)
+		_DissolveEdgeTex("Dissolve Edge Texture",Color) = "white"{}
 		_DissolveEdgeWidth("Dissolve Edge Width",Range(0,0.1)) = 0.02
 	}
 		SubShader
@@ -39,11 +39,11 @@
 				sampler2D _DissolveTex;
 				float4 _DissolveTex_ST;
 
-				fixed _DissolvePercentage;
+				sampler2D _DissolveEdgeTex;
+				float4 _DissolveEdgeTex_ST;
 
-				float4 _DissolveEdgeColor;
-
-				fixed _DissolveEdgeWidth;
+				float _DissolvePercentage;
+				float _DissolveEdgeWidth;
 
 				v2f vert(appdata v)
 				{
@@ -56,22 +56,11 @@
 				fixed4 frag(v2f i) : SV_Target
 				{
 					fixed4 col = tex2D(_MainTex, i.uv);
-					fixed dissolveChannel = tex2D(_DissolveTex, i.uv).r;
-					fixed clipScope = dissolveChannel - _DissolvePercentage;
-
-					clip(clipScope);
-
-					/*if (clipScope < _DissolveEdgeWidth)
-					{
-						col = _DissolveEdgeColor;
-					}*/
-					//使用Step,优化掉if  !!!重要的技巧
-					fixed v = step(clipScope, _DissolveEdgeWidth);
-					col = v * _DissolveEdgeColor + (1 - v)*col;
-
-
+					
+					
+					
 					return col;
-			}
+				}
 			ENDCG
 		}
 		}
