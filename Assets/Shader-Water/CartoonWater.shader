@@ -8,6 +8,7 @@ Shader "Water/CartoonWater"
 		_OpaqueTex("Opaque Texture",2D) = "white"{}
 		_NormalTex("Normal",2D) = "white"{}
 		_FoamTex("Foam Texture",2D) = "foam"{}
+		_MainTex("Main Tex",2D) = "mainTex"{}
 	}
 		SubShader
 	{
@@ -22,7 +23,7 @@ Shader "Water/CartoonWater"
 
 			ZWrite Off
 			Blend SrcAlpha OneMinusSrcAlpha
-		  cull back
+			Cull back
 
 			CGPROGRAM
 			#pragma vertex vert
@@ -78,7 +79,7 @@ Shader "Water/CartoonWater"
 			float4 frag(v2f i) : COLOR
 			{
 				float3x3 worldTBNMatrix_T = transpose(float3x3((i.worldTangent),(i.worldBinormal),(i.worldNormal)));
-				float3 normal = normalize(mul(worldTBNMatrix_T,UnpackNormal(tex2D(_NormalTex,i.uv + float2(0.1,0) * _Time.y))));
+				float3 normal = normalize(mul(worldTBNMatrix_T,UnpackNormal(tex2D(_NormalTex,i.uv + -float2(0.1,0.0)*_Time.y ))));
 				float4 opaqueCol = tex2D(_OpaqueTex,i.uv);
 
 				float3 lightDir = normalize(_WorldSpaceLightPos0.xyz);
@@ -87,10 +88,11 @@ Shader "Water/CartoonWater"
 				float3 diffuseCol = _LightColor0 * _MainColor * (max(0,dot(normal,lightDir))) * tex2D(_FoamTex,i.uv + float2(0.1,0) *_Time.y);
 
 				float3 H = normalize(lightDir + viewDir);
-				float3 spec = pow(max(0,dot(H,normal)),128) *_LightColor0;
+				float3 spec = pow(max(0,dot(H,normal)),800) *_LightColor0;
 
 				float4 col = float4(diffuseCol + spec,1);
-				col.a = opaqueCol.r;
+				col.a =1- opaqueCol.r;
+				col = lerp(col, tex2D(_MainTex, i.uv),opaqueCol.r);
 
 				return col;
 			}

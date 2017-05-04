@@ -1,20 +1,16 @@
-﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
-
-Shader "Unlit/BaseDissolve"
+﻿Shader "Dissolve/BaseDissolve"
 {
 	Properties
 	{
-		_MainTex ("Texture", 2D) = "white" {}
-		_SliceGuide("Slice Guide",2D)="white"{}
-		_SliceAmount("Slice Amount",Range(0,1)) = 0.5
-
-		//加入外发光
-		_RimColor("RimColor",Color)=(1.0,1.0,1.0,1.0)
-		_RimPower("RimPower",Range(0,10)) = 0.5
+		_MainTex("Texture", 2D) = "white" {}
+		_DissolveTex("Dissolve Tex",2D) = "white"{}
+		_DissolvePercentage("Dissolve Percentage",Range(0,1)) = 0
+		_DissolveEdgeColor("Edge Color",Color)=(1,0.5,0,1)
+		_DissolveEdgeWidth("Dissolve Edge Width",Range(0,0.1)) = 0.02
 	}
-	SubShader
+		SubShader
 	{
-		Tags { "RenderType"="Opaque" }
+		Tags { "RenderType" = "Opaque" }
 		LOD 100
 
 		Pass
@@ -22,57 +18,59 @@ Shader "Unlit/BaseDissolve"
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
-			
+
 			#include "UnityCG.cginc"
+
+			struct appdata
+			{
+				float4 vertex : POSITION;
+				float2 uv : TEXCOORD0;
+			};
 
 			struct v2f
 			{
-				float4 pos:SV_POSITION;
-				float2 uv:TEXCOORD0;
-				float2 uv2:TexCOORD1;
+				float2 uv : TEXCOORD0;
+				float4 vertex : SV_POSITION;
 			};
 
 			sampler2D _MainTex;
 			float4 _MainTex_ST;
-			sampler2D _SliceGuide;
-			float _SliceAmount;
-			float4 _RimColor;
-			float _RimPower;
-			
-			v2f vert (appdata_base v)
+
+			sampler2D _DissolveTex;
+			float4 _DissolveTex_ST;
+
+			fixed _DissolvePercentage;
+
+			float4 _DissolveEdgeColor;
+
+			fixed _DissolveEdgeWidth;
+
+			v2f vert(appdata v)
 			{
 				v2f o;
-				o.pos = UnityObjectToClipPos(v.vertex);
-				o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
-
-				float3 normalInWorldPos = UnityObjectToWorldNormal(v.normal);
-				float4 vertexInWorldSpace = mul(unity_ObjectToWorld,v.vertex);
-				float3 viewToVertexInWorldSpace = UnityWorldSpaceViewDir(vertexInWorldSpace.xyz);
-
-				float NDotV = saturate(dot(normalize(viewToVertexInWorldSpace),normalInWorldPos));
-
-				o.uv2.x = NDotV;
-
+				o.vertex = UnityObjectToClipPos(v.vertex);
+				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
 				return o;
 			}
-			
-			float4 frag (v2f i) : COLOR
+
+			fixed4 frag(v2f i) : SV_Target
 			{
-
-				float3 sliceColor = tex2D(_SliceGuide,i.uv).rgb - _SliceAmount;
+				fixed4 col = tex2D(_MainTex, i.uv);
+				fixed dissolveChannel = tex2D(_DissolveTex, i.uv).r;
+				fixed clipScope = dissolveChannel - _DissolvePercentage;
 				
-				//clip函数，（任何一个通道）小于0的直接被干掉
-				clip(sliceColor);
+				clip(clipScope);
 
-				float4 baseColor =  tex2D(_MainTex,i.uv);
+				if (clipScope < _DissolveEdgeWidth)
+				{
+					col = _DissolveEdgeColor;
+				}
+				
+				
 
-				//dot(a,b)  a,b垂直时，dot = 0 重合时 = 1,
-				//所以上方使用NDotV求出的值是边缘为0，正对是1，如果要边缘更亮，取反
-				baseColor.rgb += pow( 1-i.uv2.x,_RimPower) * _RimColor;
-
-				return baseColor;
-			}
-			ENDCG
+				return col;
 		}
+		ENDCG
+	}
 	}
 }
