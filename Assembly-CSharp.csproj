@@ -348,7 +348,7 @@
      <None Include="Assets\BuildInShader\DefaultResourcesExtra\Particle Multiply.shader" />
      <None Include="Assets\Colorful FX\Shaders\WaveDistortion.shader" />
      <None Include="Assets\Shader-NPR\Wireframe.shader" />
-     <None Include="Assets\NewUnlitShader.shader" />
+     <None Include="Assets\Shader-UV\WorldUVMap.shader" />
      <None Include="Assets\ShaderForge\Editor\InternalResources\GPU Rendering\SFN_Tex2d\SFN_Tex2d_UV.shader" />
      <None Include="Assets\BuildInShader\DefaultResources\Internal-SplashShadowReceiverSimple.shader" />
      <None Include="Assets\Colorful FX\Shaders\Negative.shader" />
@@ -542,11 +542,13 @@
      <None Include="Assets\Shader-Cloth\Cloth.shader" />
      <None Include="Assets\BuildInShader\DefaultResourcesExtra\Nature\TreeCreator\TreeCreatorBarkOptimized.shader" />
      <None Include="Assets\BuildInShader\DefaultResourcesExtra\Particle Blend.shader" />
+     <None Include="Assets\Shader-Dissolve\DissolveTwoColorLessDistance.shader" />
      <None Include="Assets\BuildInShader\DefaultResourcesExtra\Cubemaps\CubeCopy.shader" />
      <None Include="Assets\BuildInShader\CGIncludes\Tessellation.cginc" />
      <None Include="Assets\Shader-CoordCal\DrawCircle.shader" />
      <None Include="Assets\BuildInShader\DefaultResources\Internal-GUITextureClip.shader" />
      <None Include="Assets\Colorful FX\Readme.txt" />
+     <None Include="Assets\Shader-Dissolve\DissolveInScreenPos.shader" />
      <None Include="Assets\Colorful FX\Shaders\Kuwahara.cginc" />
      <None Include="Assets\OutlineWithViewDirAndNormal.shader" />
      <None Include="Assets\BuildInShader\DefaultResourcesExtra\UI\UI-Unlit-Detail.shader" />
@@ -624,6 +626,7 @@
      <None Include="Assets\BuildInShader\CGIncludes\UnityShaderVariables.cginc" />
      <None Include="Assets\BuildInShader\DefaultResourcesExtra\Unlit\Unlit-Color.shader" />
      <None Include="Assets\ShaderForge\Editor\InternalResources\GPU Rendering\SFN_Blend\SFN_Blend_HardLight.shader" />
+     <None Include="Assets\Shader-Dissolve\DissolveTwoColor.shader" />
      <None Include="Assets\BuildInShader\DefaultResources\Internal-SplashShadowReceiver.shader" />
      <None Include="Assets\Shader-NPR\PencilSketchShading.shader" />
      <None Include="Assets\BuildInShader\DefaultResources\Internal-Flare.shader" />

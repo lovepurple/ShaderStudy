@@ -1,11 +1,12 @@
-﻿Shader "Dissolve/BaseDissolve"
+﻿Shader "Dissolve/DissolveTwoColor"
 {
 	Properties
 	{
 		_MainTex("Texture", 2D) = "white" {}
 		_DissolveTex("Dissolve Tex",2D) = "white"{}
 		_DissolvePercentage("Dissolve Percentage",Range(0,1)) = 0
-		_DissolveEdgeColor("Edge Color",Color) = (1,0.5,0,1)
+		_DissolveEdgeInnerColor("Inner Edge Color",Color) = (1,0.5,0,1)
+		_DissolveEdgeOuterColor("Outer Edge Color",Color) = (1,0,0)
 		_DissolveEdgeWidth("Dissolve Edge Width",Range(0,0.1)) = 0.02
 	}
 		SubShader
@@ -41,7 +42,8 @@
 
 				fixed _DissolvePercentage;
 
-				float4 _DissolveEdgeColor;
+				float4 _DissolveEdgeInnerColor;
+				float4 _DissolveEdgeOuterColor;
 
 				fixed _DissolveEdgeWidth;
 
@@ -61,15 +63,17 @@
 
 					clip(clipScope);
 
-					/*if (clipScope < _DissolveEdgeWidth)
-					{
-						col = _DissolveEdgeColor;
-					}*/
+					/*
+						1. _DissolvePercentage ~[0,1] 表示溶解的通道的范围
+						2. 上方已经把r<= _DisslovePercentaget 都溶解掉了，所以边缘就是 [_DissolvePercentage ,_DissolvePercentage+_DissolveEdgeWidth] 这么宽
+						3. 溶解的因子就是通道
+					*/
 
+					fixed v = smoothstep(_DissolvePercentage, _DissolvePercentage + _DissolveEdgeWidth, dissolveChannel);
+					fixed v2 = step(clipScope, _DissolveEdgeWidth);
 
-					//使用Step,优化掉if  !!!重要的技巧
-					fixed v = step(clipScope, _DissolveEdgeWidth);
-					col = v * _DissolveEdgeColor + (1 - v)*col;
+					col = v2 * lerp(_DissolveEdgeInnerColor, _DissolveEdgeOuterColor, v) + (1 - v2)*col;
+
 
 
 					return col;

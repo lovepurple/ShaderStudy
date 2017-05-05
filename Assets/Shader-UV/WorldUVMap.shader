@@ -1,6 +1,7 @@
-﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+﻿// 根据世界坐标采uv,https://madewith.unity.com/en/stories/dissolving-the-world-part-1
+// 物体动的时候 uv会变
 
-Shader "Unlit/NewUnlitShader"
+Shader "UVOperate/WorldUVMap"
 {
 	Properties
 	{
@@ -13,8 +14,6 @@ Shader "Unlit/NewUnlitShader"
 
 		Pass
 		{
-		ZWrite Off
-		Blend SrcAlpha OneMinusSrcAlpha
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
@@ -32,6 +31,7 @@ Shader "Unlit/NewUnlitShader"
 			{
 				float2 uv : TEXCOORD0;
 				float4 vertex : SV_POSITION;
+				float4 screenPos:TEXCOORD1;
 			};
 
 			sampler2D _MainTex;
@@ -42,16 +42,18 @@ Shader "Unlit/NewUnlitShader"
 				v2f o;
 				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
+				//ComputeScreenPos 的输出参数是模型坐标系
+				o.screenPos = ComputeScreenPos(o.vertex);
 				return o;
 			}
 
 			fixed4 frag(v2f i) : SV_Target
 			{
-				// sample the texture
-				fixed4 col = tex2D(_MainTex, i.uv);
+				//求出屏幕的uv坐标
+				fixed2 wCoord = i.screenPos.xy / i.screenPos.w;
+
+				fixed4 col = tex2D(_MainTex, wCoord);
 				
-			fixed brightness = col.r*0.299 + 0.587*col.g + 0.114*col.b;
-			col.a = brightness;
 
 				return col;
 			}
