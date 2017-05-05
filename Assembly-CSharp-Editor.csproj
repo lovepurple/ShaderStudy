@@ -112,7 +112,6 @@
      <Compile Include="Assets\Colorful FX\Editor\Startup\ColorfulFX_StartupWindow.cs" />
      <Compile Include="Assets\ShaderForge\Editor\InternalResources\Inspectors\ShaderForgeInspector.cs" />
      <Compile Include="Assets\ShaderForge\Editor\InternalResources\Inspectors\ShaderForgeMaterialInspector.cs" />
-     <None Include="Assets\Shader-Dissolve\DissolveWithTex.shader" />
      <None Include="Assets\Colorful FX\Shaders\ContrastGain.shader" />
      <None Include="Assets\BuildInShader\CGIncludes\SpeedTreeBillboardCommon.cginc" />
      <None Include="Assets\ShaderForge\Editor\InternalResources\GPU Rendering\SFN_LightPosition\SFN_LightPosition.shader" />
