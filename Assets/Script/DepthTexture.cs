@@ -12,13 +12,16 @@ namespace Assets.Game.Actor
     {
         public Material TargetMaterial;
 
-
-        private void OnRenderImage(RenderTexture source, RenderTexture destination)
+        void OnEnable()
         {
-            Camera.main.depthTextureMode |= DepthTextureMode.Depth;
+            //必须强制打开，否则不渲染深度图
+            //  Camera.main.depthTextureMode |= DepthTextureMode.DepthNormals;
+            Camera.main.depthTextureMode = DepthTextureMode.Depth;
+        }
+        void OnRenderImage(RenderTexture source, RenderTexture destination)
+        {
+
             Graphics.Blit(source, destination, TargetMaterial);
-
-
         }
 
 

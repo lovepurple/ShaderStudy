@@ -52,8 +52,10 @@ Shader "UVOperate/WorldUVMap"
 				//求出屏幕的uv坐标
 				fixed2 wCoord = i.screenPos.xy / i.screenPos.w;
 
+
 				fixed4 col = tex2D(_MainTex, wCoord);
-				
+			col.rg = i.screenPos.xy;
+			col.b = 0;
 
 				return col;
 			}

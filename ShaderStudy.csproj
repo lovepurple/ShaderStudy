@@ -16,7 +16,7 @@
     <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
-    <UnityVersion>5.5.1p2</UnityVersion>
+    <UnityVersion>5.5.0p1</UnityVersion>
     <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
@@ -27,7 +27,7 @@
     <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_5_1;UNITY_5_5;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VIDEO;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_PRO_LICENSE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_5_0;UNITY_5_5;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VIDEO;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_PRO_LICENSE</DefineConstants>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -37,7 +37,7 @@
     <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_5_1;UNITY_5_5;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VIDEO;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_PRO_LICENSE</DefineConstants>
+    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_5_0;UNITY_5_5;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VIDEO;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_PRO_LICENSE</DefineConstants>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
@@ -75,36 +75,118 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="ShaderStudy.Plugins.csproj">
-      <Project>{EDDD29C2-2A62-BFDB-E1AF-0F354489927E}</Project>
-      <Name>ShaderStudy.Plugins</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Assets\ActorWillOnRenderComponent.cs" />
     <Compile Include="Assets\CalculateCoor.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Attributes\ColorUsageAttribute.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Attributes\HelpURLAttribute.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Attributes\MinAttribute.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\BaseEffect.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\CLib.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\AnalogTV.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\BilateralGaussianBlur.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\BleachBypass.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\Blend.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\BrightnessContrastGamma.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\ChannelClamper.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\ChannelMixer.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\ChannelSwapper.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\ChromaticAberration.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\ComicBook.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\ContrastGain.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\ContrastVignette.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\Convolution3x3.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\CrossStitch.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\DirectionalBlur.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\Dithering.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\DoubleVision.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\DynamicLookup.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\FastVignette.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\Frost.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\GaussianBlur.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\Glitch.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\GradientRamp.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\GradientRampDynamic.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\GrainyBlur.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\Grayscale.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\Halftone.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\Histogram.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\HueFocus.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\HueSaturationValue.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\Kuwahara.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\Led.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\LensDistortionBlur.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\Letterbox.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\Levels.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\LoFiPalette.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\LookupFilter.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\LookupFilter3D.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\Negative.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\Noise.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\PhotoFilter.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\PixelMatrix.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\Pixelate.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\Posterize.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\RGBSplit.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\RadialBlur.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\SCurveContrast.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\ShadowsMidtonesHighlights.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\Sharpen.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\SmartSaturation.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\Strokes.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\TVVignette.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\Technicolor.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\Threshold.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\Vibrance.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\Vintage.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\VintageFast.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\WaveDistortion.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\WhiteBalance.cs" />
+    <Compile Include="Assets\Colorful FX\Scripts\Effects\Wiggle.cs" />
     <Compile Include="Assets\DissolveShader\DemoSzene\Timed.cs" />
-    <Compile Include="Assets\Externals\Highlighting System\HighlightingSystemDemo\Scripts\Advanced\CameraTargeting.cs" />
-    <Compile Include="Assets\Externals\Highlighting System\HighlightingSystemDemo\Scripts\Advanced\CompoundObjectController.cs" />
-    <Compile Include="Assets\Externals\Highlighting System\HighlightingSystemDemo\Scripts\Advanced\ConstantHighlighting.cs" />
-    <Compile Include="Assets\Externals\Highlighting System\HighlightingSystemDemo\Scripts\Advanced\FlashingController.cs" />
-    <Compile Include="Assets\Externals\Highlighting System\HighlightingSystemDemo\Scripts\Advanced\HighlighterController.cs" />
-    <Compile Include="Assets\Externals\Highlighting System\HighlightingSystemDemo\Scripts\Advanced\HighlighterOccluder.cs" />
-    <Compile Include="Assets\Externals\Highlighting System\HighlightingSystemDemo\Scripts\Advanced\SpectrumController.cs" />
-    <Compile Include="Assets\Externals\Highlighting System\HighlightingSystemDemo\Scripts\Basic\CSHighlighterController.cs" />
-    <Compile Include="Assets\Externals\Highlighting System\HighlightingSystemDemo\Scripts\Helpers\MovementController.cs" />
-    <Compile Include="Assets\Externals\Highlighting System\HighlightingSystemDemo\Scripts\Helpers\RotationController.cs" />
-    <Compile Include="Assets\Externals\Highlighting System\HighlightingSystemDemo\Scripts\Service\CameraFlyController.cs" />
-    <Compile Include="Assets\Externals\Highlighting System\HighlightingSystemDemo\Scripts\Service\FPSCounter.cs" />
-    <Compile Include="Assets\Externals\Highlighting System\HighlightingSystemDemo\Scripts\Service\PresetSelector.cs" />
-    <Compile Include="Assets\Externals\Highlighting System\HighlightingSystemDemo\Scripts\Service\SceneLoader.cs" />
     <Compile Include="Assets\Matcap\MatCap Shaders\Demo\Assets\MC_AutoRotate.cs" />
     <Compile Include="Assets\Matcap\MatCap Shaders\Demo\Assets\MC_SwitchTexture.cs" />
     <Compile Include="Assets\NewBehaviourScript.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\Antialiasing.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\Bloom.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\BloomAndFlares.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\BloomOptimized.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\Blur.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\BlurOptimized.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\CameraMotionBlur.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\ColorCorrectionCurves.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\ColorCorrectionLookup.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\ColorCorrectionRamp.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\ContrastEnhance.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\ContrastStretch.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\CreaseShading.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\DepthOfField.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\DepthOfFieldDeprecated.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\EdgeDetection.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\Fisheye.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\GlobalFog.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\Grayscale.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\ImageEffectBase.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\ImageEffects.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\MotionBlur.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\NoiseAndGrain.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\NoiseAndScratches.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\PostEffectsBase.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\PostEffectsHelper.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\Quads.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\ScreenOverlay.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\ScreenSpaceAmbientObscurance.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\ScreenSpaceAmbientOcclusion.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\SepiaTone.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\SunShafts.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\TiltShift.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\Tonemapping.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\Triangles.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\Twirl.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\VignetteAndChromaticAberration.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\Vortex.cs" />
+    <Compile Include="Assets\Script\DepthTexture.cs" />
     <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EditorLabel.cs" />
     <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EnableCameraDepthInForward.cs" />
     <Compile Include="Assets\ShaderForge\Example Assets\Scripts\SoftNormalsToVertexColor.cs" />
-    <Compile Include="Assets\UILineRenderer.cs" />
     <Compile Include="Assets\flipfont.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -279,6 +361,68 @@
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Unlit\Unlit-AlphaTest.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Unlit\Unlit-Color.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Unlit\Unlit-Normal.shader" />
+    <None Include="Assets\Colorful FX\Changelog.txt" />
+    <None Include="Assets\Colorful FX\Editor\Shaders\_DynamicLookup.shader" />
+    <None Include="Assets\Colorful FX\Readme.txt" />
+    <None Include="Assets\Colorful FX\Shaders\AnalogTV.shader" />
+    <None Include="Assets\Colorful FX\Shaders\BilateralGaussianBlur.shader" />
+    <None Include="Assets\Colorful FX\Shaders\BleachBypass.shader" />
+    <None Include="Assets\Colorful FX\Shaders\Blend.shader" />
+    <None Include="Assets\Colorful FX\Shaders\BrightnessContrastGamma.shader" />
+    <None Include="Assets\Colorful FX\Shaders\ChannelClamper.shader" />
+    <None Include="Assets\Colorful FX\Shaders\ChannelMixer.shader" />
+    <None Include="Assets\Colorful FX\Shaders\ChannelSwapper.shader" />
+    <None Include="Assets\Colorful FX\Shaders\ChromaticAberration.shader" />
+    <None Include="Assets\Colorful FX\Shaders\Colorful.cginc" />
+    <None Include="Assets\Colorful FX\Shaders\ComicBook.shader" />
+    <None Include="Assets\Colorful FX\Shaders\ContrastGain.shader" />
+    <None Include="Assets\Colorful FX\Shaders\ContrastVignette.shader" />
+    <None Include="Assets\Colorful FX\Shaders\Convolution3x3.shader" />
+    <None Include="Assets\Colorful FX\Shaders\CrossStitch.shader" />
+    <None Include="Assets\Colorful FX\Shaders\DirectionalBlur.shader" />
+    <None Include="Assets\Colorful FX\Shaders\Dithering.shader" />
+    <None Include="Assets\Colorful FX\Shaders\DoubleVision.shader" />
+    <None Include="Assets\Colorful FX\Shaders\DynamicLookup.shader" />
+    <None Include="Assets\Colorful FX\Shaders\FastVignette.shader" />
+    <None Include="Assets\Colorful FX\Shaders\Frost.shader" />
+    <None Include="Assets\Colorful FX\Shaders\GaussianBlur.shader" />
+    <None Include="Assets\Colorful FX\Shaders\Glitch.cginc" />
+    <None Include="Assets\Colorful FX\Shaders\Glitch.shader" />
+    <None Include="Assets\Colorful FX\Shaders\GradientRamp.shader" />
+    <None Include="Assets\Colorful FX\Shaders\GrainyBlur.shader" />
+    <None Include="Assets\Colorful FX\Shaders\Grayscale.shader" />
+    <None Include="Assets\Colorful FX\Shaders\Halftone.shader" />
+    <None Include="Assets\Colorful FX\Shaders\HueFocus.shader" />
+    <None Include="Assets\Colorful FX\Shaders\HueSaturationValue.shader" />
+    <None Include="Assets\Colorful FX\Shaders\Kuwahara.cginc" />
+    <None Include="Assets\Colorful FX\Shaders\Kuwahara.shader" />
+    <None Include="Assets\Colorful FX\Shaders\Led.shader" />
+    <None Include="Assets\Colorful FX\Shaders\LensDistortionBlur.shader" />
+    <None Include="Assets\Colorful FX\Shaders\Letterbox.shader" />
+    <None Include="Assets\Colorful FX\Shaders\Levels.shader" />
+    <None Include="Assets\Colorful FX\Shaders\LookupFilter.shader" />
+    <None Include="Assets\Colorful FX\Shaders\LookupFilter2D.shader" />
+    <None Include="Assets\Colorful FX\Shaders\LookupFilter3D.shader" />
+    <None Include="Assets\Colorful FX\Shaders\Negative.shader" />
+    <None Include="Assets\Colorful FX\Shaders\Noise.shader" />
+    <None Include="Assets\Colorful FX\Shaders\PhotoFilter.shader" />
+    <None Include="Assets\Colorful FX\Shaders\PixelMatrix.shader" />
+    <None Include="Assets\Colorful FX\Shaders\Pixelate.shader" />
+    <None Include="Assets\Colorful FX\Shaders\Posterize.shader" />
+    <None Include="Assets\Colorful FX\Shaders\RGBSplit.shader" />
+    <None Include="Assets\Colorful FX\Shaders\RadialBlur.shader" />
+    <None Include="Assets\Colorful FX\Shaders\SCurveContrast.shader" />
+    <None Include="Assets\Colorful FX\Shaders\ShadowsMidtonesHighlights.shader" />
+    <None Include="Assets\Colorful FX\Shaders\Sharpen.shader" />
+    <None Include="Assets\Colorful FX\Shaders\SmartSaturation.shader" />
+    <None Include="Assets\Colorful FX\Shaders\Strokes.shader" />
+    <None Include="Assets\Colorful FX\Shaders\TVVignette.shader" />
+    <None Include="Assets\Colorful FX\Shaders\Technicolor.shader" />
+    <None Include="Assets\Colorful FX\Shaders\Threshold.shader" />
+    <None Include="Assets\Colorful FX\Shaders\Vibrance.shader" />
+    <None Include="Assets\Colorful FX\Shaders\WaveDistortion.shader" />
+    <None Include="Assets\Colorful FX\Shaders\WhiteBalance.shader" />
+    <None Include="Assets\Colorful FX\Shaders\Wiggle.shader" />
     <None Include="Assets\DissolveShader\Readme.txt" />
     <None Include="Assets\DissolveShader\Shader\Dissolve_TexturCoords.shader" />
     <None Include="Assets\DissolveShader\Shader\Dissolve_WorldCoords.shader" />
@@ -299,21 +443,105 @@
     <None Include="Assets\NewShader.shader" />
     <None Include="Assets\NewShader2.shader" />
     <None Include="Assets\NewShader3.shader" />
-    <None Include="Assets\NewShader6.shader" />
-    <None Include="Assets\NewUnlitShader.shader" />
+    <None Include="Assets\NewShader5.shader" />
     <None Include="Assets\Outlighting.shader" />
     <None Include="Assets\OutlineWithViewDirAndNormal.shader" />
     <None Include="Assets\PhotoshopLevel.shader" />
-    <None Include="Assets\Plugins\HighlightingSystem\Resources\HighlightingBlur.shader" />
-    <None Include="Assets\Plugins\HighlightingSystem\Resources\HighlightingComposite.shader" />
-    <None Include="Assets\Plugins\HighlightingSystem\Resources\HighlightingCut.shader" />
-    <None Include="Assets\Plugins\HighlightingSystem\Resources\HighlightingOpaque.shader" />
-    <None Include="Assets\Plugins\HighlightingSystem\Resources\HighlightingTransparent.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\Forward\MK4_Forwad_Streets.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\Forward\MK4_Forward_Billboard.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\Forward\MK4_Forward_Building_Toon.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\Forward\MK4_Forward_Car_1_Paint.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\Forward\MK4_Forward_Car_2_Paints.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\Forward\MK4_Forward_Color_Mask.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\Forward\MK4_Forward_Dirt.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\Forward\MK4_Forward_Dirt2.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\Forward\MK4_Forward_Dirt_simple.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\Forward\MK4_Forward_Garbage.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\MK4 Sky Texture.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\MK4_Billboard.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\MK4_Building_Toon.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\MK4_Car_1_Paint.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\MK4_Car_2_Paints.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\MK4_Color_Mask.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\MK4_Dirt.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\MK4_Dirt2.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\MK4_Dirt_simple.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\MK4_Garbage.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\MK4_Garbage_Alpha.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\MK4_Streets.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\BlurEffectConeTaps.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\CameraMotionBlur.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\CameraMotionBlurDX11.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\ChromaticAberrationShader.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrection3DLut.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurves.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurvesSimple.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionEffect.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionSelective.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Adaptation.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Apply.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Luminance.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\MinMaxReduction.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\ContrastComposite.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\ConvertDepth.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\CreaseApply.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\EdgeDetectNormals.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\FisheyeShader.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\GrayscaleEffect.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\MotionBlur.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\MotionBlurClear.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\NoiseAndGrain.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\NoiseAndGrainDX11.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderYUV.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\PrepareSunShaftsBlur.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\RadialBlur.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\SSAOShader.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\ScreenSpaceAmbientObscurance.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\SepiaToneEffect.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\ShowAlphaChannel.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\SimpleClear.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\SunShaftsComposite.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\Tonemapper.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\TwirlEffect.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\VignettingShader.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\VortexEffect.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\DLAA.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA2.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA3Console.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset2.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset3.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\NFAA.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\SSAA.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\Blend.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendForBloom.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter2.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBloom.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBlur.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MultiPassHollywoodFlares.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\VignetteShader.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\Bokeh34.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfField34.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldDX11.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableBlur.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\TiltShiftHdrLensBlur.shader" />
+    <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\frag_ao.cginc" />
     <None Include="Assets\Shader-Cloth\Cloth.shader" />
     <None Include="Assets\Shader-CoordCal\DoubleCircle.shader" />
     <None Include="Assets\Shader-CoordCal\DrawCircle.shader" />
     <None Include="Assets\Shader-Dissolve\BaseDissolve.shader" />
-    <None Include="Assets\Shader-Dissolve\DissolveWithBumRamp.shader" />
+    <None Include="Assets\Shader-Dissolve\DissolveInScreenPos.shader" />
+    <None Include="Assets\Shader-Dissolve\DissolveTwoColor.shader" />
+    <None Include="Assets\Shader-Dissolve\DissolveTwoColorLessDistance.shader" />
     <None Include="Assets\Shader-NPR\AntialiasedCelShading.shader" />
     <None Include="Assets\Shader-NPR\BackgroundShading.shader" />
     <None Include="Assets\Shader-NPR\Hatching.shader" />
@@ -338,6 +566,7 @@
     <None Include="Assets\Shader-Toon\ToonCG.shader" />
     <None Include="Assets\Shader-Toon\ToonDiscrete.shader" />
     <None Include="Assets\Shader-Toon\ToonOnePass.shader" />
+    <None Include="Assets\Shader-UV\WorldUVMap.shader" />
     <None Include="Assets\Shader-Water\CartoonWater.shader" />
     <None Include="Assets\Shader-Water\CoastFoam - 副本.shader" />
     <None Include="Assets\Shader-Water\CoastFoam.shader" />
@@ -556,6 +785,10 @@
     <None Include="Assets\shader\RadiusEdge.shader" />
     <None Include="Assets\shader\RectMosaic.shader" />
     <None Include="Assets\shader\ScreenPos.shader" />
+    <None Include="Assets\shader\Shader-Depth\DepthBlend.shader" />
+    <None Include="Assets\shader\Shader-Depth\DepthTexture.shader" />
+    <None Include="Assets\shader\Shader-Depth\InteractHightlight.shader" />
+    <None Include="Assets\shader\Shader-Fresnel\Fresnel.shader" />
     <None Include="Assets\shader\Shadertoy.cginc" />
     <None Include="Assets\shader\SimpleWave.shader" />
     <None Include="Assets\shader\TrangleMosaic.shader" />

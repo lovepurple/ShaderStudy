@@ -46,7 +46,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\ActorWillOnRenderComponent.cs" />
      <Compile Include="Assets\CalculateCoor.cs" />
      <Compile Include="Assets\Colorful FX\Scripts\Attributes\ColorUsageAttribute.cs" />
      <Compile Include="Assets\Colorful FX\Scripts\Attributes\HelpURLAttribute.cs" />
@@ -117,6 +116,7 @@
      <Compile Include="Assets\Matcap\MatCap Shaders\Demo\Assets\MC_AutoRotate.cs" />
      <Compile Include="Assets\Matcap\MatCap Shaders\Demo\Assets\MC_SwitchTexture.cs" />
      <Compile Include="Assets\NewBehaviourScript.cs" />
+     <Compile Include="Assets\Script\ActorWillOnRenderComponent.cs" />
      <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EditorLabel.cs" />
      <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EnableCameraDepthInForward.cs" />
      <Compile Include="Assets\ShaderForge\Example Assets\Scripts\SoftNormalsToVertexColor.cs" />
@@ -537,7 +537,7 @@
      <None Include="Assets\Colorful FX\Shaders\AnalogTV.shader" />
      <None Include="Assets\ShaderForge\Editor\InternalResources\GPU Rendering\SFN_ObjectScale\SFN_ObjectScale_Reciprocal.shader" />
      <None Include="Assets\BuildInShader\DefaultResourcesExtra\Skybox-Procedural.shader" />
-     <None Include="Assets\NewShader6.shader" />
+     <None Include="Assets\shader\Shader-Fresnel\Fresnel.shader" />
      <None Include="Assets\Shader-Cloth\Cloth.shader" />
      <None Include="Assets\BuildInShader\DefaultResourcesExtra\Nature\TreeCreator\TreeCreatorBarkOptimized.shader" />
      <None Include="Assets\BuildInShader\DefaultResourcesExtra\Particle Blend.shader" />
@@ -556,6 +556,7 @@
      <None Include="Assets\BuildInShader\DefaultResources\Internal-GUITexture.shader" />
      <None Include="Assets\NewShader2.shader" />
      <None Include="Assets\ShaderForge\Editor\InternalResources\GPU Rendering\SFN_Add\SFN_Add_5.shader" />
+     <None Include="Assets\NewShader5.shader" />
      <None Include="Assets\BuildInShader\CGIncludes\UnityStandardShadow.cginc" />
      <None Include="Assets\BuildInShader\DefaultResourcesExtra\Alpha-Glossy.shader" />
      <None Include="Assets\ShaderForge\Editor\InternalResources\GPU Rendering\SFN_Tex2dAsset\SFN_Tex2dAsset.shader" />
