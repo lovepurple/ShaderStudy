@@ -1,45 +1,60 @@
-Shader "Custom/DepthGrayscale"
+Shader "Unlit/Intersection Glow"
 {
-	SubShader
+	Properties
 	{
-		Tags{ "RenderType" = "Opaque" }
-
-		Pass
-		{
-			CGPROGRAM
-			#pragma vertex vert
-			#pragma fragment frag
-			#include "UnityCG.cginc"
-
-			sampler2D _CameraDepthTexture;
-
-			struct v2f {
-				float4 pos : SV_POSITION;
-				float4 scrPos:TEXCOORD1;
-			};
-
-			v2f vert(appdata_base v) {
-				v2f o;
-				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
-				o.scrPos = ComputeScreenPos(o.pos);
-				//for some reason, the y position of the depth texture comes out inverted
-				//o.scrPos.y = 1 - o.scrPos.y;
-				return o;
-			}
-
-			half4 frag(v2f i) : COLOR{
-				float depthValue = Linear01Depth(tex2Dproj(_CameraDepthTexture, UNITY_PROJ_COORD(i.scrPos)).r);
-			half4 depth;
-
-			depth.r = depthValue;
-			depth.g = depthValue;
-			depth.b = depthValue;
-
-			depth.a = 1;
-			return depth;
-			}
-		ENDCG
-		}
+		_Color("Color", Color) = (1,0,0,1)
 	}
-		FallBack "Diffuse"
+		SubShader
+	{
+		Tags{ "RenderType" = "Transparent" "Queue" = "Transparent" }
+		Blend One One // additive blending for a simple "glow" effect
+		Cull Off // render backfaces as well
+		ZWrite Off // don't write into the Z-buffer, this effect shouldn't block objects
+		Pass
+	{
+		CGPROGRAM
+#pragma vertex vert
+#pragma fragment frag
+
+#include "UnityCG.cginc"
+
+		struct appdata
+	{
+		float4 vertex : POSITION;
+	};
+
+	struct v2f
+	{
+		float4 screenPos : TEXCOORD0;
+		float4 vertex : SV_POSITION;
+	};
+
+	sampler2D _CameraDepthTexture; // automatically set up by Unity. Contains the scene's depth buffer
+	fixed4 _Color;
+
+	v2f vert(appdata v)
+	{
+		v2f o;
+		o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+		o.screenPos = ComputeScreenPos(o.vertex);
+		return o;
+	}
+
+	fixed4 frag(v2f i) : SV_Target
+	{
+		//Get the distance to the camera from the depth buffer for this point
+		float sceneZ = LinearEyeDepth(tex2Dproj(_CameraDepthTexture, UNITY_PROJ_COORD(i.screenPos)).r);
+	//Actual distance to the camera
+	float fragZ = i.screenPos.z;
+
+	//If the two are similar, then there is an object intersecting with our object
+	float factor = 1 - step(0.1, abs(fragZ - sceneZ));
+
+	float4 col = factor * _Color;
+	col.a = 1;
+	return col;
+	}
+		ENDCG
+	}
+	}
 }

@@ -18,11 +18,7 @@ namespace Assets.Game.Actor
             //  Camera.main.depthTextureMode |= DepthTextureMode.DepthNormals;
             Camera.main.depthTextureMode = DepthTextureMode.Depth;
         }
-        void OnRenderImage(RenderTexture source, RenderTexture destination)
-        {
-
-            Graphics.Blit(source, destination, TargetMaterial);
-        }
+      
 
 
 

@@ -211,6 +211,8 @@
     <None Include="Assets\BuildInShader\CGIncludes\AutoLight.cginc" />
     <None Include="Assets\BuildInShader\CGIncludes\HLSLSupport.cginc" />
     <None Include="Assets\BuildInShader\CGIncludes\Lighting.cginc" />
+    <None Include="Assets\BuildInShader\CGIncludes\NewSurfaceShader.shader" />
+    <None Include="Assets\BuildInShader\CGIncludes\NewUnlitShader.shader" />
     <None Include="Assets\BuildInShader\CGIncludes\SpeedTreeBillboardCommon.cginc" />
     <None Include="Assets\BuildInShader\CGIncludes\SpeedTreeCommon.cginc" />
     <None Include="Assets\BuildInShader\CGIncludes\SpeedTreeVertex.cginc" />
@@ -458,6 +460,7 @@
     <None Include="Assets\Matcap\MatCap Shaders\Textures\BenSimonds\_Textures Readme.txt" />
     <None Include="Assets\Matcap\MatCap Shaders\Textures\MaCrea\MaCrea.txt" />
     <None Include="Assets\Matcap\MatCap Shaders\_MatCap Shaders Readme.txt" />
+    <None Include="Assets\NewShader-sf.shader" />
     <None Include="Assets\NewShader.shader" />
     <None Include="Assets\NewShader2.shader" />
     <None Include="Assets\NewShader3.shader" />
@@ -812,6 +815,7 @@
     <None Include="Assets\shader\TrangleMosaic.shader" />
     <None Include="Assets\shader\UIIcon.shader" />
     <None Include="Assets\shader\Water.shader" />
+    <None Include="Assets\testdepth.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
