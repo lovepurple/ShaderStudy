@@ -88,7 +88,10 @@ Shader "Depth/InteractHightlight"
 				o.worldPos = mul(unity_ObjectToWorld,v.vertex);
 				o.worldNormal = UnityObjectToWorldNormal(v.normal);
 				o.vertexScreenPos = ComputeScreenPos(o.vertex);
-				o.vertexScreenPos.z = mul(UNITY_MATRIX_MV, v.vertex).z;
+
+				//z使用的是view坐标系里的z，也就是实际的米，在unity里宏是
+				//#define COMPUTE_EYEDEPTH(o) o = -UnityObjectToViewPos( v.vertex ).z
+				o.vertexScreenPos.z =- mul(UNITY_MATRIX_MV, v.vertex).z;
 				return o;
 			}
 
@@ -106,7 +109,7 @@ Shader "Depth/InteractHightlight"
 
 				//depth operate
 				float sceneDepth = LinearEyeDepth(tex2Dproj(_CameraDepthTexture,UNITY_PROJ_COORD(i.vertexScreenPos)).r);
-				float projZ = -i.vertexScreenPos.z;
+				float projZ = i.vertexScreenPos.z;
 
 
 				float diff = (abs(sceneDepth - projZ)) / _HightLightWidth;

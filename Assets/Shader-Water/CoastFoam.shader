@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 Shader "Water\CoastFoam"
 {
 	Properties
@@ -66,7 +68,7 @@ Shader "Water\CoastFoam"
 			// coast waves
 			pos.z += (waveXCos * _WaveWind * coastMask) * coastMask;
 			pos.y += (waveYCos * _WaveHeight * _WaveWind * 0.25) * coastMask;
-			o.pos = mul(UNITY_MATRIX_MVP, pos);
+			o.pos = UnityObjectToClipPos(pos);
 			// custom uv
 			float2 foamUV = float2(a.vertex.x *_FoamTileX, a.vertex.z *_FoamTileY);
 			float2 normalUV = float2(uv.x * 2.0, uv.y * 2.0) * 4.0;

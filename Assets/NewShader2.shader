@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 Shader "Unlit/Intersection Glow"
 {
 	Properties
@@ -35,7 +37,7 @@ Shader "Unlit/Intersection Glow"
 	v2f vert(appdata v)
 	{
 		v2f o;
-		o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+		o.vertex = UnityObjectToClipPos(v.vertex);
 		o.screenPos = ComputeScreenPos(o.vertex);
 		return o;
 	}

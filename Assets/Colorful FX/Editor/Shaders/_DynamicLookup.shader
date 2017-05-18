@@ -1,4 +1,6 @@
-﻿// Colorful FX - Unity Asset
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+// Colorful FX - Unity Asset
 // Copyright (c) 2015 - Thomas Hourdel
 // http://www.thomashourdel.com
 
@@ -28,7 +30,7 @@ Shader "Hidden/Colorful/Editor/_DynamicLookup"
 				fInput vert(vInput i)
 				{
 					fInput o;
-					o.pos = mul(UNITY_MATRIX_MVP, i.pos);
+					o.pos = UnityObjectToClipPos(i.pos);
 					o.color = i.color;
 					return o;
 				}

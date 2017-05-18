@@ -1,4 +1,6 @@
-﻿// Colorful FX - Unity Asset
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+// Colorful FX - Unity Asset
 // Copyright (c) 2015 - Thomas Hourdel
 // http://www.thomashourdel.com
 
@@ -39,7 +41,7 @@ Shader "Hidden/Colorful/Gaussian Blur"
 				fInput vert(appdata_img v)
 				{
 					fInput o;
-					o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+					o.pos = UnityObjectToClipPos(v.vertex);
 					o.uv = v.texcoord.xy;
 					float2 d1 = 1.3846153846 * _Direction;
 					float2 d2 = 3.2307692308 * _Direction;
