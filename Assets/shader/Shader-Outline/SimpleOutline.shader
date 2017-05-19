@@ -14,12 +14,13 @@ Shader "Outline/SimpleOutline"
 		{
 			Tags { "RenderType" = "Opaque" }
 
-			ZTest Off
-
-
 			Pass
 			{
+				//ZWrite Off
+			    Cull front
+				ZTest Always
 			
+
 				CGPROGRAM
 				#pragma vertex vert
 				#pragma fragment frag
@@ -59,6 +60,7 @@ Shader "Outline/SimpleOutline"
 			//使用Vertex&fragement 把主颜色显示出来
 			Pass
 			{
+
 				CGPROGRAM
 				#pragma vertex vert
 				#pragma fragment frag
