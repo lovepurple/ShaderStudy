@@ -9,6 +9,7 @@ Shader "Unlit/Rim"
 {
 	Properties
 	{
+		_MainColor("Main Color",Color) = (1,1,1,1)
 		_MainTex ("Texture", 2D) = "white" {}
 		_RimColor("Rim Color",Color) = (1.8,0.2,0.5,1.0)
 		_RimPower("Rim Power",Range(0,10)) = 2
@@ -37,6 +38,8 @@ Shader "Unlit/Rim"
 			float4 _MainTex_ST;
 			fixed4 _RimColor;
 			half _RimPower;
+
+			float4 _MainColor;
 			
 			v2f vert (appdata_base v)
 			{
@@ -58,7 +61,8 @@ Shader "Unlit/Rim"
 			fixed4 frag (v2f i) : SV_Target
 			{
 				fixed4 mainColor = tex2D(_MainTex,i.uv);
-			mainColor.rgb += _RimColor.rgb * pow((1 - i.uv2.x), _RimPower);
+			    mainColor = _MainColor;
+		
 
 				return mainColor;
 			}

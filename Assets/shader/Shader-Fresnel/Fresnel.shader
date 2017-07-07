@@ -7,6 +7,7 @@ Shader "Specular/Fresnel" {
         _MainTex("Main Texture",2D)="white"{}
         _FresnelPower("Fresnel Power",float) = 0.5
         _FresnelReflectColor("Fresnel Reflect Color",Color)=(0,0.2,1,1.0)
+		_MainColor("Main Color",Color) = (1,1,1,1)
 
     }
     SubShader {
@@ -31,6 +32,8 @@ Shader "Specular/Fresnel" {
 
             float _FresnelPower;
             float4 _FresnelReflectColor;
+
+			float4 _MainColor;
 
             struct VertexInput {
                 float4 vertex : POSITION;
@@ -58,6 +61,7 @@ Shader "Specular/Fresnel" {
                 i.viewDir = normalize(i.viewDir);
 
                 float4 col = tex2D(_MainTex,i.uv);
+				col = _MainColor;
                 float4 fresnelCol = pow(1 - max(0,dot(i.normalDir,i.viewDir)),_FresnelPower) * _FresnelReflectColor;
                 col.rgb += fresnelCol.rgb;
                 

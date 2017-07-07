@@ -8,7 +8,7 @@ Shader "PostEffect/Night Vision"
 		_MainTex("Main Tex",2D) = "white"{}
 
 		_VignetteTex("Vignette Tex",2D) = "black"{}				   //晕影贴图
-		_NoiseTex("Noise Tex",2D) = "black"{}
+		_NoiseTex("Noise Tex",2D) = "white"{}
 		_NightVisionColor("Night Vision Color",Color) = (0,1,0,1)  //夜视颜色
 		_Brightness("Brightness",Range(0,1)) = 0.5			//亮度
 		_Contrast("Contrast",float) = 1				//对比度
