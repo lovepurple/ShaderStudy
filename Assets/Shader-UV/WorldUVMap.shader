@@ -9,7 +9,7 @@ Shader "UVOperate/WorldUVMap"
 	}
 		SubShader
 	{
-		Tags { "RenderType" = "Tranparent" "Queue"="Transparent" }
+		Tags { "RenderType" = "Tranparent" "Queue" = "Transparent" }
 		LOD 100
 
 		Pass
