@@ -54,8 +54,6 @@ Shader "UVOperate/WorldUVMap"
 
 
 				fixed4 col = tex2D(_MainTex, wCoord);
-			col.rg = i.screenPos.xy;
-			col.b = 0;
 
 				return col;
 			}
