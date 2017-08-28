@@ -24,7 +24,6 @@ public class RenderShadowMap : MonoBehaviour
 
     void Start()
     {
-
     }
 
     // Update is called once per frame
@@ -36,11 +35,7 @@ public class RenderShadowMap : MonoBehaviour
     private void OnPreRender()
     {
         m_shadowCamera.RenderWithShader(m_depthGrayShader, "");
-    }
-
-    private void OnRenderImage(RenderTexture source, RenderTexture destination)
-    {
-        Graphics.Blit(m_shadowDepthTexture, destination);
+        Shader.SetGlobalTexture("_ShadowMap", m_shadowDepthTexture);
     }
 
 
@@ -59,8 +54,9 @@ public class RenderShadowMap : MonoBehaviour
         this.m_shadowDepthTexture = new RenderTexture(Screen.width, Screen.height, 24);
         this.m_shadowCamera.targetTexture = m_shadowDepthTexture;
         this.m_shadowCamera.enabled = false;
+        this.m_shadowCamera.orthographic = true;
 
-        this.m_depthGrayShader = Shader.Find("Shader Forge/sf-GrayDepthTexture");
+        this.m_depthGrayShader = Shader.Find("Hidden/SceneDepth");
     }
 
     private void UpdateSceneBounds()
@@ -70,21 +66,16 @@ public class RenderShadowMap : MonoBehaviour
 
         List<Vector3> sceneWorldConnerList = GetSceneWorldAABB(m_sceneBoundsCollider.bounds, m_sceneBoundObj.transform);
         SetLightCameraFitScene(m_light.transform, m_shadowCamera, sceneWorldConnerList);
-
     }
 
-    private Vector3 boundsCenterPos;
-    private Vector3 boundsExtension;
+
 
     /// <summary>
-    /// 获取场景
+    /// 获取场景AABB包围盒的8个顶点
     /// </summary>
     /// <param name="sceneBounds"></param>
     /// <param name="sceneBoundsTransform"></param>
     /// <returns></returns>
-    /// <remarks>
-    /// 变换AABB的算法需要稍后看一下
-    /// </remarks>
     private List<Vector3> GetSceneWorldAABB(Bounds sceneBounds, Transform sceneBoundsTransform)
     {
         Vector3 boundsCenterPos = sceneBoundsTransform.localToWorldMatrix.MultiplyPoint(sceneBounds.center);
@@ -95,72 +86,50 @@ public class RenderShadowMap : MonoBehaviour
         //下部分
         m_sceneWorldConnerList.Add(new Vector3(boundsCenterPos.x - boundsExtension.x, boundsCenterPos.y - boundsExtension.y, boundsCenterPos.z - boundsExtension.z));
         m_sceneWorldConnerList.Add(new Vector3(boundsCenterPos.x - boundsExtension.x, boundsCenterPos.y - boundsExtension.y, boundsCenterPos.z + boundsExtension.z));
-        m_sceneWorldConnerList.Add(new Vector3(boundsCenterPos.x + boundsExtension.x, boundsCenterPos.y - boundsExtension.y, boundsCenterPos.z - boundsExtension.z));
         m_sceneWorldConnerList.Add(new Vector3(boundsCenterPos.x + boundsExtension.x, boundsCenterPos.y - boundsExtension.y, boundsCenterPos.z + boundsExtension.z));
+        m_sceneWorldConnerList.Add(new Vector3(boundsCenterPos.x + boundsExtension.x, boundsCenterPos.y - boundsExtension.y, boundsCenterPos.z - boundsExtension.z));
 
         m_sceneWorldConnerList.Add(new Vector3(boundsCenterPos.x - boundsExtension.x, boundsCenterPos.y + boundsExtension.y, boundsCenterPos.z - boundsExtension.z));
         m_sceneWorldConnerList.Add(new Vector3(boundsCenterPos.x - boundsExtension.x, boundsCenterPos.y + boundsExtension.y, boundsCenterPos.z + boundsExtension.z));
-        m_sceneWorldConnerList.Add(new Vector3(boundsCenterPos.x + boundsExtension.x, boundsCenterPos.y + boundsExtension.y, boundsCenterPos.z - boundsExtension.z));
         m_sceneWorldConnerList.Add(new Vector3(boundsCenterPos.x + boundsExtension.x, boundsCenterPos.y + boundsExtension.y, boundsCenterPos.z + boundsExtension.z));
+        m_sceneWorldConnerList.Add(new Vector3(boundsCenterPos.x + boundsExtension.x, boundsCenterPos.y + boundsExtension.y, boundsCenterPos.z - boundsExtension.z));
 
         return m_sceneWorldConnerList;
     }
 
-    private Vector3 debugCubeCenter;
-    private Vector3 debugCubeSize;
 
-    private void OnDrawGizmos()
-    {
-        if (debugCubeCenter != default(Vector3) && debugCubeSize != default(Vector3))
-        {
-            Gizmos.color = Color.red;
-
-            Gizmos.DrawWireCube(debugCubeCenter, debugCubeSize);
-        }
-    }
-
-
-
+    /// <summary>
+    /// 摄像机正适应场景
+    /// </summary>
+    /// <param name="lightTransform"></param>
+    /// <param name="lightCamara"></param>
+    /// <param name="sceneConnerList"></param>
     private void SetLightCameraFitScene(Transform lightTransform, Camera lightCamara, List<Vector3> sceneConnerList)
     {
-        //scene conner 相对于light的坐标()
-        List<Vector3> sceneConnersInLightSpace = new List<Vector3>(sceneConnerList.Count);
+        AABBBounds boundsInLightSpace = new AABBBounds();
 
-
-        float xMin = 0f;
-        float xMax = 0f;
-        float yMin = 0f;
-        float yMax = 0f;
-        float zMin = 0f;
-        float zMax = 0f;
-        sceneConnerList.ForEach(worldConner =>
+        sceneConnerList.ForEach(worldConnerVertex =>
         {
-            Vector3 connerPosInLightSpace = lightTransform.worldToLocalMatrix.MultiplyPoint(worldConner);
-            xMin = Mathf.Min(xMin, connerPosInLightSpace.x);
-            xMax = Mathf.Max(xMax, connerPosInLightSpace.x);
-
-            yMin = Mathf.Min(yMin, connerPosInLightSpace.y);
-            yMax = Mathf.Max(yMax, connerPosInLightSpace.y);
-
-            zMin = Mathf.Min(zMin, connerPosInLightSpace.z);
-            zMax = Mathf.Max(zMax, connerPosInLightSpace.z);
-
-            sceneConnersInLightSpace.Add(connerPosInLightSpace);
+            Vector3 connerPosInLightSpace = lightTransform.worldToLocalMatrix.MultiplyPoint(worldConnerVertex);
+            boundsInLightSpace.UpdatePoint(connerPosInLightSpace);
         });
 
         //由于lightcamera,位置由x,y确定，z由 camera.near far确定  脑补一下侧视图 还有俯视图
         //x,y的中间就是摄像机位置，z值为near~far 需要保证near~far大于0
-        //lightCamara.transform.localPosition = new Vector3((xMax + xMin) / 2, (yMax + yMin) / 2, zMin - 0.05f);
-        //lightCamara.orthographicSize = Mathf.Max((xMax - xMin) / 2, (yMax - yMin) / 2);
-        //lightCamara.orthographic = true;
-        //lightCamara.nearClipPlane = 0.05f;
-        //lightCamara.farClipPlane = 0.05f + (zMax - zMin);
+        lightCamara.transform.localPosition = new Vector3(boundsInLightSpace.Center.x, boundsInLightSpace.Center.y, boundsInLightSpace.Min.z - 0.05f);
+        lightCamara.orthographicSize = Mathf.Max(boundsInLightSpace.Extends.x, boundsInLightSpace.Extends.y);
+        lightCamara.nearClipPlane = 0.05f;
+        lightCamara.farClipPlane = 0.05f + (boundsInLightSpace.Size.z);
 
-        GameObject markCube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        markCube.transform.parent = lightTransform;
-        markCube.transform.localRotation = Quaternion.identity;
-        markCube.transform.localPosition = new Vector3((xMin + xMax) / 2, (yMin + yMax) / 2, (zMin + zMax) / 2);
-        markCube.transform.localScale = new Vector3((xMax - xMin) / 2, (yMax - yMin) / 2, (zMax - zMin) / 2);
+        Matrix4x4 lightCameraProjectionUVMatrix = new Matrix4x4();
+        Vector3 transpose = new Vector3(0.5f, 0.5f, 0f);
+        Vector3 scale = new Vector3(0.5f, 0.5f, 1f);
+        lightCameraProjectionUVMatrix.SetTRS(transpose, Quaternion.identity, scale);
+
+        //  (P*V) *0.5 +0.5
+        lightCameraProjectionUVMatrix = lightCameraProjectionUVMatrix * GL.GetGPUProjectionMatrix(lightCamara.projectionMatrix, false) * lightCamara.worldToCameraMatrix;
+
+        Shader.SetGlobalMatrix("_LightSpaceProjectionUVMatrix", lightCameraProjectionUVMatrix);
 
     }
 

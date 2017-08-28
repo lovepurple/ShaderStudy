@@ -15,7 +15,7 @@ Shader "Shader Forge/sf-GrayDepthTexture" {
             Tags {
                 "LightMode"="ForwardBase"
             }
-            
+            Cull Off ZTest Always
             
             CGPROGRAM
             #pragma vertex vert
