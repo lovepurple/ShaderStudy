@@ -69,14 +69,14 @@ Shader "Shadow/DiffuseReceiveShadow" {
 
 						float bias = 0.005;
 
-						//直接加了个0.005   会导致有偏移（人的影 起点不在自己脚下）
+						//直接加了个0.005   会导致有偏移（人的影 起点不在自己脚下） bias
 						float depth = posInShadowMap.z + bias;
 
 						float4 baseCol = tex2D(_MainTex, i.uv);
 
 						//Shadow with bias
 						float3 worldSpaceLightDir = UnityWorldSpaceLightDir(i.worldPos);
-						bias = max(0.05 * (1.0 - dot(i.worldNormal, worldSpaceLightDir)), 0.005);			//视线跟法线角度越大，偏移越高
+						bias = max(0.05 * (1.0 - dot(i.worldNormal, worldSpaceLightDir)), 0.005);			//视线跟法线角度越大，偏移越多
 						depth = posInShadowMap.z + bias;
 
 						float f = step(depth, lightSpaceDepth);
