@@ -223,6 +223,63 @@ public static partial class GeometryUtility
             return SideOfPlane.ON;
     }
 
+    /// <summary>
+    /// 计算三角形任意点的重心坐标
+    /// </summary>
+    /// <param name="fPoint"></param>
+    /// <param name="triangleP0"></param>
+    /// <param name="triangleP1"></param>
+    /// <param name="triangleP2"></param>
+    /// <returns></returns>
+    /// <remarks>point = a * triangleP0 + b * triangelP1 + c * triangleP2</remarks>
+    public static Vector3 PointBarycentricInTriangle(Vector3 fPoint, Vector3 triangleP0, Vector3 triangleP1, Vector3 triangleP2)
+    {
+        Vector3 barycentric = Vector3.zero;
+
+        //重心坐标使用面积比实现
+        Vector3 p0ToP1 = triangleP0 - triangleP1;
+        Vector3 p0ToP2 = triangleP0 - triangleP2;
+
+        Vector3 fPointToP0 = triangleP0 - fPoint;
+        Vector3 fPointToP1 = triangleP1 - fPoint;
+        Vector3 fPointToP2 = triangleP2 - fPoint;
+
+        //三角形面积等于叉乘的1/2 
+        //叉乘的方向基于右手定则
+        Vector3 totalArea = Vector3.Cross(p0ToP1, p0ToP2);
+        Vector3 areaFP0P1 = Vector3.Cross(fPointToP0, fPointToP1);
+        Vector3 areaFP0P2 = Vector3.Cross(fPointToP2, fPointToP0);
+        Vector3 areaFP1P2 = Vector3.Cross(fPointToP1, fPointToP2);
+
+        //点乘确定方向
+        //对于每个顶点的系数是跟这个无关的三角形
+        barycentric.x = (areaFP1P2.magnitude / totalArea.magnitude) * Mathf.Sign(Vector3.Dot(areaFP1P2, totalArea));
+        barycentric.y = (areaFP0P2.magnitude / totalArea.magnitude) * Mathf.Sign(Vector3.Dot(areaFP0P2, totalArea));
+        barycentric.z = (areaFP0P1.magnitude / totalArea.magnitude) * Mathf.Sign(Vector3.Dot(areaFP0P1, totalArea));
+
+        return barycentric;
+    }
+
+    public static Vector2 GetTrianglePointByBarycentricWeight2D(Vector3 barycentricWeight, Vector2 point0, Vector2 point1, Vector2 point2)
+    {
+        return point0 * barycentricWeight.x + point1 * barycentricWeight.y + point2 * barycentricWeight.z;
+    }
+
+
+    /// <summary>
+    /// 通过barycentric 获取基于三角形的顶点
+    /// </summary>
+    /// <param name="barycentricWeight"></param>
+    /// <param name="point0"></param>
+    /// <param name="point1"></param>
+    /// <param name="point2"></param>
+    /// <returns></returns>
+    public static Vector2 GetTrianglePointByBarycentricWeight3D(Vector3 barycentricWeight, Vector3 point0, Vector3 point1, Vector3 point2)
+    {
+        return point0 * barycentricWeight.x + point1 * barycentricWeight.y + point2 * barycentricWeight.z;
+    }
+
+
     ///相对面的方向
     public enum SideOfPlane
     {
