@@ -17,7 +17,7 @@ public static partial class GeometryUtility
     public static TriangleWindingOrder GetTriangleWindingOrder(Vector3 triangleVertex0, Vector3 triangleVertex1, Vector3 triangleVertex2)
     {
         Vector3 v1CrossV2 = Vector3.Cross(triangleVertex1, triangleVertex2);
-        return Vector3.Dot(triangleVertex0, v1CrossV2) >= 0 ? TriangleWindingOrder.ClockWise : TriangleWindingOrder.CounterClockWise;
+        return Vector3.Dot(triangleVertex0, v1CrossV2) >= 0 ? TriangleWindingOrder.CounterClockWise : TriangleWindingOrder.ClockWise;
     }
 
     /// <summary>
@@ -42,7 +42,12 @@ public static partial class GeometryUtility
         //三个点在同一方向
         if (p0SideOfPlane == p1SideOfPlane && p0SideOfPlane == p2SideOfPlane)
         {
-            intersectionResult.UpperTriangleList.Add(triangle);
+            if (p0SideOfPlane == SideOfPlane.UP)
+                intersectionResult.UpperTriangleList.Add(triangle);
+
+            if (includePlaneBack && p0SideOfPlane == SideOfPlane.DOWN)
+                intersectionResult.UnderTriangleList.Add(triangle);
+
             return intersectionResult;
         }
         //两个点在Plane上
@@ -210,7 +215,7 @@ public static partial class GeometryUtility
                         if (includePlaneBack)
                         {
                             intersectionResult.UnderTriangleList.Add(triangle0);
-                            intersectionResult.UpperTriangleList.Add(triangle1);
+                            intersectionResult.UnderTriangleList.Add(triangle1);
                         }
                     }
                 }
@@ -236,7 +241,7 @@ public static partial class GeometryUtility
 
                         if (includePlaneBack)
                         {
-                            intersectionResult.UpperTriangleList.Add(triangle1);
+                            intersectionResult.UnderTriangleList.Add(triangle1);
                             intersectionResult.UnderTriangleList.Add(triangle2);
                         }
                     }
@@ -265,7 +270,7 @@ public static partial class GeometryUtility
             intersectionResult.IntersectionPointList.Add(intersectionPoint1);
 
             Triangle triangle0 = new Triangle(intersectionPoint0, p0, intersectionPoint1, intersectionPointUV0, triangle.UV0, intersectionPointUV1);
-            Triangle triangle1 = new Triangle(intersectionPoint1, p0, p2, intersectionPointUV1, triangle.UV0, triangle.UV2);
+            Triangle triangle1 = new Triangle(p0, p1, intersectionPoint1, triangle.UV0, triangle.UV1, intersectionPointUV1);
             Triangle triangle2 = new Triangle(intersectionPoint0, intersectionPoint1, p2, intersectionPointUV0, intersectionPointUV1, triangle.UV2);
 
             if (p2SideOfPlane == SideOfPlane.UP)
@@ -356,6 +361,75 @@ public static partial class GeometryUtility
 
         return GetTriangleWindingOrder(vertex0, vertex1, vertex2);
 
+    }
+
+    /// <summary>
+    /// 构建凸包图
+    /// </summary>
+    /// <param name="points"></param>
+    /// <param name="normal">维度方向</param>
+    /// <returns></returns>
+    /// <remarks>基于Andrew monotone chain 算法，时间复杂度nlogn 在几个凸包算法中表现比较好</remarks>
+    public static List<Vector3> CreateConvexhullByMonotoneChain(List<Vector3> points, Vector3 normal)
+    {
+
+        return null;
+    }
+
+    /// <summary>
+    /// Andrew monotone chain算法，计算凸边形
+    /// </summary>
+    /// <param name="inVertices">输入的无序2维点</param>
+    /// <param name="convexHullVertices">输出凸边形顶点</param>
+    /// <param name="triangles">triangle indices</param>
+    /// <param name="uvs">输出uv</param>
+    /// <returns></returns>
+    public static void MonotoneChain(List<Vector2> inVertices, out List<Vector2> convexHullVertices, out List<Vector2> uvs, out List<int> triangles)
+    {
+        convexHullVertices = new List<Vector2>();
+        uvs = new List<Vector2>();
+        triangles = new List<int>();
+
+        if (inVertices.Count < 3)
+            return;
+
+        inVertices.Sort((lVector, rVector) =>
+        {
+            return (lVector.x < rVector.x) || ((lVector.x == rVector.x) && (lVector.y < rVector.y)) ? -1 : 1;
+        });
+
+
+
+        Vector2[] convexVertex = new Vector2[inVertices.Count];
+
+        //算法非常巧妙
+
+        int converxIndex = 0;
+
+        //bottom convex hull
+        for (int i = 0; i < inVertices.Count; ++i)
+        {
+            while (converxIndex >= 2)
+            {
+                Vector2 vertex0 = convexVertex[converxIndex - 2];
+                Vector2 vertex1 = convexVertex[converxIndex - 1];
+                Vector2 current = inVertices[i];
+
+                float crossValue = Cross((vertex1 - vertex0), (current - vertex0));
+                if (crossValue < 0)
+                    converxIndex--;
+                else
+                    break;
+            }
+            convexVertex[converxIndex++] = inVertices[i];
+        }
+
+        ////up convex hull
+        //for (int i = inVertices.Count - 2, t = converxIndex + 1; i >= 0; --i)
+        //{
+
+        //}
+        convexHullVertices.AddRange(convexVertex);
     }
 
     /// <summary>
