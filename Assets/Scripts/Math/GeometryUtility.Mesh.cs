@@ -403,6 +403,8 @@ public static partial class GeometryUtility
         Vector2[] convexVertex = new Vector2[inVertices.Count];
 
         //算法非常巧妙
+        //判断前一个点是否在 当前点与前两个点的正方向，如果在正方向说明前一个点是个无用点（凹点）
+        //2D向量的cross直接判断目标点的方向
 
         int converxIndex = 0;
 
