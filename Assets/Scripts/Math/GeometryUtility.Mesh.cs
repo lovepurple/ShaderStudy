@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 /// <summary>
 /// 模型相关计算的工具类
@@ -364,74 +366,197 @@ public static partial class GeometryUtility
     }
 
     /// <summary>
-    /// 构建凸包图
+    /// 构建凸包模型
     /// </summary>
     /// <param name="points"></param>
     /// <param name="normal">维度方向</param>
     /// <returns></returns>
     /// <remarks>基于Andrew monotone chain 算法，时间复杂度nlogn 在几个凸包算法中表现比较好</remarks>
-    public static List<Vector3> CreateConvexhullByMonotoneChain(List<Vector3> points, Vector3 normal)
+    public static Mesh CreateConvexhullMeshByMonotoneChain(List<Vector3> points, Vector3 normal, TriangleWindingOrder windingOrder = TriangleWindingOrder.CounterClockWise)
     {
+        Vector3 planeRight = Mathf.Abs(normal.x) > Mathf.Abs(normal.y) ? new Vector3(0, 1, 0) : new Vector3(1, 0, 0);
+        Vector3 vAxis = Vector3.Cross(planeRight, normal).normalized;
+        Vector3 uAxis = Vector3.Cross(normal, vAxis).normalized;
 
-        return null;
+        Vector3[] meshVertices;
+        Vector2[] meshUVs;
+        int[] meshTriangles;
+
+        bool isValid = CreateConvexHullByMonotoneChain(points, uAxis, vAxis, out meshVertices, out meshUVs, out meshTriangles, windingOrder);
+        if (!isValid)
+            return null;
+
+        Mesh convexHullMesh = new Mesh();
+        convexHullMesh.vertices = meshVertices;
+        convexHullMesh.uv = meshUVs;
+        convexHullMesh.triangles = meshTriangles;
+
+        convexHullMesh.RecalculateNormals();
+        convexHullMesh.RecalculateTangents();
+
+        return convexHullMesh;
     }
 
     /// <summary>
     /// Andrew monotone chain算法，计算凸边形
     /// </summary>
-    /// <param name="inVertices">输入的无序2维点</param>
+    /// <param name="inVertices">输入的无序3维点</param>
+    /// <param name="uAxis">降维x方向</param>
+    /// <param name="vAxis">降维y方向</param>
     /// <param name="convexHullVertices">输出凸边形顶点</param>
     /// <param name="triangles">triangle indices</param>
     /// <param name="uvs">输出uv</param>
     /// <returns></returns>
-    public static void MonotoneChain(List<Vector2> inVertices, out List<Vector2> convexHullVertices, out List<Vector2> uvs, out List<int> triangles)
+    public static bool CreateConvexHullByMonotoneChain(List<Vector3> inVertices, Vector3 uAxis, Vector3 vAxis, out Vector3[] convexHullVertices, out Vector2[] uvs, out int[] triangles, TriangleWindingOrder triangleWindingOrder = TriangleWindingOrder.CounterClockWise)
     {
-        convexHullVertices = new List<Vector2>();
-        uvs = new List<Vector2>();
-        triangles = new List<int>();
+        convexHullVertices = new Vector3[0];
+        uvs = new Vector2[0];
+        triangles = new int[0];
 
         if (inVertices.Count < 3)
-            return;
+            return false;
 
-        inVertices.Sort((lVector, rVector) =>
+        float uMax = float.MinValue;
+        float uMin = float.MaxValue;
+        float vMax = float.MinValue;
+        float vMin = float.MaxValue;
+
+        //3D降维到2D
+        Dictionary<Vector2, Mapped2DVector> vector2DAndMappedDict = new Dictionary<Vector2, Mapped2DVector>();
+        for (int i = 0; i < inVertices.Count; ++i)
+        {
+            Mapped2DVector mappedVector = new Mapped2DVector(inVertices[i], uAxis, vAxis);
+            if (!vector2DAndMappedDict.ContainsKey(mappedVector.MappedVector2))
+            {
+                vector2DAndMappedDict.Add(mappedVector.MappedVector2, mappedVector);
+
+                uMax = Mathf.Max(uMax, mappedVector.MappedVector2.x);
+                uMin = Mathf.Min(uMin, mappedVector.MappedVector2.x);
+                vMax = Mathf.Max(vMax, mappedVector.MappedVector2.y);
+                vMin = Mathf.Min(vMin, mappedVector.MappedVector2.y);
+            }
+        }
+
+        List<Vector2> inVertexPoints = vector2DAndMappedDict.Keys.ToList();
+        List<Vector2> convexHullByMonotoneChain = MonotoneChain(inVertexPoints.ToArray()).ToList();
+
+        convexHullVertices = new Vector3[convexHullByMonotoneChain.Count];
+        uvs = new Vector2[convexHullByMonotoneChain.Count];
+
+        //计算uv
+        for (int i = 0; i < convexHullByMonotoneChain.Count; ++i)
+        {
+            Vector2 point2D = convexHullByMonotoneChain[i];
+
+            convexHullVertices[i] = vector2DAndMappedDict[point2D].OriginalVector;
+
+            Vector2 pointUV = new Vector2();
+            pointUV.x = MathUtils.Remap(point2D.x, uMax, uMin, 1, 0);
+            pointUV.y = MathUtils.Remap(point2D.y, vMax, vMin, 1, 0);
+
+            uvs[i] = pointUV;
+        }
+
+        //根据WindingOrder计算triangle
+        int index = 1;
+        triangles = new int[(convexHullByMonotoneChain.Count - 2) * 3];
+
+        for (int i = 0; i < triangles.Length; i += 3)
+        {
+            triangles[i] = 0;
+            if (triangleWindingOrder == TriangleWindingOrder.CounterClockWise)
+            {
+                triangles[i + 1] = index;
+                triangles[i + 2] = index + 1;
+            }
+            else
+            {
+                triangles[i + 1] = index + 1;
+                triangles[i + 2] = index;
+            }
+
+            index++;
+        }
+
+        return true;
+    }
+
+    /// <summary>
+    /// Andrew Monotone Chain算法
+    /// </summary>
+    /// <param name="inPoints"></param>
+    /// <returns></returns>
+    public static Vector2[] MonotoneChain(Vector2[] inPoints)
+    {
+        if (inPoints.Length < 3)
+            return null;
+
+        Array.Sort(inPoints, (lVector, rVector) =>
         {
             return (lVector.x < rVector.x) || ((lVector.x == rVector.x) && (lVector.y < rVector.y)) ? -1 : 1;
         });
 
-
-
-        Vector2[] convexVertex = new Vector2[inVertices.Count];
+        //初始大小
+        Vector2[] tempConvexHull = new Vector2[inPoints.Length + 1];
 
         //算法非常巧妙
         //判断前一个点是否在 当前点与前两个点的正方向，如果在正方向说明前一个点是个无用点（凹点）
         //2D向量的cross直接判断目标点的方向
-
-        int converxIndex = 0;
+        int convexIndex = 0;
 
         //bottom convex hull
-        for (int i = 0; i < inVertices.Count; ++i)
+        for (int i = 0; i < inPoints.Length; ++i)
         {
-            while (converxIndex >= 2)
+            while (convexIndex >= 2)
             {
-                Vector2 vertex0 = convexVertex[converxIndex - 2];
-                Vector2 vertex1 = convexVertex[converxIndex - 1];
-                Vector2 current = inVertices[i];
+                Vector2 vertex0 = tempConvexHull[convexIndex - 2];
+                Vector2 vertex1 = tempConvexHull[convexIndex - 1];
+                Vector2 current = inPoints[i];
 
                 float crossValue = Cross((vertex1 - vertex0), (current - vertex0));
                 if (crossValue < 0)
-                    converxIndex--;
+                    convexIndex--;
                 else
                     break;
             }
-            convexVertex[converxIndex++] = inVertices[i];
+            tempConvexHull[convexIndex] = inPoints[i];
+
+            convexIndex++;
         }
 
-        ////up convex hull
-        //for (int i = inVertices.Count - 2, t = converxIndex + 1; i >= 0; --i)
-        //{
+        //干掉两点之间下面的点
+        //构建上凸边，k当前值是 下边总数+1， 使用t限制上凸包的开始
+        //例如：
+        //       在上一步计算出的下凸点数量为5，k = 6,则下凸边的开始为7，如果点数低于7，都是上边界
+        //upper convex hull
+        int upperConvexStartIndex = convexIndex + 1;
+        for (int i = inPoints.Length - 2; i >= 0; --i)
+        {
+            while (convexIndex >= upperConvexStartIndex)
+            {
+                Vector2 vertex0 = tempConvexHull[convexIndex - 2];
+                Vector2 vertex1 = tempConvexHull[convexIndex - 1];
+                Vector2 current = inPoints[i];
 
-        //}
-        convexHullVertices.AddRange(convexVertex);
+                float crossValue = Cross((vertex1 - vertex0), (current - vertex0));
+                if (crossValue < 0)
+                    convexIndex--;
+                else
+                    break;
+            }
+            tempConvexHull[convexIndex] = inPoints[i];
+
+            convexIndex++;
+        }
+
+        int finalConvexPointCount = convexIndex - 1;
+        if (finalConvexPointCount < 3)
+            return null;
+
+        Vector2[] finalConvexHullPoints = new Vector2[finalConvexPointCount];
+        Array.Copy(tempConvexHull, finalConvexHullPoints, finalConvexPointCount);
+
+        return finalConvexHullPoints;
     }
 
     /// <summary>

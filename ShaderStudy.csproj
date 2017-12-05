@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.6.0f3</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -79,7 +81,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Advanced\Deferred Shading\GetMRT.cs" />
-    <Compile Include="Assets\CalculateCoor.cs" />
+    <Compile Include="Assets\Advanced\Screen Space AO\SSAO.cs" />
+    <Compile Include="Assets\ClipMeshDemo.cs" />
     <Compile Include="Assets\Colorful FX\Scripts\Attributes\ColorUsageAttribute.cs" />
     <Compile Include="Assets\Colorful FX\Scripts\Attributes\HelpURLAttribute.cs" />
     <Compile Include="Assets\Colorful FX\Scripts\Attributes\MinAttribute.cs" />
@@ -145,6 +148,7 @@
     <Compile Include="Assets\Colorful FX\Scripts\Effects\WaveDistortion.cs" />
     <Compile Include="Assets\Colorful FX\Scripts\Effects\WhiteBalance.cs" />
     <Compile Include="Assets\Colorful FX\Scripts\Effects\Wiggle.cs" />
+    <Compile Include="Assets\DepthNormals.cs" />
     <Compile Include="Assets\DissolveShader\DemoSzene\Timed.cs" />
     <Compile Include="Assets\JCDeferredShading\JCDSCamera.cs" />
     <Compile Include="Assets\JCDeferredShading\JCDSRenderTexture.cs" />
@@ -153,6 +157,8 @@
     <Compile Include="Assets\JMO Assets\MatCap Shaders\Demo\Assets\MC_SwitchTexture.cs" />
     <Compile Include="Assets\Mirror Shaders\Mirror.cs" />
     <Compile Include="Assets\PostEffect.cs" />
+    <Compile Include="Assets\RenderDepthTexture.cs" />
+    <Compile Include="Assets\Res\Scene\Postapo Cartoon\Props\Models\CullModel.cs" />
     <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\Antialiasing.cs" />
     <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\Bloom.cs" />
     <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\BloomAndFlares.cs" />
@@ -191,13 +197,37 @@
     <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\Twirl.cs" />
     <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\VignetteAndChromaticAberration.cs" />
     <Compile Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Scripts\Vortex.cs" />
-    <Compile Include="Assets\Script\DepthTexture.cs" />
+    <Compile Include="Assets\RoundConnerRectangle.cs" />
+    <Compile Include="Assets\Scenes\PBR\PBRWater\OrbitCamera.cs" />
+    <Compile Include="Assets\Scripts\Geomerty\Mapped2DVector.cs" />
+    <Compile Include="Assets\Scripts\Math\MathUtils.cs" />
+    <Compile Include="Assets\Script\CalPosByDistanceAndRotation.cs" />
+    <Compile Include="Assets\Script\DepthNormalTexture.cs" />
     <Compile Include="Assets\Script\EnvironmentUpdater.cs" />
     <Compile Include="Assets\Script\LensFlare.cs" />
     <Compile Include="Assets\Script\NightVision.cs" />
+    <Compile Include="Assets\Script\PlanarShadowOnArbitraryPlane.cs" />
     <Compile Include="Assets\Scripts\AABBBounds.cs" />
+    <Compile Include="Assets\Scripts\Billboard.cs" />
+    <Compile Include="Assets\Scripts\CascadeShadowmap.cs" />
     <Compile Include="Assets\Scripts\FollowTargetEditor.cs" />
+    <Compile Include="Assets\Scripts\GeomertyDecal\DecalVertex.cs" />
+    <Compile Include="Assets\Scripts\GeomertyDecal\GeomertyDecal.cs" />
+    <Compile Include="Assets\Scripts\GeomertyDecal\GeomertyDecalDemo.cs" />
+    <Compile Include="Assets\Scripts\GeomertyDecal\GeomertyDecalUtility.cs" />
+    <Compile Include="Assets\Scripts\Math\FrustumUtility.cs" />
+    <Compile Include="Assets\Scripts\Math\GeometryUtility.Intersection2D.cs" />
+    <Compile Include="Assets\Scripts\Math\GeometryUtility.IntersectionResult.cs" />
+    <Compile Include="Assets\Scripts\Math\GeometryUtility.Mesh.cs" />
+    <Compile Include="Assets\Scripts\Math\GeometryUtility.cs" />
+    <Compile Include="Assets\Scripts\Math\RelationBetweenPointAndPlane.cs" />
+    <Compile Include="Assets\Scripts\Mesh Slicer\MeshHull.cs" />
+    <Compile Include="Assets\Scripts\Mesh Slicer\MeshSlicer.cs" />
+    <Compile Include="Assets\Scripts\Mesh Slicer\SlicedMesh.cs" />
+    <Compile Include="Assets\Scripts\Mesh Slicer\Triangle.cs" />
     <Compile Include="Assets\Scripts\RenderShadowMap.cs" />
+    <Compile Include="Assets\Scripts\TextureArray.cs" />
+    <Compile Include="Assets\Scripts\TextureUtility.cs" />
     <Compile Include="Assets\Scripts\behaviac\runtime\Agent\Agent.cs" />
     <Compile Include="Assets\Scripts\behaviac\runtime\Agent\Context.cs" />
     <Compile Include="Assets\Scripts\behaviac\runtime\Base\Attributs.cs" />
@@ -276,9 +306,11 @@
     <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EditorLabel.cs" />
     <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EnableCameraDepthInForward.cs" />
     <Compile Include="Assets\ShaderForge\Example Assets\Scripts\SoftNormalsToVertexColor.cs" />
+    <Compile Include="Assets\TestMeshClip.cs" />
     <Compile Include="Assets\flipfont.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Arenmegil\readme.txt" />
     <None Include="Assets\BuildInShader\CGIncludes\AutoLight.cginc" />
     <None Include="Assets\BuildInShader\CGIncludes\HLSLSupport.cginc" />
     <None Include="Assets\BuildInShader\CGIncludes\Lighting.cginc" />
@@ -531,14 +563,15 @@
     <None Include="Assets\JMO Assets\MatCap Shaders\Textures\BenSimonds\_Textures Readme.txt" />
     <None Include="Assets\JMO Assets\MatCap Shaders\Textures\MaCrea\MaCrea.txt" />
     <None Include="Assets\JMO Assets\MatCap Shaders\_MatCap Shaders Readme.txt" />
+    <None Include="Assets\Mesh\leeperrysmith\LeePerrySmith.js.txt" />
+    <None Include="Assets\Mesh\leeperrysmith\LeePerrySmith_License.txt" />
     <None Include="Assets\Mirror Shaders\Mirror-AlphaBumpSpec.shader" />
     <None Include="Assets\Mirror Shaders\Mirror-AlphaSpecSphere.shader" />
     <None Include="Assets\Mirror Shaders\Mirror-BumpSpec.shader" />
-    <None Include="Assets\NewShader3.shader" />
-    <None Include="Assets\Offset.shader" />
     <None Include="Assets\Outlighting.shader" />
     <None Include="Assets\OutlineWithViewDirAndNormal.shader" />
     <None Include="Assets\PhotoshopLevel.shader" />
+    <None Include="Assets\PlanarShadowbyGroup.shader" />
     <None Include="Assets\PostOutline.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\Forward\MK4_Forwad_Streets.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\Forward\MK4_Forward_Billboard.shader" />
@@ -642,16 +675,22 @@
     <None Include="Assets\Resources\Shader\Deferred\TestGBufferOutput.shader" />
     <None Include="Assets\Resources\Shader\Deferred\TestMRT.shader" />
     <None Include="Assets\Resources\Shader\Deferred\ViewDepth.shader" />
+    <None Include="Assets\Resources\Shader\Other\TextureArray.shader" />
+    <None Include="Assets\Resources\Shader\Resources\Shader-PostEffect\SSAO\Resources\SSAO.shader" />
+    <None Include="Assets\Resources\Shader\Resources\Shader-Shadow\DiffuseReceiveCascadedShadow.shader" />
+    <None Include="Assets\Resources\Shader\Resources\Shader-Shadow\PlanarShadow.shader" />
+    <None Include="Assets\Resources\Shader\Resources\Shader-Shadow\PlanarShadowOnCustomPlanar.shader" />
     <None Include="Assets\Resources\Shader\Shader-Depth\DepthBlend.shader" />
     <None Include="Assets\Resources\Shader\Shader-Depth\DepthCompare.shader" />
+    <None Include="Assets\Resources\Shader\Shader-Depth\DepthNormalTexture.shader" />
     <None Include="Assets\Resources\Shader\Shader-Depth\DepthTexture.shader" />
     <None Include="Assets\Resources\Shader\Shader-Depth\DepthWater.shader" />
+    <None Include="Assets\Resources\Shader\Shader-Depth\DiffuseReceivePCFShadow.shader" />
     <None Include="Assets\Resources\Shader\Shader-Depth\DiffuseReceiveShadow.shader" />
     <None Include="Assets\Resources\Shader\Shader-Depth\InteractHightlight.shader" />
     <None Include="Assets\Resources\Shader\Shader-Depth\NewShader.shader" />
     <None Include="Assets\Resources\Shader\Shader-Depth\SceneDepth.shader" />
     <None Include="Assets\Resources\Shader\Shader-Depth\sf-GrayDepthTexture.shader" />
-    <None Include="Assets\Resources\TestPostUV.shader" />
     <None Include="Assets\Scripts\behaviac\runtime\license.txt" />
     <None Include="Assets\Scripts\behaviac\runtime\readme.txt" />
     <None Include="Assets\Scripts\behaviac\runtime\version.txt" />
@@ -890,19 +929,22 @@
     <None Include="Assets\ShaderForge\Example Assets\Shaders\VertexColorRounding.shader" />
     <None Include="Assets\ShaderForge\Readme.txt" />
     <None Include="Assets\SilhouetteDiffuse.shader" />
+    <None Include="Assets\SimplePBR.shader" />
+    <None Include="Assets\TestPostUV.shader" />
     <None Include="Assets\Textures\ocean-Textures\NewSurfaceShader.shader" />
+    <None Include="Assets\ViewTangent.shader" />
     <None Include="Assets\ZTestShader\TestA.shader" />
     <None Include="Assets\ZTestShader\TestB.shader" />
     <None Include="Assets\ZTestShader\TestC.shader" />
-    <None Include="Assets\sf-test.shader" />
+    <None Include="Assets\sf-DebugDepth.shader" />
+    <None Include="Assets\sf-PbrWater.shader" />
+    <None Include="Assets\sf-TextureArray.shader" />
+    <None Include="Assets\sf-VertexColor.shader" />
+    <None Include="Assets\shader\AdvancedShading\AreaLight\QuadAreaLight.shader" />
     <None Include="Assets\shader\CircleMosaic.shader" />
     <None Include="Assets\shader\Cook-Torrance.shader" />
     <None Include="Assets\shader\Gray.shader" />
     <None Include="Assets\shader\Heart.shader" />
-    <None Include="Assets\shader\LightFace.cginc" />
-    <None Include="Assets\shader\Main Role.shader" />
-    <None Include="Assets\shader\Mobile\TerrainX\Lightface\LightFace.cginc" />
-    <None Include="Assets\shader\Mobile\TerrainX\Lightface\Role.shader" />
     <None Include="Assets\shader\Projector.shader" />
     <None Include="Assets\shader\RadiusEdge.shader" />
     <None Include="Assets\shader\RectMosaic.shader" />
@@ -917,8 +959,13 @@
     <None Include="Assets\shader\Shader-Outline\Outline-DepthTexture.shader" />
     <None Include="Assets\shader\Shader-Outline\SimpleOutline.shader" />
     <None Include="Assets\shader\Shader-Overlay\LensFlare.shader" />
+    <None Include="Assets\shader\Shader-PBR\CartoonPbrWater.shader" />
+    <None Include="Assets\shader\Shader-PBR\PBR-Metallic.shader" />
     <None Include="Assets\shader\Shader-PBR\SH.shader" />
+    <None Include="Assets\shader\Shader-PBR\sf-BasePBR.shader" />
+    <None Include="Assets\shader\Shader-PBR\sf-pbr-water.shader" />
     <None Include="Assets\shader\Shader-Reflact&amp;Refract\SimpleGlass.shader" />
+    <None Include="Assets\shader\Shader-Transform\Billboard-Selfillum.shader" />
     <None Include="Assets\shader\Shadertoy.cginc" />
     <None Include="Assets\shader\SimpleWave.shader" />
     <None Include="Assets\shader\TrangleMosaic.shader" />

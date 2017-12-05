@@ -7,7 +7,6 @@
 	{
 		Pass
 		{
-				
 
 			CGPROGRAM
 			#pragma vertex vert
@@ -36,7 +35,7 @@
 
 			fixed4 frag(v2f i) : SV_Target
 			{
-				return EncodeFloatRGBA(i.depth.x / i.depth.y);
+				return EncodeFloatRGBA(i.depth.x / i.depth.y);			//不使用深度图，直接使用z并转换成颜色输出
 			}
 			ENDCG
 		}

@@ -260,6 +260,14 @@ public static partial class GeometryUtility
         return barycentric;
     }
 
+    /// <summary>
+    /// 通过barycentric权重获取对应的点
+    /// </summary>
+    /// <param name="barycentricWeight"></param>
+    /// <param name="point0"></param>
+    /// <param name="point1"></param>
+    /// <param name="point2"></param>
+    /// <returns></returns>
     public static Vector2 GetTrianglePointByBarycentricWeight2D(Vector3 barycentricWeight, Vector2 point0, Vector2 point1, Vector2 point2)
     {
         return point0 * barycentricWeight.x + point1 * barycentricWeight.y + point2 * barycentricWeight.z;
