@@ -194,7 +194,7 @@ public static partial class GeometryUtility
                 if (plane.GetSegmentPlaneIntersectionPoint(p1, p2, out intersectionPoint1))
                 {
                     Vector3 barycentricWeight1 = PointBarycentricInTriangle(intersectionPoint1, p0, p1, p2);
-                    Vector3 intersectionPointUV1 = GetTrianglePointByBarycentricWeight2D(barycentricWeight1, triangle.UV0, triangle.UV1, triangle.UV2);
+                    Vector2 intersectionPointUV1 = GetTrianglePointByBarycentricWeight2D(barycentricWeight1, triangle.UV0, triangle.UV1, triangle.UV2);
 
                     Triangle triangle0 = new Triangle(p0, intersectionPoint0, intersectionPoint1, triangle.UV0, intersectionPointUV0, intersectionPointUV1);
                     Triangle triangle1 = new Triangle(p0, intersectionPoint1, p2, triangle.UV0, intersectionPointUV1, triangle.UV2);
@@ -228,14 +228,14 @@ public static partial class GeometryUtility
                 if (plane.GetSegmentPlaneIntersectionPoint(p0, p2, out intersectionPoint1))
                 {
                     Vector3 barycentricWeight1 = PointBarycentricInTriangle(intersectionPoint1, p0, p1, p2);
-                    Vector3 intersectionPointUV1 = GetTrianglePointByBarycentricWeight2D(barycentricWeight1, triangle.UV0, triangle.UV1, triangle.UV2);
+                    Vector2 intersectionPointUV1 = GetTrianglePointByBarycentricWeight2D(barycentricWeight1, triangle.UV0, triangle.UV1, triangle.UV2);
 
                     intersectionResult.IntersectionPointList.Add(intersectionPoint1);
 
                     Triangle triangle0 = new Triangle(p0, intersectionPoint0, intersectionPoint1, triangle.UV0, intersectionPointUV0, intersectionPointUV1);
 
                     Triangle triangle1 = new Triangle(intersectionPoint0, p1, p2, intersectionPointUV0, triangle.UV1, triangle.UV2);
-                    Triangle triangle2 = new Triangle(intersectionPoint1, intersectionPoint0, p2, triangle.UV1, intersectionPointUV0, intersectionPointUV1);
+                    Triangle triangle2 = new Triangle(intersectionPoint1, intersectionPoint0, p2, intersectionPointUV1, intersectionPointUV0, triangle.UV2);
 
                     if (p0SideOfPlane == SideOfPlane.UP)
                     {
