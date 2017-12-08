@@ -10,17 +10,20 @@ public class GeomertyDecalDemo : MonoBehaviour
 
     private GeomertyDecal decal = null;
     private Vector3 m_decalPosition = default(Vector3);
+    private Vector3 m_decalPointNormal = default(Vector3);
+
     private Mesh m_decalMesh = null;
 
     public bool DebugDecalProjector = false;
     public bool DebugDecalMesh = false;
 
 
-    void Start()
-    {
-        if (DecalMaterial != null)
-            decal = new GeomertyDecal(DecalMaterial);
-    }
+    private Vector3 m_targetMeshPosition = Vector3.zero;
+    private Vector3 m_targetMeshRotation = Vector3.zero;
+    private Vector3 m_targetMeshScale = Vector3.one;
+    private Matrix4x4 m_targetMeshTRSMatrix = Matrix4x4.identity;
+
+    private Mesh m_debugMesh = null;
 
     void Update()
     {
@@ -32,46 +35,37 @@ public class GeomertyDecalDemo : MonoBehaviour
             if (Physics.Raycast(cameraRay, out rayCastHitInfo))
             {
                 this.m_decalPosition = rayCastHitInfo.point;
+                this.m_decalPointNormal = rayCastHitInfo.normal;
 
-                StampDecalOnTarget(rayCastHitInfo.collider.gameObject, this.m_decalPosition);
+                this.m_targetMeshPosition = rayCastHitInfo.collider.gameObject.transform.position;
+                this.m_targetMeshRotation = rayCastHitInfo.collider.gameObject.transform.localRotation.eulerAngles;
+                this.m_targetMeshScale = rayCastHitInfo.collider.gameObject.transform.localScale;
+                this.m_targetMeshTRSMatrix = Matrix4x4.TRS(this.m_targetMeshPosition, Quaternion.Euler(this.m_targetMeshRotation), this.m_targetMeshScale);
+                Debug.Log(rayCastHitInfo.normal);
+                //StampDecalOnTarget(rayCastHitInfo.collider.gameObject, m_decalPosition, m_decalPointNormal, m_targetMeshTRSMatrix);
             }
-
         }
-
     }
 
 
-
-    private void ModifyTriangles(Mesh mesh)
-    {
-        int[] triangles = new int[] {  0, 1, 2, 1, 0,  3 };
-        mesh.triangles = triangles; 
-
-    }
-
-
-    private void StampDecalOnTarget(GameObject targetGameObject, Vector3 decalPosition)
+    private void StampDecalOnTarget(GameObject targetGameObject, Vector3 decalPosition, Vector3 decalPointNormal, Matrix4x4 originMeshTRS)
     {
         MeshFilter targetMeshFilter = targetGameObject.GetComponent<MeshFilter>();
         if (!targetMeshFilter)
             return;
 
         Mesh targetMesh = targetMeshFilter.mesh;
+        GeomertyDecal decal = new GeomertyDecal(DecalMaterial, originMeshTRS);
+        Mesh decalMesh = decal.StampDecal(targetMesh, decalPosition, DecalSize, DecalRotationEuler, decalPointNormal);
 
-        ModifyTriangles(targetMesh);
-        return;
+        //debugMesh = ss.StampDecal(targetMesh, decalPosition, DecalSize, DecalRotationEuler, this.targetNormal);
+        //debugMesh.ApplyTransposeMatrix(Matrix4x4.Scale(m_targetMeshScale));
 
-        Matrix4x4 meshLocalToWorldMatrix = targetGameObject.transform.localToWorldMatrix;
-        this.m_decalMesh = decal.GetDecalMesh(targetMesh, meshLocalToWorldMatrix, decalPosition, DecalSize, DecalRotationEuler);
-
-        GameObject testGameObject = new GameObject();
-        MeshFilter mf = testGameObject.AddComponent<MeshFilter>();
-        mf.mesh = m_decalMesh;
-        MeshRenderer renderer = testGameObject.AddComponent<MeshRenderer>();
-        renderer.material = DecalMaterial;
+        m_debugMesh = GameObject.Instantiate(decalMesh);
 
 
     }
+
 
 
     private void OnDrawGizmos()
@@ -87,15 +81,22 @@ public class GeomertyDecalDemo : MonoBehaviour
 
     private void DrawDecalProjector()
     {
+        Gizmos.color = Color.green;
+        Gizmos.DrawSphere(this.m_decalPosition, 0.05f);
+
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireCube(this.m_decalPosition, DecalSize);
+
+        Vector3 xAxis = Vector3.Cross(m_decalPointNormal, Vector3.up).normalized;
+        Vector3 yAxis = Vector3.Cross(m_decalPointNormal, xAxis).normalized;
+
+        Gizmos.DrawLine(this.m_decalPosition, this.m_decalPosition + xAxis);
+        Gizmos.DrawLine(this.m_decalPosition, this.m_decalPosition + yAxis);
+
     }
 
     private void DrawDecalMesh()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireMesh(this.m_decalMesh);
+        Gizmos.DrawWireMesh(this.m_debugMesh);
     }
-
-
 }

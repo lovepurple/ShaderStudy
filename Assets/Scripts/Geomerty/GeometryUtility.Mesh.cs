@@ -302,10 +302,14 @@ public static partial class GeometryUtility
     /// 通过triangleList创建Unity的Mesh
     /// </summary>
     /// <param name="triangleList"></param>
+    /// <param name="meshTransposeMatrix"></param>
     /// <param name="windingOrder"></param>
     /// <returns></returns>
-    public static Mesh CreateUnityMeshByTriangleList(List<Triangle> triangleList, TriangleWindingOrder windingOrder = TriangleWindingOrder.CounterClockWise)
+    public static Mesh CreateUnityMeshByTriangleList(List<Triangle> triangleList, Matrix4x4 meshTransposeMatrix = default(Matrix4x4), TriangleWindingOrder windingOrder = TriangleWindingOrder.CounterClockWise)
     {
+        if (meshTransposeMatrix == default(Matrix4x4))
+            meshTransposeMatrix = Matrix4x4.identity;
+
         Mesh unityMesh = new Mesh();
 
         Vector3[] vertices = new Vector3[triangleList.Count * 3];
@@ -322,6 +326,7 @@ public static partial class GeometryUtility
 
             Triangle triangle = triangleList[i];
             triangle.WindingOrder = windingOrder;
+            triangle.ApplyMatrix(meshTransposeMatrix);
 
             vertices[index0] = triangle.VertexPosition0;
             vertices[index1] = triangle.VertexPosition1;
@@ -557,6 +562,26 @@ public static partial class GeometryUtility
         Array.Copy(tempConvexHull, finalConvexHullPoints, finalConvexPointCount);
 
         return finalConvexHullPoints;
+    }
+
+    /// <summary>
+    /// 对模型顶点进行变换
+    /// </summary>
+    /// <param name="mesh"></param>
+    /// <param name="transposeMatrix"></param>
+    /// <returns></returns>
+    public static Mesh ApplyTransposeMatrix(this Mesh mesh, Matrix4x4 transposeMatrix)
+    {
+        Vector3[] vertices = new Vector3[mesh.vertexCount];
+        for (int i = 0; i < mesh.vertexCount; ++i)
+        {
+            Vector3 vertex = mesh.vertices[i];
+            vertex = transposeMatrix.MultiplyPoint(vertex);
+            vertices[i] = vertex;
+        }
+        mesh.vertices = vertices;
+
+        return mesh;
     }
 
     /// <summary>

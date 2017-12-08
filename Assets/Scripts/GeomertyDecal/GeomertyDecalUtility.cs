@@ -9,33 +9,6 @@ public static class GeomertyDecalUtility
 {
 
     /// <summary>
-    /// 生成贴花顶点
-    /// </summary>
-    /// <param name="meshInfo"></param>
-    /// <returns></returns>
-    public static DecalMeshInfo GeneralDecalMeshInfoByMesh(Mesh meshInfo, Matrix4x4 meshLocalToWorldMatrix)
-    {
-        DecalMeshInfo decalMeshInfo = new DecalMeshInfo();
-
-        //triangle 是真正的面
-        for (int i = 0; i < meshInfo.triangles.Length; ++i)
-        {
-            int triangleIndex = meshInfo.triangles[i];
-
-            Vector3 vertexPosition = meshLocalToWorldMatrix.MultiplyPoint(meshInfo.vertices[triangleIndex]);
-            Vector3 vertexNormal = meshInfo.normals[triangleIndex];
-
-            //DecalVertex decalVertex = new DecalVertex(meshLocalToWorldMatrix.MultiplyPoint(meshInfo.vertices[triangleIndex]), meshInfo.normals[triangleIndex]);
-
-            //decalMeshInfo.PushDecalVertex(decalVertex, triangleIndex);
-            decalMeshInfo.PushVertex(vertexPosition, vertexNormal);
-        }
-
-        return decalMeshInfo;
-    }
-
-
-    /// <summary>
     /// 剔除 PlaneNormal 方向外的顶点
     /// </summary>
     /// <param name="inDecalVertices"></param>

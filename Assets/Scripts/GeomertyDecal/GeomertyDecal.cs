@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// 基于几何贴花
+/// 几何贴花,基于平面裁剪模型算法
 /// </summary>
 public class GeomertyDecal
 {
@@ -11,27 +11,23 @@ public class GeomertyDecal
     public Vector3 DecalPosition = default(Vector3);
     public Vector3 DecalSize = Vector3.one;
     public Vector3 DecalRotationEular = Vector3.zero;
+    public Vector3 DecalPointNormal = Vector3.up;
 
     private Mesh m_targetMesh = null;
     private Matrix4x4 m_targetMeshToWorldMatrix = Matrix4x4.identity;
-    private DecalMeshInfo m_decalMeshInfo = null;
     private Matrix4x4 m_worldToDecalProjectorMatrix = Matrix4x4.identity;
     private Matrix4x4 m_decalProjectorToWorldMatrix = Matrix4x4.identity;
 
-    private DecalMeshInfo m_outDecalMeshInfo = null;
+    private Matrix4x4 m_originMeshTRSMatrix = Matrix4x4.identity;
 
+    private Mesh m_decalMesh = null;
 
-    public GeomertyDecal(Material decalMeterial)
+    public GeomertyDecal(Material decalMeterial, Matrix4x4 targetMeshTRSMatrix)
     {
         this.DecalMeterial = decalMeterial;
+        this.m_originMeshTRSMatrix = targetMeshTRSMatrix;
     }
 
-    public GeomertyDecal(Mesh targetMesh, Matrix4x4 targetMeshLocalToWorldMatrix, Material decalMeterial) : this(decalMeterial)
-    {
-        this.m_targetMesh = targetMesh;
-        this.m_targetMeshToWorldMatrix = targetMeshLocalToWorldMatrix;
-        this.m_decalMeshInfo = GeomertyDecalUtility.GeneralDecalMeshInfoByMesh(targetMesh, targetMeshLocalToWorldMatrix);
-    }
 
     /// <summary>
     /// 向目标点印贴花
@@ -39,79 +35,85 @@ public class GeomertyDecal
     /// <param name="targetMesh"></param>
     /// <param name="position"></param>
     /// <param name="decalSize"></param>
+    /// <param name="pointNormal">贴花目标点的法线方向</param>
     /// <param name="rotationEular"></param>
-    public void StampDecal(Mesh targetMesh, Matrix4x4 targetMeshLocalToWorldMatrix, Vector3 position, Vector3 decalSize, Vector3 rotationEular)
+    public Mesh StampDecal(Mesh targetMesh, Vector3 position, Vector3 decalSize, Vector3 rotationEular, Vector3 pointNormal)
     {
-        if (targetMesh != this.m_targetMesh)
-        {
-            this.m_targetMeshToWorldMatrix = targetMeshLocalToWorldMatrix;
-            this.m_decalMeshInfo = GeomertyDecalUtility.GeneralDecalMeshInfoByMesh(targetMesh, targetMeshLocalToWorldMatrix);
-        }
-
         this.DecalPosition = position;
         this.DecalRotationEular = rotationEular;
-        this.DecalSize = decalSize;
+        this.DecalSize = decalSize * 0.5f;      //整个Projector是1
+        this.DecalPointNormal = pointNormal;
 
-        UpdateDecalProjectorMatrix(position, decalSize, rotationEular);
+        Matrix4x4 decalPointSpace = Matrix4x4.identity;
 
-        this.m_decalMeshInfo.ApplyMatrix(this.m_worldToDecalProjectorMatrix);
+        //目标点的三轴向坐标
+        Vector3 xAxis = Vector3.Cross(pointNormal, Vector3.up).normalized;
+        Vector3 yAxis = Vector3.Cross(pointNormal, xAxis).normalized;
 
-        //上下左右前后裁剪
-        this.m_decalMeshInfo = GeomertyDecalUtility.PlaneClipGeometry(this.m_decalMeshInfo, new Vector3(1, 0, 0), decalSize);
-        this.m_decalMeshInfo = GeomertyDecalUtility.PlaneClipGeometry(this.m_decalMeshInfo, new Vector3(-1, 0, 0), decalSize);
-        this.m_decalMeshInfo = GeomertyDecalUtility.PlaneClipGeometry(this.m_decalMeshInfo, new Vector3(0, 1, 0), decalSize);
-        this.m_decalMeshInfo = GeomertyDecalUtility.PlaneClipGeometry(this.m_decalMeshInfo, new Vector3(0, -1, 0), decalSize);
-        this.m_decalMeshInfo = GeomertyDecalUtility.PlaneClipGeometry(this.m_decalMeshInfo, new Vector3(0, 0, 1), decalSize);
-        this.m_decalMeshInfo = GeomertyDecalUtility.PlaneClipGeometry(this.m_decalMeshInfo, new Vector3(0, 0, -1), decalSize);
+        decalPointSpace.SetRow(0, xAxis);
+        decalPointSpace.SetRow(1, yAxis);
+        decalPointSpace.SetRow(2, pointNormal);
 
+        Mesh decalMesh = GetDecalMesh(targetMesh, this.DecalPosition, this.DecalSize, this.DecalRotationEular, decalPointSpace);
 
-
-
+        return decalMesh;
     }
 
-    public Mesh GetDecalMesh(Mesh targetMesh, Matrix4x4 targetMeshLocalToWorldMatrix, Vector3 position, Vector3 decalSize, Vector3 rotationEular)
+    /// <summary>
+    /// 获取贴花的模型
+    /// </summary>
+    /// <param name="targetMesh"></param>
+    /// <param name="targetMeshLocalToWorldMatrix"></param>
+    /// <param name="position"></param>
+    /// <param name="decalSize"></param>
+    /// <param name="rotationEular"></param>
+    /// <returns></returns>
+    /// todo: 可以根据点基位置估算一个切割顺序，优化,主要基于动态模型切割算法
+    public Mesh GetDecalMesh(Mesh targetMesh, Vector3 position, Vector3 decalSize, Vector3 rotationEular, Matrix4x4 projectorCoord)
     {
-        if (targetMesh != this.m_targetMesh)
-        {
-            this.m_targetMeshToWorldMatrix = targetMeshLocalToWorldMatrix;
-            this.m_decalMeshInfo = GeomertyDecalUtility.GeneralDecalMeshInfoByMesh(targetMesh, targetMeshLocalToWorldMatrix);
-        }
+        Mesh decalMesh = Object.Instantiate<Mesh>(targetMesh);
+        decalMesh.ApplyTransposeMatrix(this.m_originMeshTRSMatrix);
+
+        //back
+        Plane projectorEdgePlane = GetDecalProjectorEdgePlane(position, rotationEular, decalSize.z, projectorCoord.GetRow(2));
+        MeshSlicer slicer = new MeshSlicer(decalMesh, projectorEdgePlane);
 
 
-        this.DecalPosition = position;
-        this.DecalRotationEular = rotationEular;
-        this.DecalSize = decalSize;
+        SlicedMesh slicedMesh = slicer.Slice(false, false);
+        if (slicedMesh.UpperMesh == null)
+            return null;
 
-        UpdateDecalProjectorMatrix(position, decalSize, rotationEular);
+        return slicedMesh.UpperMesh;
+        //up
+        projectorEdgePlane = GetDecalProjectorEdgePlane(position, rotationEular, decalSize.y, projectorCoord.GetRow(1));
+        slicer = new MeshSlicer(slicedMesh.UpperMesh, projectorEdgePlane);
+        slicedMesh = slicer.Slice(false, false);
+        //slicedMesh = MeshSlicer.SliceTriangleList(slicedMesh.UpperMeshTriangleList, projectorEdgePlane, false, false);
+        if (slicedMesh.UpperMesh == null)
+            return null;
 
-        this.m_decalMeshInfo.ApplyMatrix(this.m_worldToDecalProjectorMatrix);
+        return slicedMesh.UpperMesh;
 
-        //return ToUnityMesh();
+        /*
+        //down
+        projectorEdgePlane = GetDecalProjectorEdgePlane(ProjectorEdgeDirection.DOWN, position, rotationEular, decalSize);
+        slicedMesh = MeshSlicer.SliceTriangleList(slicedMesh.UpperMeshTriangleList, projectorEdgePlane, false, false);
+        if (slicedMesh == null)
+            return null;
 
-        //上下左右前后裁剪
-        this.m_outDecalMeshInfo = GeomertyDecalUtility.PlaneClipGeometry(this.m_decalMeshInfo, new Vector3(1, 0, 0), decalSize);
-        //this.m_outDecalMeshInfo = GeomertyDecalUtility.PlaneClipGeometry(this.m_outDecalMeshInfo, new Vector3(-1, 0, 0), decalSize);
-        //this.m_outDecalMeshInfo = GeomertyDecalUtility.PlaneClipGeometry(this.m_outDecalMeshInfo, new Vector3(0, 1, 0), decalSize);
-        //this.m_outDecalMeshInfo = GeomertyDecalUtility.PlaneClipGeometry(this.m_outDecalMeshInfo, new Vector3(0, -1, 0), decalSize);
-        //this.m_outDecalMeshInfo = GeomertyDecalUtility.PlaneClipGeometry(this.m_outDecalMeshInfo, new Vector3(0, 0, 1), decalSize);
-        //this.m_outDecalMeshInfo = GeomertyDecalUtility.PlaneClipGeometry(this.m_outDecalMeshInfo, new Vector3(0, 0, -1), decalSize);
+        //left
+        projectorEdgePlane = GetDecalProjectorEdgePlane(ProjectorEdgeDirection.LEFT, position, rotationEular, decalSize);
+        slicedMesh = MeshSlicer.SliceTriangleList(slicedMesh.UpperMeshTriangleList, projectorEdgePlane, false, false);
+        if (slicedMesh == null)
+            return null;
 
-        //创建一个投影大小的Quad
-        if (m_outDecalMeshInfo.DecalVertexCount == 0)
-        {
-            Matrix4x4 scalar = Matrix4x4.Scale(DecalSize);
-            DecalVertex quadVertex0 = new DecalVertex(scalar.MultiplyPoint(new Vector3(-1, -1, 0)), new Vector3(0, 0, 1));
-            DecalVertex quadVertex1 = new DecalVertex(scalar.MultiplyPoint(new Vector3(1, -1, 0)), new Vector3(0, 0, 1));
-            DecalVertex quadVertex2 = new DecalVertex(scalar.MultiplyPoint(new Vector3(1, 1, 0)), new Vector3(0, 0, 1));
-            DecalVertex quadVertex3 = new DecalVertex(scalar.MultiplyPoint(new Vector3(-1, 1, 0)), new Vector3(0, 0, 1));
+        //right
+        projectorEdgePlane = GetDecalProjectorEdgePlane(ProjectorEdgeDirection.RIGHT, position, rotationEular, decalSize);
+        slicedMesh = MeshSlicer.SliceTriangleList(slicedMesh.UpperMeshTriangleList, projectorEdgePlane, false, false);
+        if (slicedMesh == null)
+            return null;
 
-            m_outDecalMeshInfo.PushDecalTriangle(quadVertex0, quadVertex1, quadVertex3);
-            m_outDecalMeshInfo.PushDecalTriangle(quadVertex1, quadVertex2, quadVertex3);
-
-        }
-
-
-        return ToUnityMesh();
+        return slicedMesh.UpperMesh; */
     }
 
     /// <summary>
@@ -125,45 +127,6 @@ public class GeomertyDecal
     {
         this.m_worldToDecalProjectorMatrix = Matrix4x4.TRS(decalPosition, Quaternion.Euler(decalRotationEular), Vector3.one);
         this.m_decalProjectorToWorldMatrix = m_worldToDecalProjectorMatrix.inverse;
-    }
-
-
-    /// <summary>
-    /// 转换DecalMesh 到Unity的Mesh
-    /// </summary>
-    /// <returns></returns>
-    private Mesh ToUnityMesh()
-    {
-        Mesh unityMesh = new Mesh();
-
-        List<Vector2> meshUVList = new List<Vector2>();
-        List<int> meshTriangleList = new List<int>();
-        List<Vector3> meshPositionList = new List<Vector3>();
-        List<Vector3> meshNormalList = new List<Vector3>();
-
-        Matrix4x4 projectorToMeshLocalMatrix = Matrix4x4.Translate(DecalPosition).inverse * m_decalProjectorToWorldMatrix;
-
-        for (int i = 0; i < this.m_outDecalMeshInfo.DecalVertexCount; ++i)
-        {
-            Vector3 vertexPosition = projectorToMeshLocalMatrix.MultiplyPoint(this.m_outDecalMeshInfo.VertexPositionList[i]);
-            meshPositionList.Add(vertexPosition);
-
-            Vector3 vertexNormal = this.m_outDecalMeshInfo.VertexNormalList[i];
-            meshNormalList.Add(vertexNormal);
-
-            Vector2 uv = CalculateVertexUV(this.m_outDecalMeshInfo.VertexPositionList[i], this.DecalSize);
-            meshUVList.Add(uv);
-
-            meshTriangleList.Add(i);
-
-        }
-
-        unityMesh.SetVertices(meshPositionList);
-        unityMesh.SetNormals(meshNormalList);
-        unityMesh.SetUVs(0, meshUVList);
-        unityMesh.SetTriangles(meshTriangleList, 0);
-
-        return unityMesh;
     }
 
     /// <summary>
@@ -181,4 +144,22 @@ public class GeomertyDecal
         return uv;
     }
 
+
+    /// <summary>
+    /// 贴花投影裁剪边缘Plane
+    /// </summary>
+    /// <param name="projectorCenterPoint"></param>
+    /// <param name="projectorRotation"></param>
+    /// <param name="scaleTowardsNormalDirection"></param>
+    /// <param name="planeEdgeNormal"></param>
+    /// <returns></returns>
+    private Plane GetDecalProjectorEdgePlane(Vector3 projectorCenterPoint, Vector3 projectorRotation, float scaleTowardsNormalDirection, Vector3 planeEdgeNormal)
+    {
+        planeEdgeNormal = Quaternion.Euler(projectorRotation) * planeEdgeNormal;
+        Vector3 pointOnPlane = projectorCenterPoint - planeEdgeNormal * scaleTowardsNormalDirection;
+
+        Debug.DrawLine(pointOnPlane, pointOnPlane + planeEdgeNormal * 2f, Color.green, 5f);
+
+        return new Plane(planeEdgeNormal, pointOnPlane);
+    }
 }

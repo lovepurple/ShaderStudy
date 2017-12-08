@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using UnityEngine;
 
 /// <summary>
@@ -12,7 +10,7 @@ public partial class GeometryUtility
     /// <summary>
     /// 模型的三角面
     /// </summary>
-    public class Triangle
+    public class Triangle : ICloneable
     {
         //顶点数据
         private Vector3 m_vertexPos0;
@@ -66,6 +64,22 @@ public partial class GeometryUtility
                     this.m_uv2 = tempUV;
                 }
             }
+        }
+
+        /// <summary>
+        /// 顶点变换
+        /// </summary>
+        /// <param name="matrix"></param>
+        public void ApplyMatrix(Matrix4x4 matrix)
+        {
+            this.m_vertexPos0 = matrix.MultiplyPoint(this.m_vertexPos0);
+            this.m_vertexPos1 = matrix.MultiplyPoint(this.m_vertexPos1);
+            this.m_vertexPos2 = matrix.MultiplyPoint(this.m_vertexPos2);
+        }
+
+        public object Clone()
+        {
+            return new Triangle(this.m_vertexPos0, this.m_vertexPos1, this.m_vertexPos2, this.m_uv0, this.m_uv1, this.m_uv2);
         }
 
         public Vector3 VertexPosition0
