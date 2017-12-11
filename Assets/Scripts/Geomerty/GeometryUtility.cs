@@ -287,6 +287,31 @@ public static partial class GeometryUtility
         return point0 * barycentricWeight.x + point1 * barycentricWeight.y + point2 * barycentricWeight.z;
     }
 
+    /// <summary>
+    /// 获取基于平面的镜像变换矩阵
+    /// </summary>
+    /// <param name="mirrorPlane"></param>
+    /// <returns></returns>
+    /// <remarks>镜像变换矩阵</remarks>
+    public static Matrix4x4 GetMirrorMatrixByPlane(this Plane mirrorPlane)
+    {
+        Matrix4x4 mirrorMatrix = Matrix4x4.identity;
+        Vector3 mirrorNormal = mirrorPlane.normal;
+        float mirrorDistance = mirrorPlane.distance;
+
+        Vector4 row0 = new Vector4(1.0f - 2 * mirrorNormal.x * mirrorNormal.x, -2.0f * mirrorNormal.x * mirrorNormal.y, -2.0f * mirrorNormal.x * mirrorNormal.z, -2.0f * mirrorNormal.x * mirrorDistance);
+        Vector4 row1 = new Vector4(-2.0f * mirrorNormal.x * mirrorNormal.y, 1.0f - 2.0f * mirrorNormal.y * mirrorNormal.y, -2.0f * mirrorNormal.y * mirrorNormal.z, -2.0f * mirrorNormal.y * mirrorDistance);
+        Vector4 row2 = new Vector4(-2.0f * mirrorNormal.x * mirrorNormal.z, -2.0f * mirrorNormal.y * mirrorNormal.z, 1.0f - 2.0f * mirrorNormal.z * mirrorNormal.z, -2.0f * mirrorNormal.z * mirrorDistance);
+        Vector4 row3 = new Vector4(0, 0, 0, 1);
+
+        mirrorMatrix.SetRow(0, row0);
+        mirrorMatrix.SetRow(1, row1);
+        mirrorMatrix.SetRow(2, row2);
+        mirrorMatrix.SetRow(3, row3);
+
+        return mirrorMatrix;
+    }
+
 
     ///相对面的方向
     public enum SideOfPlane
