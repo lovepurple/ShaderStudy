@@ -9,7 +9,7 @@ using System.Linq;
 public class SlicedMeshByArbitraryPlane : MonoBehaviour
 {
     public Vector3 slicerNormal = Vector3.up;
-    public float slicerDistance = 0;
+    public float slicerDistance = 0.5f;
 
     public GameObject TargetGameobject;
 
@@ -77,11 +77,45 @@ public class SlicedMeshByArbitraryPlane : MonoBehaviour
 
     }
 
+    public Vector3 pont;
+
+    void Update()
+    {
+        if (Input.GetMouseButtonUp(0))
+        {
+            Ray cameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            RaycastHit rayCastHitInfo = default(RaycastHit);
+            if (Physics.Raycast(cameraRay, out rayCastHitInfo))
+            {
+                slicerNormal = Vector3.back;
+                Vector3 pointOnSlicer = rayCastHitInfo.point - slicerNormal * slicerDistance;
+                Plane slicerPlane = new Plane(slicerNormal, pont);
+                Mesh originMesh = rayCastHitInfo.collider.gameObject.GetComponent<MeshFilter>().sharedMesh;
+
+                Matrix4x4 trs = Matrix4x4.TRS(rayCastHitInfo.collider.gameObject.transform.position, rayCastHitInfo.collider.gameObject.transform.rotation, rayCastHitInfo.collider.gameObject.transform.localScale);
+
+
+
+
+                Mesh m = Object.Instantiate<Mesh>(originMesh);
+                m.ApplyTransposeMatrix(trs);
+
+                MeshSlicer slicer = new MeshSlicer(m, slicerPlane);
+
+
+                GeometryDebugHelper.instance.DrawPlane(slicerPlane);
+                slicer.Slice(false, false);
+                slicer.RenderSlicedGameObject(SlicedUpperMaterial);
+            }
+        }
+    }
+    Mesh debug;
 
     private void OnDrawGizmos()
     {
-        //Gizmos.color = Color.red;
-        //Gizmos.DrawWireCube(new Vector3(0, slicerDistance, 0), new Vector3(5, 0, 5));
+        Gizmos.color = Color.red;
+        Gizmos.DrawMesh(debug);
     }
 
 }

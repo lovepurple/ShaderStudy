@@ -326,7 +326,7 @@ public static partial class GeometryUtility
 
             Triangle triangle = triangleList[i];
             triangle.WindingOrder = windingOrder;
-            triangle.ApplyMatrix(meshTransposeMatrix);
+            //triangle.ApplyMatrix(meshTransposeMatrix);
 
             vertices[index0] = triangle.VertexPosition0;
             vertices[index1] = triangle.VertexPosition1;

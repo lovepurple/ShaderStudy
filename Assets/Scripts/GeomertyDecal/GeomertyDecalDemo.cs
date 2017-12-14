@@ -41,8 +41,9 @@ public class GeomertyDecalDemo : MonoBehaviour
                 this.m_targetMeshRotation = rayCastHitInfo.collider.gameObject.transform.localRotation.eulerAngles;
                 this.m_targetMeshScale = rayCastHitInfo.collider.gameObject.transform.localScale;
                 this.m_targetMeshTRSMatrix = Matrix4x4.TRS(this.m_targetMeshPosition, Quaternion.Euler(this.m_targetMeshRotation), this.m_targetMeshScale);
-                Debug.Log(rayCastHitInfo.normal);
-                //StampDecalOnTarget(rayCastHitInfo.collider.gameObject, m_decalPosition, m_decalPointNormal, m_targetMeshTRSMatrix);
+                this.m_targetMeshTRSMatrix = Matrix4x4.identity;
+                StampDecalOnTarget(rayCastHitInfo.collider.gameObject, m_decalPosition, m_decalPointNormal, m_targetMeshTRSMatrix);
+
             }
         }
     }
@@ -56,13 +57,18 @@ public class GeomertyDecalDemo : MonoBehaviour
 
         Mesh targetMesh = targetMeshFilter.mesh;
         GeomertyDecal decal = new GeomertyDecal(DecalMaterial, originMeshTRS);
+
+        //decalPosition = new Vector3(0, 0, -1);
+        //DecalSize = new Vector3(1, 1, 1);
+        //DecalRotationEuler = Vector3.zero;
+        //decalPointNormal = new Vector3(0, 0, -1);
+
         Mesh decalMesh = decal.StampDecal(targetMesh, decalPosition, DecalSize, DecalRotationEuler, decalPointNormal);
 
         //debugMesh = ss.StampDecal(targetMesh, decalPosition, DecalSize, DecalRotationEuler, this.targetNormal);
         //debugMesh.ApplyTransposeMatrix(Matrix4x4.Scale(m_targetMeshScale));
 
         m_debugMesh = GameObject.Instantiate(decalMesh);
-
 
     }
 

@@ -54,7 +54,10 @@ public class GeomertyDecal
         decalPointSpace.SetRow(1, yAxis);
         decalPointSpace.SetRow(2, pointNormal);
 
-        Mesh decalMesh = GetDecalMesh(targetMesh, this.DecalPosition, this.DecalSize, this.DecalRotationEular, decalPointSpace);
+        Mesh decalOriginMesh = Object.Instantiate<Mesh>(targetMesh);
+        //decalOriginMesh.ApplyTransposeMatrix(this.m_originMeshTRSMatrix);
+
+        Mesh decalMesh = GetDecalMesh(decalOriginMesh, this.DecalPosition, this.DecalSize, this.DecalRotationEular, decalPointSpace);
 
         return decalMesh;
     }
@@ -71,18 +74,17 @@ public class GeomertyDecal
     /// todo: 可以根据点基位置估算一个切割顺序，优化,主要基于动态模型切割算法
     public Mesh GetDecalMesh(Mesh targetMesh, Vector3 position, Vector3 decalSize, Vector3 rotationEular, Matrix4x4 projectorCoord)
     {
-        Mesh decalMesh = Object.Instantiate<Mesh>(targetMesh);
-        decalMesh.ApplyTransposeMatrix(this.m_originMeshTRSMatrix);
+        Mesh decalMesh = targetMesh;
 
         //back
         Plane projectorEdgePlane = GetDecalProjectorEdgePlane(position, rotationEular, decalSize.z, projectorCoord.GetRow(2));
+        GeometryDebugHelper.instance.DrawPlane(projectorEdgePlane);
         MeshSlicer slicer = new MeshSlicer(decalMesh, projectorEdgePlane);
 
 
         SlicedMesh slicedMesh = slicer.Slice(false, false);
         if (slicedMesh.UpperMesh == null)
             return null;
-
         return slicedMesh.UpperMesh;
         //up
         projectorEdgePlane = GetDecalProjectorEdgePlane(position, rotationEular, decalSize.y, projectorCoord.GetRow(1));
@@ -158,8 +160,8 @@ public class GeomertyDecal
         planeEdgeNormal = Quaternion.Euler(projectorRotation) * planeEdgeNormal;
         Vector3 pointOnPlane = projectorCenterPoint - planeEdgeNormal * scaleTowardsNormalDirection;
 
-        Debug.DrawLine(pointOnPlane, pointOnPlane + planeEdgeNormal * 2f, Color.green, 5f);
+        Plane clipPlane = new Plane(planeEdgeNormal, pointOnPlane);
 
-        return new Plane(planeEdgeNormal, pointOnPlane);
+        return clipPlane;
     }
 }

@@ -84,7 +84,7 @@ public class SlicedMesh
             return null;
 
         if (m_upperCrossMesh == null)
-            m_upperCrossMesh = GeometryUtility.CreateConvexhullMeshByMonotoneChain(m_crossVertexList, -crossPlaneNormal, GeometryUtility.TriangleWindingOrder.ClockWise).ApplyTransposeMatrix(m_meshTransposeMatrix);
+            m_upperCrossMesh = GeometryUtility.CreateConvexhullMeshByMonotoneChain(m_crossVertexList, -crossPlaneNormal, GeometryUtility.TriangleWindingOrder.ClockWise);//.ApplyTransposeMatrix(m_meshTransposeMatrix);
 
         return m_upperCrossMesh;
     }
