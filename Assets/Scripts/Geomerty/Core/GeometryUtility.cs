@@ -211,13 +211,16 @@ public static partial class GeometryUtility
     /// <param name="plane"></param>
     /// <param name="pointPosition"></param>
     /// <returns></returns>
+    /// <remarks>Unity Plane中的Distance 有方向 方向的符号为：Dot(PointToOrigin,PlaneNormal)</remarks>
     public static SideOfPlane PointSideOfPlane(this Plane plane, Vector3 pointPosition)
     {
-        float distanceToPlane = Vector3.Dot(plane.normal, pointPosition) - plane.distance;
+        Vector3 pointOnPlane = -plane.normal * plane.distance;
+        Vector3 pointToPlane = pointPosition - pointOnPlane;
+        float d = Vector3.Dot(plane.normal, pointToPlane);
 
-        if (distanceToPlane < float.Epsilon)
+        if (d < float.Epsilon)
             return SideOfPlane.DOWN;
-        else if (distanceToPlane > float.Epsilon)
+        else if (d > float.Epsilon)
             return SideOfPlane.UP;
         else
             return SideOfPlane.ON;
