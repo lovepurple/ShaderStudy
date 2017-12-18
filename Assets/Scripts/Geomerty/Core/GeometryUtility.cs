@@ -174,7 +174,8 @@ public static partial class GeometryUtility
         if (NDotDir == 0)
             return false;
 
-        Vector3 pointOnPlane = plane.normal * Mathf.Abs(plane.distance);
+        //平面上点的计算方法！！！ plane.distance 有符号
+        Vector3 pointOnPlane = -plane.normal * plane.distance;
 
         //计算 t 直线与平面方程联立
         Vector3 planePointToSegmentStart = pointOnPlane - rayOrigin;
