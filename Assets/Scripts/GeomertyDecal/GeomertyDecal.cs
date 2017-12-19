@@ -41,12 +41,12 @@ public class GeomertyDecal
     {
         this.DecalPosition = position;
         this.DecalRotationEular = rotationEular;
-        this.DecalSize = decalSize * 0.5f;      //整个Projector是1
+        this.DecalSize = decalSize * 0.5f;          //整个Projector是1
         this.DecalPointNormal = pointNormal;
 
         Matrix4x4 decalPointSpace = Matrix4x4.identity;
 
-        //目标点的三轴向坐标
+        //目标点的三轴向坐标(在贴花点构建坐标系)
         Vector3 xAxis = Vector3.Cross(pointNormal, Vector3.up).normalized;
         Vector3 yAxis = Vector3.Cross(pointNormal, xAxis).normalized;
 
@@ -55,9 +55,12 @@ public class GeomertyDecal
         decalPointSpace.SetRow(2, pointNormal);
 
         Mesh decalOriginMesh = Object.Instantiate<Mesh>(targetMesh);
-        //decalOriginMesh.ApplyTransposeMatrix(this.m_originMeshTRSMatrix);
+        decalOriginMesh.ApplyTransposeMatrix(this.m_originMeshTRSMatrix);
 
         Mesh decalMesh = GetDecalMesh(decalOriginMesh, this.DecalPosition, this.DecalSize, this.DecalRotationEular, decalPointSpace);
+        decalMesh = RemapDecalMapUV(decalMesh, pointNormal);
+
+        RenderDecalGameobject(decalMesh, this.DecalMeterial);
 
         return decalMesh;
     }
@@ -78,44 +81,39 @@ public class GeomertyDecal
 
         //back
         Plane projectorEdgePlane = GetDecalProjectorEdgePlane(position, rotationEular, decalSize.z, projectorCoord.GetRow(2));
-        GeometryDebugHelper.instance.DrawPlane(projectorEdgePlane);
         MeshSlicer slicer = new MeshSlicer(decalMesh, projectorEdgePlane);
-
 
         SlicedMesh slicedMesh = slicer.Slice(false, false);
         if (slicedMesh.UpperMesh == null)
             return null;
-        return slicedMesh.UpperMesh;
-        //up
-        projectorEdgePlane = GetDecalProjectorEdgePlane(position, rotationEular, decalSize.y, projectorCoord.GetRow(1));
-        slicer = new MeshSlicer(slicedMesh.UpperMesh, projectorEdgePlane);
-        slicedMesh = slicer.Slice(false, false);
-        //slicedMesh = MeshSlicer.SliceTriangleList(slicedMesh.UpperMeshTriangleList, projectorEdgePlane, false, false);
-        if (slicedMesh.UpperMesh == null)
-            return null;
-
-        return slicedMesh.UpperMesh;
-
-        /*
-        //down
-        projectorEdgePlane = GetDecalProjectorEdgePlane(ProjectorEdgeDirection.DOWN, position, rotationEular, decalSize);
-        slicedMesh = MeshSlicer.SliceTriangleList(slicedMesh.UpperMeshTriangleList, projectorEdgePlane, false, false);
-        if (slicedMesh == null)
-            return null;
 
         //left
-        projectorEdgePlane = GetDecalProjectorEdgePlane(ProjectorEdgeDirection.LEFT, position, rotationEular, decalSize);
+        projectorEdgePlane = GetDecalProjectorEdgePlane(position, rotationEular, decalSize.x, -projectorCoord.GetRow(0));
         slicedMesh = MeshSlicer.SliceTriangleList(slicedMesh.UpperMeshTriangleList, projectorEdgePlane, false, false);
         if (slicedMesh == null)
             return null;
 
         //right
-        projectorEdgePlane = GetDecalProjectorEdgePlane(ProjectorEdgeDirection.RIGHT, position, rotationEular, decalSize);
+        projectorEdgePlane = GetDecalProjectorEdgePlane(position, rotationEular, decalSize.x, projectorCoord.GetRow(0));
         slicedMesh = MeshSlicer.SliceTriangleList(slicedMesh.UpperMeshTriangleList, projectorEdgePlane, false, false);
         if (slicedMesh == null)
             return null;
 
-        return slicedMesh.UpperMesh; */
+
+        //up
+        projectorEdgePlane = GetDecalProjectorEdgePlane(position, rotationEular, decalSize.y, projectorCoord.GetRow(1));
+        slicer = new MeshSlicer(slicedMesh.UpperMesh, projectorEdgePlane);
+        slicedMesh = slicer.Slice(false, false);
+        if (slicedMesh.UpperMesh == null)
+            return null;
+
+        //down
+        projectorEdgePlane = GetDecalProjectorEdgePlane(position, rotationEular, decalSize.y, -projectorCoord.GetRow(1));
+        slicedMesh = MeshSlicer.SliceTriangleList(slicedMesh.UpperMeshTriangleList, projectorEdgePlane, false, false);
+        if (slicedMesh == null)
+            return null;
+
+        return slicedMesh.UpperMesh;
     }
 
     /// <summary>
@@ -132,19 +130,53 @@ public class GeomertyDecal
     }
 
     /// <summary>
-    /// 计算顶点UV
+    /// 对贴花的模型重新映射UV
     /// </summary>
-    /// <param name="vertexPositionInProjectorSpace"></param>
+    /// <param name="decalMesh"></param>
+    /// <param name="decalNormal"></param>
     /// <returns></returns>
-    private Vector2 CalculateVertexUV(Vector3 vertexPositionInProjectorSpace, Vector3 projectorSize)
+    /// <remarks>UV展开算法需要进一步研究，这里使用最基本的算法</remarks>
+    private Mesh RemapDecalMapUV(Mesh decalMesh, Vector3 decalNormal)
     {
-        float normalizeSizeX = vertexPositionInProjectorSpace.x / (2.0f * projectorSize.x);
-        float normlaizeSizeY = vertexPositionInProjectorSpace.y / (2.0f * projectorSize.y);
+        List<Mapped2DVector> vertexMappedTo2DList = new List<Mapped2DVector>();
+        float xMin = float.MaxValue;
+        float yMin = float.MaxValue;
+        float xMax = float.MinValue;
+        float yMax = float.MinValue;
 
-        Vector2 uv = new Vector2(0.5f, 0.5f) + new Vector2(normalizeSizeX, normlaizeSizeY);
+        Vector2[] mappedUV = new Vector2[decalMesh.uv.Length];
 
-        return uv;
+        for (int i = 0; i < decalMesh.vertexCount; ++i)
+        {
+            Vector3 vertexPosition = decalMesh.vertices[i];
+            Mapped2DVector posMapTo2D = Mapped2DVector.MapVector3ToVector2(vertexPosition, decalNormal);
+
+            xMin = Mathf.Min(xMin, posMapTo2D.MappedVector2.x);
+            xMax = Mathf.Max(xMax, posMapTo2D.MappedVector2.x);
+
+            yMin = Mathf.Min(yMin, posMapTo2D.MappedVector2.y);
+            yMax = Mathf.Max(yMax, posMapTo2D.MappedVector2.y);
+
+            vertexMappedTo2DList.Add(posMapTo2D);
+        }
+
+        float uSize = xMax - xMin;
+        float vSize = yMax - yMin;
+
+        for (int i = 0; i < vertexMappedTo2DList.Count; ++i)
+        {
+            Mapped2DVector mapped2DVector = vertexMappedTo2DList[i];
+            float u = (mapped2DVector.MappedVector2.x - xMin) / uSize;
+            float v = 1 - (mapped2DVector.MappedVector2.y - yMin) / vSize;       //MapVector3ToVector2里的y坐标系是向下的，与正常uv的相反
+
+            mappedUV[i] = new Vector2(u, v);
+        }
+
+        decalMesh.uv = mappedUV;
+
+        return decalMesh;
     }
+
 
 
     /// <summary>
@@ -163,5 +195,17 @@ public class GeomertyDecal
         Plane clipPlane = new Plane(planeEdgeNormal, pointOnPlane);
 
         return clipPlane;
+    }
+
+    private GameObject RenderDecalGameobject(Mesh decalMesh, Material decalMaterial)
+    {
+        GameObject decalGameObject = new GameObject("DecalObj");
+        MeshFilter meshFilter = decalGameObject.AddComponent<MeshFilter>();
+        meshFilter.sharedMesh = decalMesh;
+
+        MeshRenderer renderer = decalGameObject.AddComponent<MeshRenderer>();
+        renderer.material = decalMaterial;
+
+        return decalGameObject;
     }
 }

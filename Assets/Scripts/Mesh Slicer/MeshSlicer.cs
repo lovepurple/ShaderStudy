@@ -73,6 +73,10 @@ public class MeshSlicer
             Vector2 uv1 = Vector2.zero;
             Vector2 uv2 = Vector2.zero;
 
+            Vector3 vertexNormal0 = sliceMesh.normals[vertexIndex0];
+            Vector3 vertexNormal1 = sliceMesh.normals[vertexIndex1];
+            Vector3 vertexNormal2 = sliceMesh.normals[vertexIndex2];
+
             if (sliceMesh.uv.Length != 0)
             {
                 uv0 = sliceMesh.uv[vertexIndex0];
@@ -80,7 +84,7 @@ public class MeshSlicer
                 uv2 = sliceMesh.uv[vertexIndex2];
             }
 
-            GeometryUtility.Triangle triangle = new GeometryUtility.Triangle(vertexPosition0, vertexPosition1, vertexPosition2, uv0, uv1, uv2);
+            GeometryUtility.Triangle triangle = new GeometryUtility.Triangle(vertexPosition0, vertexPosition1, vertexPosition2, uv0, uv1, uv2, vertexNormal0, vertexNormal1, vertexNormal2);
             GeometryUtility.PlaneTriangleIntersectionResult intersectionResult = GeometryUtility.GetPlaneTriangleIntersectionResult(this.m_slicerPlane, triangle, includeOppositeFace);
 
             slicedMesh.UpperMeshTriangleList.AddRange(intersectionResult.UpperTriangleList);
@@ -159,6 +163,7 @@ public class MeshSlicer
 
         this.m_slicedUpperGameObject = new GameObject(originMeshGameObjectName + "_Upper");
         RenderMesh(this.m_slicedUpperMesh, upperHullMaterial, this.m_slicedUpperGameObject);
+
         if (this.m_includeSection)
         {
             GameObject upperSection = new GameObject(originMeshGameObjectName + "_UpperSection");
@@ -213,4 +218,8 @@ public class MeshSlicer
         }
     }
 
+    public Mesh UpperMesh
+    {
+        get { return m_slicedUpperMesh; }
+    }
 }

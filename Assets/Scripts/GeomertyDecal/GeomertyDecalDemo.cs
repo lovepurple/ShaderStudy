@@ -25,6 +25,7 @@ public class GeomertyDecalDemo : MonoBehaviour
 
     private Mesh m_debugMesh = null;
 
+
     void Update()
     {
         if (Input.GetMouseButtonUp(0))
@@ -41,7 +42,6 @@ public class GeomertyDecalDemo : MonoBehaviour
                 this.m_targetMeshRotation = rayCastHitInfo.collider.gameObject.transform.localRotation.eulerAngles;
                 this.m_targetMeshScale = rayCastHitInfo.collider.gameObject.transform.localScale;
                 this.m_targetMeshTRSMatrix = Matrix4x4.TRS(this.m_targetMeshPosition, Quaternion.Euler(this.m_targetMeshRotation), this.m_targetMeshScale);
-                this.m_targetMeshTRSMatrix = Matrix4x4.identity;
                 StampDecalOnTarget(rayCastHitInfo.collider.gameObject, m_decalPosition, m_decalPointNormal, m_targetMeshTRSMatrix);
 
             }
@@ -58,11 +58,6 @@ public class GeomertyDecalDemo : MonoBehaviour
         Mesh targetMesh = targetMeshFilter.mesh;
         GeomertyDecal decal = new GeomertyDecal(DecalMaterial, originMeshTRS);
 
-        //decalPosition = new Vector3(0, 0, -1);
-        //DecalSize = new Vector3(1, 1, 1);
-        //DecalRotationEuler = Vector3.zero;
-        //decalPointNormal = new Vector3(0, 0, -1);
-
         Mesh decalMesh = decal.StampDecal(targetMesh, decalPosition, DecalSize, DecalRotationEuler, decalPointNormal);
 
         //debugMesh = ss.StampDecal(targetMesh, decalPosition, DecalSize, DecalRotationEuler, this.targetNormal);
@@ -76,8 +71,6 @@ public class GeomertyDecalDemo : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        if (DebugDecalProjector)
-            DrawDecalProjector();
 
         if (DebugDecalMesh)
             DrawDecalMesh();
@@ -85,20 +78,6 @@ public class GeomertyDecalDemo : MonoBehaviour
     }
 
 
-    private void DrawDecalProjector()
-    {
-        Gizmos.color = Color.green;
-        Gizmos.DrawSphere(this.m_decalPosition, 0.05f);
-
-        Gizmos.color = Color.yellow;
-
-        Vector3 xAxis = Vector3.Cross(m_decalPointNormal, Vector3.up).normalized;
-        Vector3 yAxis = Vector3.Cross(m_decalPointNormal, xAxis).normalized;
-
-        Gizmos.DrawLine(this.m_decalPosition, this.m_decalPosition + xAxis);
-        Gizmos.DrawLine(this.m_decalPosition, this.m_decalPosition + yAxis);
-
-    }
 
     private void DrawDecalMesh()
     {
