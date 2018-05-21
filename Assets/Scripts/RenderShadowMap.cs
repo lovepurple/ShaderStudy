@@ -40,6 +40,7 @@ public class RenderShadowMap : MonoBehaviour
     {
         m_shadowCamera.RenderWithShader(m_depthGrayShader, "");
         Shader.SetGlobalTexture("_ShadowMap", m_shadowDepthTexture);
+        Shader.SetGlobalVector("_PixelSize", new Vector2(1.0f / Camera.main.pixelWidth, 1.0f / Camera.main.pixelHeight));
     }
 
 
@@ -55,7 +56,7 @@ public class RenderShadowMap : MonoBehaviour
         this.m_shadowCamera = this.m_shadowCameraObj.AddComponent<Camera>();
         this.m_shadowCamera.depthTextureMode = DepthTextureMode.Depth;
 
-        this.m_shadowDepthTexture = new RenderTexture(Screen.width, Screen.height, 24);
+        this.m_shadowDepthTexture = new RenderTexture(Camera.main.pixelWidth, Camera.main.pixelHeight, 24);         //必须要有深度
         this.m_shadowCamera.targetTexture = m_shadowDepthTexture;
         this.m_shadowCamera.enabled = false;
         this.m_shadowCamera.orthographic = true;
@@ -231,24 +232,18 @@ public class RenderShadowMap : MonoBehaviour
         float nearX = nearY * camera.aspect;
 
         //使用的是camera 所在的local->world 不是camera->world
-        AddPlaneToVertexList(nearX, nearY, nearZ, ref connerVertexList);
+        GeometryUtility.AddVertexByExtensionList(nearX, nearY, nearZ, ref connerVertexList);
 
         float farY = farZ * tanHalfFov;
         float farX = farY * camera.aspect;
-        AddPlaneToVertexList(farX, farY, farZ, ref connerVertexList);
+        GeometryUtility.AddVertexByExtensionList(farX, farY, farZ, ref connerVertexList);
 
         return connerVertexList;
     }
 
 
 
-    private void AddPlaneToVertexList(float x, float y, float z, ref List<Vector3> vertexList)
-    {
-        vertexList.Add(new Vector3(-x, y, z));
-        vertexList.Add(new Vector3(x, y, z));
-        vertexList.Add(new Vector3(x, -y, z));
-        vertexList.Add(new Vector3(-x, -y, z));
-    }
+
 }
 
 public enum LightFitMode

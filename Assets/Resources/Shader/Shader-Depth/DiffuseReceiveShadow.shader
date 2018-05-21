@@ -3,6 +3,7 @@ Shader "Shadow/DiffuseReceiveShadow" {
 	{
 		_Color("Main Color",Color) = (1.0,1.0,1.0,1.0)
 		_MainTex("Main Tex",2D) = "white"{}
+		_ShadowColor("Shadow Color",Color) = (0,0,0,0.6)
 	}
 		SubShader{
 			Tags {
@@ -18,6 +19,7 @@ Shader "Shadow/DiffuseReceiveShadow" {
 				}
 
 				ZWrite Off
+				Blend SrcAlpha OneMinusSrcAlpha
 
 				CGPROGRAM
 				#pragma vertex vert
@@ -31,6 +33,8 @@ Shader "Shadow/DiffuseReceiveShadow" {
 				float4 _Color;
 				sampler2D _MainTex;
 				float4 _MainTex_ST;
+
+				float4 _ShadowColor;
 
 				uniform sampler2D _ShadowMap;
 				uniform float4x4 _LightSpaceProjectionUVMatrix;			//灯光坐标系下物体的UV,顶点世界-> 灯光view -> 灯光Projection -> [-1,1]->[0,1]
@@ -81,7 +85,7 @@ Shader "Shadow/DiffuseReceiveShadow" {
 
 						float f = step(depth, lightSpaceDepth);
 
-						return _Color*baseCol * (1 - f) + f *float4(0, 0, 0, 0.1);
+						return _Color*baseCol * (1 - f) + f *lerp(baseCol,_ShadowColor,_ShadowColor.a);
 
 					}
 					ENDCG

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+[ExecuteInEditMode]
 public class Billboard : MonoBehaviour
 {
     private Material mat;
@@ -7,7 +8,7 @@ public class Billboard : MonoBehaviour
     private void Update()
     {
         if (mat == null)
-            mat = GetComponentInChildren<Renderer>().material;
+            mat = GetComponentInChildren<Renderer>().sharedMaterial;
 
         if (mat == null)
             return;

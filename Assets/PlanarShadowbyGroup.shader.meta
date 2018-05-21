@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Offset.shader.meta
+guid: 24f65cc37127227458f291f98ed1ed25
+timeCreated: 1502173295
+=======
+guid: 84c9707e12a50a14b87177e764dae22d
+timeCreated: 1506067712
+>>>>>>> 94e4deea689ba7caf98868d587f9c222d60ad920:Assets/PlanarShadowbyGroup.shader.meta
+licenseType: Pro
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
