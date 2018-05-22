@@ -6,6 +6,7 @@ Shader "UVOperate/SimpleSin"
 	Properties
 	{
 		_MainTex ("Texture", 2D) = "white" {}
+		_Speed("Speed",Range(0,50))=0
 	}
 	SubShader
 	{
@@ -41,11 +42,15 @@ Shader "UVOperate/SimpleSin"
 			}
 			
 			sampler2D _MainTex;
+			half _Speed;
 
 			fixed4 frag (v2f i) : SV_Target
 			{
 				float2 uv = i.uv ;
-				float4 color = tex2D(_MainTex,uv +float2(sin(_Time.y * 5.0 + uv.y * 15.0) * 0.05,0));
+
+				//为啥只加uv.x
+				//float4 color = tex2D(_MainTex,uv +float2(sin(_Time.y *_Speed + uv.y * 5.0) * 0.05,0));
+				float4 color = tex2D(_MainTex,uv + float2(sin(uv.y),0));
 				return color;
 				
 			}
