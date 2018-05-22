@@ -24,21 +24,21 @@ public class TestMeshClip : MonoBehaviour
 
     private void OnGUI()
     {
-        if (GUILayout.Button("slice"))
-        {
-            Plane plane = new Plane(slicerNormal, slicerDistance);
-            MeshSlicer slicer = new MeshSlicer(TargetGameobject.GetComponent<MeshFilter>().mesh, plane);
-            //DebugMeshWindingOrder(TargetGameobject.GetComponent<MeshFilter>().mesh);
-            List<Mesh> meshs = slicer.Slice(IncludeIntersection, IncludeOppsiteSide, false);
+        //if (GUILayout.Button("slice"))
+        //{
+        //    Plane plane = new Plane(slicerNormal, slicerDistance);
+        //    MeshSlicer slicer = new MeshSlicer(TargetGameobject.GetComponent<MeshFilter>().mesh, plane);
+        //    //DebugMeshWindingOrder(TargetGameobject.GetComponent<MeshFilter>().mesh);
+        //    List<Mesh> meshs = slicer.Slice(IncludeIntersection, IncludeOppsiteSide, false);
 
-            for (int i = 0; i < meshs.Count; ++i)
-                RenderMesh(meshs[i]);
+        //    for (int i = 0; i < meshs.Count; ++i)
+        //        RenderMesh(meshs[i]);
 
-            TargetGameobject.SetActive(false);
+        //    TargetGameobject.SetActive(false);
 
 
 
-        }
+        //}
 
         if (GUILayout.Button("cross"))
         {

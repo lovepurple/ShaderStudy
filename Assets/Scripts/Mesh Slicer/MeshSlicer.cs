@@ -84,7 +84,7 @@ public class MeshSlicer
                 uv2 = sliceMesh.uv[vertexIndex2];
             }
 
-            GeometryUtility.Triangle triangle = new GeometryUtility.Triangle(vertexPosition0, vertexPosition1, vertexPosition2, uv0, uv1, uv2, vertexNormal0, vertexNormal1, vertexNormal2);
+            GeometryUtility.Triangle triangle = new GeometryUtility.Triangle(vertexPosition0, vertexPosition1, vertexPosition2); /*new GeometryUtility.Triangle(vertexPosition0, vertexPosition1, vertexPosition2, uv0, uv1, uv2, vertexNormal0, vertexNormal1, vertexNormal2);*/
             GeometryUtility.PlaneTriangleIntersectionResult intersectionResult = GeometryUtility.GetPlaneTriangleIntersectionResult(this.m_slicerPlane, triangle, includeOppositeFace);
 
             slicedMesh.UpperMeshTriangleList.AddRange(intersectionResult.UpperTriangleList);
