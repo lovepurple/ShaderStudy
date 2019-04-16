@@ -7,6 +7,7 @@ Shader "UVOperate/SimpleRipple" {
         _MainTex ("Texture", 2D) = "white" {}
         _Scale ("Scale", Range(0.5,500.0)) = 3.0
         _Speed ("Speed", Range(-50,50.0)) = 1.0
+        _Center("Center",Vector) = (0.5,0.5,1,1)
     }
     SubShader 
     {
@@ -24,6 +25,7 @@ Shader "UVOperate/SimpleRipple" {
             half _Speed;
             sampler2D _MainTex;
             float4 _MainTex_ST;
+            float4 _Center;
             
             struct v2f
             {
@@ -44,11 +46,11 @@ Shader "UVOperate/SimpleRipple" {
 
             float4 frag (v2f i):COLOR
             {
-                half2 uv = (i.uv- 0.5) * _Scale;
-                half r = sqrt (uv.x*uv.x + uv.y*uv.y);
+                half2 uv = (i.uv- _Center.xy) ;
+                half r = sqrt (uv.x*uv.x + uv.y*uv.y)* _Scale;
                 half z = sin (r+_Time.y*_Speed) / r;
 
-                float3 col =  _Color.rgb * tex2D (_MainTex, i.uv+z).rgb;
+                float3 col =  _Color.rgb * tex2D (_MainTex, i.uv+float2(z,0)).rgb;
 
                 return float4(col,1.0);
             }

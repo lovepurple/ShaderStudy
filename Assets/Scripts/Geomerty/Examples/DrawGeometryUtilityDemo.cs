@@ -6,6 +6,6 @@ using System.Collections;
 /// </summary>
 public class DrawGeometryUtilityDemo : MonoBehaviour
 {
-    public Vector3
+    //public Vector3
 
 }

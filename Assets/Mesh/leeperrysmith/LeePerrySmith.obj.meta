@@ -1,9 +1,7 @@
 fileFormatVersion: 2
 guid: 640e50e1c20962e4b8949696a4d00106
-timeCreated: 1510901822
-licenseType: Pro
 ModelImporter:
-  serializedVersion: 19
+  serializedVersion: 22
   fileIDToRecycleName:
     100000: Group12
     100002: Group14
@@ -72,10 +70,78 @@ ModelImporter:
     4300020: Group4
     4300022: Group5
     4300024: Group7
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group12Mat
+    second: {fileID: 2100000, guid: d40d8e7461429204b8de3eb55de9f27f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group14Mat
+    second: {fileID: 2100000, guid: a13827f7391f8464abd66c6ae69f1b3a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group19Mat
+    second: {fileID: 2100000, guid: c19c3d6a71278ee4eb42d882a8cea4f0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group24Mat
+    second: {fileID: 2100000, guid: 43ecaff9057dc6846ad38e6ebb2df3ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group26Mat
+    second: {fileID: 2100000, guid: 97e88d3d954d5b64288c4539a05dbcac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group28Mat
+    second: {fileID: 2100000, guid: bdd84c12894cee94995a53f3f03ac5c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group2Mat
+    second: {fileID: 2100000, guid: 10919fa36d499984eaa8cde02dd7365d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group33Mat
+    second: {fileID: 2100000, guid: 3050a0f5c9abd5642b4f7ebf09b950d7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group35Mat
+    second: {fileID: 2100000, guid: 98048cc782b46014382365c5f71f402f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group39Mat
+    second: {fileID: 2100000, guid: b3c9f38fbd21bfc4cbf8a74933bcaa43, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group4Mat
+    second: {fileID: 2100000, guid: 41cf817f7fd78904695dfb66d4001942, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group5Mat
+    second: {fileID: 2100000, guid: b88b99427a093de48a63f4c87ca4c5d7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Group7Mat
+    second: {fileID: 2100000, guid: 14d1a79e3d373264095603fb969f603f, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -88,12 +154,15 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
@@ -101,13 +170,18 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
@@ -117,6 +191,7 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+    normalCalculationMode: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
