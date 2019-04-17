@@ -2,3 +2,5 @@ Temp/
 Library/
 .vs/
 Debug/
+/.vs
+/Logs
