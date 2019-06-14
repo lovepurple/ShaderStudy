@@ -442,7 +442,6 @@
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Reflect-Diffuse.shader" />
     <None Include="Assets\Shader-ZTest\TestC.shader" />
     <None Include="Assets\Outlighting.shader" />
-    <None Include="Assets\Arenmegil\readme.txt" />
     <None Include="Assets\sf-PbrWater.shader" />
     <None Include="Assets\Resources\Shader\Shader-Depth\DepthBlend.shader" />
     <None Include="Assets\Shader-Rim\Rim.shader" />
