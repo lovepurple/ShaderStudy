@@ -23,7 +23,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_3_7;UNITY_2018_3;UNITY_2018;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_TEXTURE_STREAMING;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_VIDEO;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_EVENT_QUEUE;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;NET_LEGACY;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_PRO_LICENSE;AMPLIFY_SHADER_EDITOR</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2018_4_0;UNITY_2018_4;UNITY_2018;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_TEXTURE_STREAMING;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_VIDEO;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_EVENT_QUEUE;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;NET_LEGACY;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_PRO_LICENSE;UNITY_POST_PROCESSING_STACK_V2;AQUAS_PRESENT;UNITY_POST_PROCESSING_STACK_V1</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169;CS0649;IDE0051</NoWarn>
@@ -50,14 +50,14 @@
     <UnityProjectGenerator>Unity/VSTU</UnityProjectGenerator>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
-    <UnityVersion>2018.3.7f1</UnityVersion>
+    <UnityVersion>2018.4.0f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
-      <HintPath>D:\Softwares\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
+      <HintPath>H:\Softwares\Unity\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>D:\Softwares\Unity\Editor\Data\Managed/UnityEditor.dll</HintPath>
+      <HintPath>H:\Softwares\Unity\Editor\Data\Managed/UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -70,189 +70,14 @@
     <Compile Include="Assets\_3rd Plugins\DynamicShadowProjector\Scripts\ShadowTextureRenderer.cs" />
     <Compile Include="Assets\_3rd Plugins\JMO Assets\MatCap Shaders\Demo\Assets\MC_AutoRotate.cs" />
     <Compile Include="Assets\_3rd Plugins\JMO Assets\MatCap Shaders\Demo\Assets\MC_SwitchTexture.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2DxFX.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_4Gradients.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Additive.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_BlackHole.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Blood.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Blur.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_BlurHQ.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_BlurHQX.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_BurnFX.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_BurningFX.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Cartoon.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_CircleFade.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Clipping.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Color.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_ColorChange.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_ColorRGB.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_CompressionFX.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_DesintegrationFX.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_DestroyedFX.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Distortion.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Distortion_Additive.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_EdgeColor.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_EnergyBar.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Fire.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_FireAdditive.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Flame.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_FlameAdditive.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Frozen.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Ghost.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_GoldenFX.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_GoldFX.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_GrassFX.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_GrassMultiFX.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_GrayScale.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Heat.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Hologram.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Hologram2.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Hologram3.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_HSV.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Ice.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_IcedFX.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Jelly.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_JellyAutoMove.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Lightning.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_LightningBolt.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Liquid.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Liquify.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_MetalFX.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Mystic_Distortion.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Mystic_Distortion_Additive.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Negative.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_NewTeleportation.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_NewTeleportation2.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Noise.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_NoiseAnimated.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Offset.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Outline.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Pattern.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_PatternAdditive.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Pixel.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Pixel8bitsBW.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Pixel8bitsC64.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Pixel8bitsGB.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_PixelDie.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_PlasmaRainbow.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_PlasmaRainbow_Color.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_PlasmaShield.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Posterize.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_SandFX.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Sepia.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Sharpen.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Shiny_Reflect.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_SkyCloud.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Slim.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Smoke.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_StoneFX.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Teleportation.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Threshold.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Twist.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_WaterAndBackground.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_WaterAndBackgroundDeluxe.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Waterfall.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_Wave.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\_2dxFX_WoodFX.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_4Gradients.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_BlackHole.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Blood.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Blur.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_BurningFX.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Cartoon.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_CircleFade.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Clipping.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Color.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_ColorChange.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_ColorRGB.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_CompressionFX.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_DesintegrationFX.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_DestroyedFX.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Distortion.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_EdgeColor.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_EnergyBar.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Fire.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Flame.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Frozen.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Ghost.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_GoldenFX.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_GoldFX.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_GrassFX.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_GrassMultiFX.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_GrayScale.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Heat.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Hologram.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Hologram2.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Hologram3.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_HSV.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Ice.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_IcedFX.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Jelly.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_JellyAutoMove.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Lightning.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_LightningBolt.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Liquid.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Liquify.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_MetalFX.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Mystic_Distortion.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Negative.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Noise.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_NoiseAnimated.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Normal.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Offset.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Outline.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Pattern.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Pixel.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Pixel8bitsBW.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Pixel8bitsC64.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Pixel8bitsGB.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_PixelDie.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_PlasmaRainbow.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_PlasmaShield.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Posterize.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_SandFX.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Sepia.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Sharpen.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Shiny_Reflect.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_SkyCloud.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Slim.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Smoke.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_StoneFX.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Threshold.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_Twist.cs" />
-    <Compile Include="Assets\2DxFX\Scripts\2dxfx_AL\_2dxFX_AL_WoodFX.cs" />
+    <Compile Include="Assets\_3rd Plugins\ShaderForge\Example Assets\Scripts\EditorLabel.cs" />
+    <Compile Include="Assets\_3rd Plugins\ShaderForge\Example Assets\Scripts\EnableCameraDepthInForward.cs" />
+    <Compile Include="Assets\_3rd Plugins\ShaderForge\Example Assets\Scripts\SoftNormalsToVertexColor.cs" />
     <Compile Include="Assets\Advanced\Deferred Shading\GetMRT.cs" />
     <Compile Include="Assets\Advanced\Screen Space AO\SSAO.cs" />
-    <Compile Include="Assets\AmplifyShaderEditor\Examples\Community\ForceShield\ForceShieldDestroyBall.cs" />
-    <Compile Include="Assets\AmplifyShaderEditor\Examples\Community\ForceShield\ForceShieldImpactDetection.cs" />
-    <Compile Include="Assets\AmplifyShaderEditor\Examples\Community\ForceShield\ForceShieldShootBall.cs" />
-    <Compile Include="Assets\AmplifyShaderEditor\Examples\Community\HighlightAnimated\highlightAnimated.cs" />
-    <Compile Include="Assets\AmplifyShaderEditor\Examples\Official\SimpleGPUInstancing\SimpleGPUInstancingExample.cs" />
-    <Compile Include="Assets\AmplifyShaderEditor\Examples\Official\Smear\SimpleMoveExample.cs" />
-    <Compile Include="Assets\AmplifyShaderEditor\Examples\Official\Smear\Smear.cs" />
-    <Compile Include="Assets\AmplifyShaderEditor\Examples\Official\TemplateExamples\PostProcess\Sobel\PostProcessExample.cs" />
-    <Compile Include="Assets\AmplifyShaderEditor\Examples\Official\TemplateExamples\Sprites\SpriteMask\SpriteMaskController.cs" />
-    <Compile Include="Assets\CalculateDepth.cs" />
     <Compile Include="Assets\ClipMeshDemo.cs" />
     <Compile Include="Assets\DepthNormals.cs" />
     <Compile Include="Assets\flipfont.cs" />
-    <Compile Include="Assets\GfxManager.cs" />
-    <Compile Include="Assets\InkPainter\Sample\Script\ClipPainter.cs" />
-    <Compile Include="Assets\InkPainter\Sample\Script\CollisionPainter.cs" />
-    <Compile Include="Assets\InkPainter\Sample\Script\CollisionReflectionPainter.cs" />
-    <Compile Include="Assets\InkPainter\Sample\Script\MousePainter.cs" />
-    <Compile Include="Assets\InkPainter\Sample\Script\ReflectPainter.cs" />
-    <Compile Include="Assets\InkPainter\Sample\Script\TextureRecovery.cs" />
-    <Compile Include="Assets\InkPainter\Script\Core\Brush.cs" />
-    <Compile Include="Assets\InkPainter\Script\Core\InkCanvas.cs" />
-    <Compile Include="Assets\InkPainter\Script\Core\Math.cs" />
-    <Compile Include="Assets\InkPainter\Script\Core\MeshOperator.cs" />
-    <Compile Include="Assets\InkPainter\Script\Effective\GrabArea.cs" />
-    <Compile Include="Assets\InkPainter\Script\Effective\HeightFluid.cs" />
-    <Compile Include="Assets\InkPainter\Script\Effective\ReverseUV.cs" />
-    <Compile Include="Assets\InkPainter\Script\Effective\TextureMorphing.cs" />
-    <Compile Include="Assets\InkPainter\Script\Extenision\GameObjectExtension.cs" />
-    <Compile Include="Assets\InkPainter\Script\Util\SceneViewCamera.cs" />
     <Compile Include="Assets\JCDeferredShading\JCDSCamera.cs" />
     <Compile Include="Assets\JCDeferredShading\JCDSRenderTexture.cs" />
     <Compile Include="Assets\JCDeferredShading\Test1.cs" />
@@ -306,36 +131,6 @@
     <Compile Include="Assets\Script\PlanarShadowOnArbitraryPlane.cs" />
     <Compile Include="Assets\Script\RippleEffect.cs" />
     <Compile Include="Assets\Scripts\AABBBounds.cs" />
-    <Compile Include="Assets\Scripts\ai\AIAction.cs" />
-    <Compile Include="Assets\Scripts\ai\AIBaseClub.cs" />
-    <Compile Include="Assets\Scripts\ai\AIClubFactory.cs" />
-    <Compile Include="Assets\Scripts\ai\AIComparer.cs" />
-    <Compile Include="Assets\Scripts\ai\AIDeviation.cs" />
-    <Compile Include="Assets\Scripts\ai\AIEnter.cs" />
-    <Compile Include="Assets\Scripts\ai\AIGameLauncher.cs" />
-    <Compile Include="Assets\Scripts\ai\AIGuideLine.cs" />
-    <Compile Include="Assets\Scripts\ai\AIJsonClub.cs" />
-    <Compile Include="Assets\Scripts\ai\AILogger.cs" />
-    <Compile Include="Assets\Scripts\ai\AIMapRegion.cs" />
-    <Compile Include="Assets\Scripts\ai\AIMathf.cs" />
-    <Compile Include="Assets\Scripts\ai\AIModeSwitch.cs" />
-    <Compile Include="Assets\Scripts\ai\AINavEnter.cs" />
-    <Compile Include="Assets\Scripts\ai\AINavStrategy.cs" />
-    <Compile Include="Assets\Scripts\ai\AIPlayer.cs" />
-    <Compile Include="Assets\Scripts\ai\AISet.cs" />
-    <Compile Include="Assets\Scripts\ai\AISpinFitFunction.cs" />
-    <Compile Include="Assets\Scripts\ai\AIStrategy.cs" />
-    <Compile Include="Assets\Scripts\ai\AITerrain.cs" />
-    <Compile Include="Assets\Scripts\ai\AITest.cs" />
-    <Compile Include="Assets\Scripts\ai\AIWind.cs" />
-    <Compile Include="Assets\Scripts\ai\Experiment\AIBackSpinTest.cs" />
-    <Compile Include="Assets\Scripts\ai\Experiment\AIBounceTest.cs" />
-    <Compile Include="Assets\Scripts\ai\Experiment\AISideSpinDiffTest.cs" />
-    <Compile Include="Assets\Scripts\ai\Experiment\AISideSpinTest.cs" />
-    <Compile Include="Assets\Scripts\ai\Experiment\AISpinBounceHeightTest.cs" />
-    <Compile Include="Assets\Scripts\ai\Experiment\AISpinData.cs" />
-    <Compile Include="Assets\Scripts\ai\Experiment\AITopSpinTest.cs" />
-    <Compile Include="Assets\Scripts\ai\IStrategy.cs" />
     <Compile Include="Assets\Scripts\behaviac\runtime\Agent\Agent.cs" />
     <Compile Include="Assets\Scripts\behaviac\runtime\Agent\Context.cs" />
     <Compile Include="Assets\Scripts\behaviac\runtime\Base\Attributs.cs" />
@@ -435,174 +230,77 @@
     <Compile Include="Assets\Scripts\TextureArray.cs" />
     <Compile Include="Assets\Scripts\TextureUtility.cs" />
     <Compile Include="Assets\Scripts\Utils.cs" />
-    <Compile Include="Assets\SoftMask\Samples\Scripts\Draggable.cs" />
-    <Compile Include="Assets\SoftMask\Samples\Scripts\HorizontalFovSetter.cs" />
-    <Compile Include="Assets\SoftMask\Samples\Scripts\Item.cs" />
-    <Compile Include="Assets\SoftMask\Samples\Scripts\ItemsGenerator.cs" />
-    <Compile Include="Assets\SoftMask\Samples\Scripts\Minimap.cs" />
-    <Compile Include="Assets\SoftMask\Samples\Scripts\SoftMaskSampleChooser.cs" />
-    <Compile Include="Assets\SoftMask\Samples\Scripts\SoftMaskToggler.cs" />
-    <Compile Include="Assets\SoftMask\Samples\Scripts\Tooltip.cs" />
-    <Compile Include="Assets\SoftMask\Scripts\ISoftMask.cs" />
-    <Compile Include="Assets\SoftMask\Scripts\MaterialOps.cs" />
-    <Compile Include="Assets\SoftMask\Scripts\MaterialReplacements.cs" />
-    <Compile Include="Assets\SoftMask\Scripts\SoftMask.cs" />
-    <Compile Include="Assets\SoftMask\Scripts\SoftMaskable.cs" />
     <Compile Include="Assets\TestMeshClip.cs" />
     <Compile Include="Assets\Third Party\DissolveShader\DemoSzene\Timed.cs" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Community\LowPolyWater\Credits.txt" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Templates\Legacy\Sprites-Default.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\ScreenSpaceDetail\ScreenSpaceDetail.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_GrayScale.shader" />
     <None Include="Assets\BuildInShader\CGIncludes\SpeedTreeBillboardCommon.cginc" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_PixelDie.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\SimpleTerrain\SimpleTerrainBase.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Particle VertexLit Blended.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
     <None Include="Assets\BuildInShader\DefaultResources\Internal-GUITextureClipText.shader" />
     <None Include="Assets\Resources\Shader\Resources\Shader-Shadow\DiffuseReceiveCascadedShadow.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_SimpleSubtractOpNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\SimpleTerrain\SimpleTerrainAddPass.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_FmodOpNode.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Nature\TreeCreator\TreeCreatorLeavesFastOptimized.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\Translucency\Translucency.shader" />
     <None Include="Assets\Shader-UV\Distorting\Sine\DirectSin\DirectSinUVXY.shader" />
     <None Include="Assets\shader\Gray.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Shaders\ASESShaderSelectorUnlit.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_NegateNode.shader" />
     <None Include="Assets\Shader-Toon\ToonCG.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_SmoothstepOpNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_WireNode.shader" />
     <None Include="Assets\BuildInShader\CGIncludes\TerrainSplatmapCommon.cginc" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_WorldPosInputsNode.shader" />
     <None Include="Assets\BuildInShader\CGIncludes\UnityStandardMeta.cginc" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TFHCCompareLowerEqual.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_DistanceOpNode.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Smoke.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ExpOpNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_WorldTransformParams.shader" />
     <None Include="Assets\Shader-ZTest\TestA.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Decal.shader" />
-    <None Include="Assets\InkPainter\readme_en.txt" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Ice.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ToonShading\Shaders\ToonBasic.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\UI\UI-Lit-RefractionDetail.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\UI\UI-Lit-Transparent.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Distortion.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_CosOpNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_FunctionNode.shader" />
     <None Include="Assets\ViewTangent.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\AnimatedUVDistortion\AnimatedUVDistortion.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\StencilExample\Portals\Portal03\StencilDiffuse03.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Mobile\Mobile-Diffuse.shader" />
     <None Include="Assets\_3rd Plugins\DynamicShadowProjector\Shaders\Projector\Dynamic\MipmappedShadow.shader" />
     <None Include="Assets\BuildInShader\DefaultResources\Internal-Clear.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\AlphaTest-BumpSpec.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_LightColorNode.shader" />
     <None Include="Assets\shader\Shader-Environment\Shader-SimpleCubemap.shader" />
     <None Include="Assets\BuildInShader\DefaultResources\Internal-SplashShadowCaster.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Templates\Legacy\MultiPassUnlit.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_Vector4Node.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_IndirectSpecularLight.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_SimpleDivideOpNode.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\AlphaTest-SoftEdgeUnlit.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_GrayscaleNode.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\AlphaTest-VertexLit.shader" />
     <None Include="Assets\shader\Shadertoy.cginc" />
     <None Include="Assets\BuildInShader\CGIncludes\UnityUI.cginc" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Noise.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Reflect-Glossy.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\GIDebug\VertexColors.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\TerrainShaders\Splats\Specular-AddPass.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Pattern.shader" />
     <None Include="Assets\_3rd Plugins\JMO Assets\MatCap Shaders\Shaders\MatCap_TextureAdd_Bumped.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Illumin-VertexLit.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Illumin-ParallaxSpec.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_StaticSwitchNode.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\ShowAlphaChannel.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\TemplateExamples\PostProcess\Sobel\Sobel.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Smoke.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ReflectOpNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ATanOpNode.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_CircleFade.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_NoiseAnimated.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Sharpen.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\SRP Lightweight GlintSparkle\SRP Lightweight GlintSparkle.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_FunctionOutputNode.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_DestroyedFX.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_WorldSpaceCameraPos.shader" />
     <None Include="Assets\BuildInShader\DefaultResources\Internal-BlitCopy.shader" />
     <None Include="Assets\Resources\Shader\Shader-Depth\NewShader.shader" />
     <None Include="Assets\Mirror Shaders\Mirror-AlphaSpecSphere.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ATan2OpNode.shader" />
     <None Include="Assets\Resources\Shader\Resources\Shader-Shadow\PlanarShadow.shader" />
     <None Include="Assets\Resources\Shader\Shader-Depth\InteractHightlight.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Teleportation.shader" />
     <None Include="Assets\BuildInShader\DefaultResources\Internal-SplashShadowBlur.shader" />
     <None Include="Assets\shader\Heart.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_GrassMultiFX.shader" />
     <None Include="Assets\BuildInShader\CGIncludes\UnityGlobalIllumination.cginc" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Templates\Legacy\DefaultUnlit.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_SimpleMaxOp.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_SandFX.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_LightningBolt.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_RotatorNode.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Pattern.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_DecodeFloatRGBAHlpNode.shader" />
     <None Include="Assets\Resources\Shader\Deferred\ViewDepth.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Posterize.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\ObjectNormalRefraction\ObjectNormalRefraction.shader" />
-    <None Include="Assets\SoftMask\Samples\Fonts\OpenSans License.txt" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\UVLightReveal\UV light.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\MK4_Car_1_Paint.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Normal-DiffuseFast.shader" />
     <None Include="Assets\BuildInShader\CGIncludes\UnityStandardCoreForwardSimple.cginc" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Liquify.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\SunShaftsComposite.shader" />
     <None Include="Assets\Shader-CoordCal\DoubleCircle.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\UI\UI-Unlit-TextDetail.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_WorldToObjectTransfNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ObjSpaceViewDirHlpNode.shader" />
     <None Include="Assets\shader\Shader-Overlay\LensFlare.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Shiny_Reflect.shader" />
     <None Include="Assets\shader\Water.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurves.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ObjectToWorldTransfNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_DecodeLightmapHlpNode.shader" />
     <None Include="Assets\Mirror Shaders\Mirror-AlphaBumpSpec.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Community\HologramSimple\Hologram Simple.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\SnowAccum\SnowAccum.shader" />
     <None Include="Assets\shader\ScreenPos.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\ScreenSpaceAmbientObscurance.shader" />
     <None Include="Assets\Resources\Shader\Resources\Shader-Shadow\PlanarShadowOnCustomPlanar.shader" />
     <None Include="Assets\shader\SimpleWave.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TangentSignVertexDataNode.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_BurnFX.shader" />
     <None Include="Assets\Shader-UV\Distorting\Sine\SinDistort\SimpleSinDistort.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_CeilOpNode.shader" />
     <None Include="Assets\Textures\ocean-Textures\NewSurfaceShader.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_VertexBinormalNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\SRP Lightweight 2D Fractal\SRP Lightweight 2D Fractal.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\PositionCutoff\LocalPosCutoff.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\TemplateExamples\Sprites\SpriteMask\SpritesMask.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Nature\SoftOcclusion\TreeSoftOcclusionBarkRendertex.shader" />
     <None Include="Assets\shader\Shader-Transform\Billboard-Selfillum.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Alpha-ParallaxSpec.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ScreenPosInputsNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TangentVertexDataNode.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\NFAA.shader" />
     <None Include="Assets\BuildInShader\CGIncludes\Lighting.cginc" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Community\SingleChannelMasking\SingleChannelMasking.shader" />
     <None Include="Assets\BuildInShader\CGIncludes\NewSurfaceShader.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Normal-Bumped.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Community\Skybox Cubemap Extended\Credits.txt" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_PiNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_FloorOpNode.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Offset.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TFHCCompareLessNode.shader" />
     <None Include="Assets\_3rd Plugins\DynamicShadowProjector\Shaders\Projector\DSPProjector.cginc" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Reflect-Parallax.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\TiltShiftHdrLensBlur.shader" />
@@ -616,365 +314,184 @@
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Normal-Parallax.shader" />
     <None Include="Assets\BuildInShader\CGIncludes\AutoLight.cginc" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\TerrainShaders\Details\WavingGrass.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Community\Dissolve Burn\DissolveBurn.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ObjSpaceLightDirHlpNode.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Mystic_Distortion_Additive.shader" />
     <None Include="Assets\Shader-Water\CoastFoamWater.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\VignetteShader.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\TerrainShaders\Splats\AddPass.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Internal-DeferredShading.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Flame.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularSmooth.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\RimLight\RimLight.shader" />
     <None Include="Assets\Resources\Shader\Shader-Depth\DepthTexture.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Reflect-VertexLit.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ASinOpNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\CubemapReflections\CubemapReflections.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\Projectors\Guidelines.txt" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Pixel8bitsGB.shader" />
     <None Include="Assets\Shader-UV\Distorting\Sine\DirectSin\DirectSinUVOnlyX.shader" />
     <None Include="Assets\BuildInShader\CGIncludes\UnityBuiltin3xTreeLibrary.cginc" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_SkyCloud.shader" />
     <None Include="Assets\BuildInShader\DefaultResources\Internal-Halo.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\UI\UI-Lit-Detail.shader" />
     <None Include="Assets\shader\Shader-Debug\sf-VertexColor.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Threshold.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_EnergyBar.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Heat.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Outline.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\MK4 Sky Texture.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\MotionBlur.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Illumin-BumpSpec.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBloom.shader" />
     <None Include="Assets\_3rd Plugins\DynamicShadowProjector\Shaders\Projector\Dynamic\LightxShadowWithLinearFalloff.shader" />
     <None Include="Assets\_3rd Plugins\JMO Assets\MatCap Shaders\Shaders\MatCap_TextureMult_Bumped.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_DeltaTime.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Particle Add.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\AlphaTest-Glossy.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\TemplateExamples\Particles\HeatHaze\ParticlesTest.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Mobile\Mobile-Particle-Add.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Reflect-ParallaxSpec.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Pixel8bitsBW.shader" />
     <None Include="Assets\Shader-Rim\X-Ray.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Liquid.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\GIDebug\UV1sAsPositions.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Lightmap-Glossy.shader" />
     <None Include="Assets\Scripts\behaviac\runtime\version.txt" />
     <None Include="Assets\BuildInShader\CGIncludes\SpeedTreeWind.cginc" />
     <None Include="Assets\PlanarShadowbyGroup.shader" />
     <None Include="Assets\Shader-UV\Distorting\Sine\CircleDistort\CircleSineDistort.shader" />
+    <None Include="Assets\_3rd Plugins\ShaderForge\Readme.txt" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Nature\SoftOcclusion\TreeSoftOcclusionLeaves.shader" />
-    <None Include="Assets\AmplifyShaderEditor\ChangeLog.txt" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\MK4_Car_2_Paints.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Hologram2.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\ShaderLibrary\ShaderLibrary.txt" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TFHCIf.shader" />
     <None Include="Assets\shader\RadiusEdge.shader" />
     <None Include="Assets\_3rd Plugins\DynamicShadowProjector\Shaders\Caps\glslCheck.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Standard.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Community\Skybox Cubemap Extended\Shaders\Skybox Cubemap Extended.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Mobile\Mobile-VertexLit-OnlyDirectionalLights.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\Projectors\ProjectorShadow.shader" />
-    <None Include="Assets\SoftMask\Shaders\SoftMaskETC1.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_VertexTangentNode.shader" />
     <None Include="Assets\BuildInShader\CGIncludes\UnityStandardCoreForward.cginc" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_RoundOpNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_WorldSpaceLightPosNode.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\MinMaxReduction.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\SSAA.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_ColorChange.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Community\2Sided\2Sided.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Mobile\Mobile-Particle-Alpha.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Cartoon.shader" />
     <None Include="Assets\Shader-UV\UVCoord\DrawCircleByPixelCoord.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\RadialBlur.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Mobile\Mobile-Particle-Alpha-VertexLit.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_MetalFX.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_GetLocalVarNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_Log2OpNode.shader" />
     <None Include="Assets\Shader-Toon\ToonByRimTexture.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\Water\WaterSample.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Pixel8bitsC64.shader" />
-    <None Include="Assets\InkPainter\Shader\Effective\HeightToNormal.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_StoneFX.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldDX11.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_EdgeColor.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Shaders\Unlit-ColoredAlpha.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_LightAttenuation.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_DestroyedFX.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TexturePropertyNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_SinOpNode.shader" />
     <None Include="Assets\Shader-Dissolve\BaseDissolve.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Cubemaps\CubeBlend.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_ColorChange.shader" />
     <None Include="Assets\BuildInShader\CGIncludes\UnityPBSLighting.cginc" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_WorldNormalVector.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Readme.txt" />
     <None Include="Assets\Resources\Shader\Shader-Depth\SceneDepth.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\ContrastComposite.shader" />
-    <None Include="Assets\CBRounded.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_SimpleContrastNode.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset3.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_RefractOpVec.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\TemplateExamples\PostProcess\FilmGrain\FilmGrain.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_SignOpNode.shader" />
     <None Include="Assets\Shader-NPR\WireframeTransparent.shader" />
     <None Include="Assets\Shader-UV\ScreenUVAndW.shader" />
     <None Include="Assets\Shader-Toon\Toon.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_RGBToHSVNode.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\FisheyeShader.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\Outline\Outline.shader" />
     <None Include="Assets\BuildInShader\CGIncludes\TerrainEngine.cginc" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ClampOpNode.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\Forward\MK4_Forward_Garbage.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_WoodFX.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\GIDebug\TextureUV.shader" />
-    <None Include="Assets\InkPainter\Shader\Lib\InkPainterFoundation.cginc" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Credits.txt" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\TerrainShaders\Splats\Specular-Base.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\TerrainShaders\Details\WavingGrassBillboard.shader" />
     <None Include="Assets\Shader-Water\CartoonWater.shader" />
-    <None Include="Assets\SoftMask\Shaders\SoftMask.cginc" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\UI\UI-Unlit-Text.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Reflect-BumpSpec.shader" />
     <None Include="Assets\Resources\Shader\Other\TextureArray.shader" />
     <None Include="Assets\SilhouetteDiffuse.shader" />
     <None Include="Assets\Shader-Toon\ToonOnePass.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Community\HighlightAnimated\Highlight_Animated.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Community\Melting\Melting.shader" />
+    <None Include="Assets\_3rd Plugins\ShaderForge\Example Assets\Shaders\Vegetation.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Apply.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Mystic_Distortion.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_BurningFX.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\TemplateExamples\Sprites\SimpleSprite\SimpleSprite.shader" />
     <None Include="Assets\Mesh\leeperrysmith\LeePerrySmith.js.txt" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_Log10OpNode.shader" />
-    <None Include="Assets\InkPainter\Shader\Effective\HeightToColor.shader" />
     <None Include="Assets\Shader-UV\Distorting\Sine\DirectSin\DirectSinUV.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Threshold.shader" />
     <None Include="Assets\_3rd Plugins\DynamicShadowProjector\Shaders\Shadow\ShadowTransparent.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Liquid.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\UI\UI-DefaultFont.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Twist.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_LengthOpNode.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Alpha-Parallax.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_WorldSpaceViewDirHlpNode.shader" />
     <None Include="Assets\BuildInShader\CGIncludes\UnityShadowLibrary.cginc" />
     <None Include="Assets\Shader-ShaderToy\Hexagon.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_PosVertexDataNode.shader" />
+    <None Include="Assets\_3rd Plugins\ShaderForge\Example Assets\Shaders\VertexAnimation.shader" />
     <None Include="Assets\_3rd Plugins\DynamicShadowProjector\Shaders\Projector\Dynamic\ShadowWithoutFalloff.shader" />
     <None Include="Assets\BuildInShader\CGIncludes\HLSLSupport.cginc" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\StencilExample\RefractionsPanels\AnimatedRefraction.shader" />
     <None Include="Assets\Third Party\DissolveShader\Shader\Dissolve_WorldCoords.shader" />
     <None Include="Assets\_3rd Plugins\DynamicShadowProjector\Shaders\Projector\LightWithLinearFalloff.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_CoshOpNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TauNode.shader" />
     <None Include="Assets\Resources\Shader\Shader-Depth\DepthWater.shader" />
     <None Include="Assets\Shader-NPR\BackgroundShading.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_IntNode.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Alpha-Diffuse.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_EnergyBar.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\RadialUVDistortion\RadialUVDistortion.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\frag_ao.cginc" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Community\EnvironmentGradient\Credits.txt" />
     <None Include="Assets\Shader-Toon\ToonDiscrete.shader" />
     <None Include="Assets\BuildInShader\DefaultResources\Internal-CombineDepthNormals.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\SimpleRefraction\SimpleRefraction.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_DegreesOpNode.shader" />
     <None Include="Assets\_3rd Plugins\DynamicShadowProjector\Shaders\Blit\CopyMipmap.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TFHCPixelateUV.shader" />
     <None Include="Assets\Shader-Rim\X-RayAdvance.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\TerrainShaders\Splats\FirstPass.shader" />
     <None Include="Assets\BuildInShader\CGIncludes\UnityStandardBRDF.cginc" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_Exp2OpNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_DotProductOpNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\TwoSidedWithFace\TwoSideWithFace.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\SimplePotionLiquid\SimplePotionLiquid.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\RefractedShadows\RefractedShadows.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TemplateShaderProperty.shader" />
     <None Include="Assets\shader\Shader-Environment\Shader-SimpleRefraction.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\MK4_Building_Toon.shader" />
     <None Include="Assets\Resources\Shader\Deferred\TestMRT.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_SandFX.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Frozen.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\ParallaxOffsetFakeInterior\ParallaxWindow.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Pixel.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\TerrainShaders\Splats\Standard-AddPass.shader" />
     <None Include="Assets\BuildInShader\CGIncludes\UnityBuiltin2xTreeLibrary.cginc" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ConditionalIfNode.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Shiny_Reflect.shader" />
     <None Include="Assets\shader\Cook-Torrance.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_PatternAdditive.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\Extrusion\NormalExtrusion.shader" />
-    <None Include="Assets\InkPainter\Sample\Shader\TessellateHeightTransform.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_CircleFade.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\Burn\BurnEffect.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_SummedBlendNode.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_NewTeleportation2.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\Forward\MK4_Forward_Dirt.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TruncOpNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\VertexNormalReconstruction\VertexNormalReconstruction.shader" />
     <None Include="Assets\shader\Shader-PBR\SH.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Heat.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Blur.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\AlphaTest-Bumped.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Negative.shader" />
     <None Include="Assets\BuildInShader\DefaultResources\Internal-GUITextureBlit.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_BlackHole.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Skybox.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\ReadFromAtlasTiled\ImprovedReadFromAtlasTiled.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Particle Multiply.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\TextureArray\TextureArray.shader" />
     <None Include="Assets\shader\Shader-Outline\Outline-DepthTexture.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_SinhOpNode.shader" />
     <None Include="Assets\Shader-NPR\Wireframe.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Community\ForceShield\Credits.txt" />
     <None Include="Assets\Shader-UV\WorldUVMap.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\ScreenSpaceCurvature\ScreenSpaceCurvature.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ParallaxMappingNode.shader" />
     <None Include="Assets\_3rd Plugins\DynamicShadowProjector\Shaders\Projector\MipmappedShadow.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_GoldenFX.shader" />
     <None Include="Assets\BuildInShader\DefaultResources\Internal-SplashShadowReceiverSimple.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\AnimatedFire\AnimatedFire.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\SimpleBlur\SimpleBlur.shader" />
     <None Include="Assets\Shader-NPR\StylizedHighlights.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Mobile\Mobile-Particle-Multiply.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Ghost.shader" />
+    <None Include="Assets\_3rd Plugins\ShaderForge\Example Assets\Shaders\Refraction.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Unlit\Unlit-AlphaTest.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Liquify.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TFHCCompareNotEqual.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\Forward\MK4_Forward_Dirt2.shader" />
     <None Include="Assets\BuildInShader\CGIncludes\UnityDeferredLibrary.cginc" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Posterize.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_StoneFX.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_4Gradients.shader" />
     <None Include="Assets\BuildInShader\CGIncludes\UnityStandardCore.cginc" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfField34.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\SRP Lightweight Coverage\SRP Lightweight Coverage.shader" />
     <None Include="Assets\_3rd Plugins\DynamicShadowProjector\Shaders\Shadow\ShadowForReplacement.shader" />
     <None Include="Assets\Resources\Shader\Shader-Depth\sf-GrayDepthTexture.shader" />
     <None Include="Assets\_3rd Plugins\DynamicShadowProjector\Shaders\Projector\ShadowWithoutFalloff.shader" />
     <None Include="Assets\BuildInShader\CGIncludes\UnityLightingCommon.cginc" />
     <None Include="Assets\Shader-Water\Water.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TexCoordVertexDataNode.shader" />
-    <None Include="Assets\InkPainter\Shader\Effective\SingleColorFill.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Cartoon.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_WoodFX.shader" />
     <None Include="Assets\Shader-NPR\LowPolygonGeometry.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ColorSpaceDouble.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Reflect-Diffuse.shader" />
     <None Include="Assets\Shader-ZTest\TestC.shader" />
     <None Include="Assets\Outlighting.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Pixel8bitsC64.shader" />
-    <None Include="Assets\Arenmegil\readme.txt" />
     <None Include="Assets\sf-PbrWater.shader" />
     <None Include="Assets\Resources\Shader\Shader-Depth\DepthBlend.shader" />
     <None Include="Assets\Shader-Rim\Rim.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\StandardSpecular.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_GoldenFX.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\TemplateExamples\UI\SimpleUI\SimpleUI.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_BurningFX.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\XRay\ProceduralWall.shader" />
     <None Include="Assets\_3rd Plugins\DynamicShadowProjector\Shaders\Shadow\DSPShadow.cginc" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\SimpleNoise\SimpleNoise.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_NewTeleportation.shader" />
-    <None Include="Assets\InkPainter\Shader\Effective\InvertAlpha.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Hologram.shader" />
+    <None Include="Assets\_3rd Plugins\ShaderForge\Example Assets\Shaders\Parallax.shader" />
     <None Include="Assets\Shader-UV\UVCoord\DrawCircleByUVCoord.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_LinearToGammaNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\ParallaxOcclusionMappingPOM\SandPOM.shader" />
     <None Include="Assets\shader\UIIcon.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_GoldFX.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_SaturateNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_BlendOpsNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TanOpNode.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBlur.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TFHCCompareGreaterEqual.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\SSAOShader.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Slim.shader" />
     <None Include="Assets\_3rd Plugins\JMO Assets\MatCap Shaders\Shaders\MatCap_Lit.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\UI\UI-Unlit-Transparent.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_BlackHole.shader" />
     <None Include="Assets\_3rd Plugins\JMO Assets\MatCap Shaders\Shaders\MatCap_Plain_Bumped.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\ConvertDepth.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_EncodeViewNormalStereoHlpNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\Matcap\MatcapSample.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_RangedFloatNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\Projectors\ProjectorLight.shader" />
     <None Include="Assets\Shader-UV\Distorting\Sine\DirectSin\SimpleSin.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Reflect-BumpNolight.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Hologram.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurvesSimple.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\SimpleTexture\SimpleTexture.shader" />
     <None Include="Assets\Third Party\DissolveShader\Shader\Dissolve_TexturCoords.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\StencilExample\Portals\Portal03\StencilMask03.shader" />
     <None Include="Assets\BuildInShader\DefaultResources\PerformanceTools\FrameDebuggerRenderTargetDisplay.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderYUV.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\XRay\XRay.shader" />
-    <None Include="Assets\InkPainter\Shader\Effective\ReverseUV.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Nature\TreeCreator\TreeCreatorBarkRendertex.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_CompressionFX.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_HSV.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_DesintegrationFX.shader" />
     <None Include="Assets\BuildInShader\CGIncludes\UnityStandardConfig.cginc" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_SimpleMinNode.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Blood.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\Forward\MK4_Forwad_Streets.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ViewDirInputsCoordNode.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Fire.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_SamplerNode.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Lightmap-BumpSpec.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Community\LowPolyWater\LowPolyWater.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\SimplePotionLiquid\SimpleGlass.shader" />
     <None Include="Assets\Mirror Shaders\Mirror-BumpSpec.shader" />
     <None Include="Assets\Shader-Outline\OutlineWithMask.shader" />
+    <None Include="Assets\_3rd Plugins\ShaderForge\Example Assets\Shaders\LightWrapping.shader" />
     <None Include="Assets\shader\Shader-Fresnel\FresnelOutline.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\TerrainShaders\Details\VertexLit.shader" />
     <None Include="Assets\Shader-Rim\X-RayAdvance2.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\CreaseApply.shader" />
-    <None Include="Assets\InkPainter\Shader\Effective\HeightDrip.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\Forward\MK4_Forward_Car_2_Paints.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\SimpleGPUInstancing\SimpleGPUInstancing.shader" />
-    <None Include="Assets\InkPainter\Shader\Effective\GrabArea.shader" />
     <None Include="Assets\shader\CircleMosaic.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_PowerNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_FractNode.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Nature\SoftOcclusion\TreeSoftOcclusionBark.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Mobile\Mobile-Skybox.shader" />
     <None Include="Assets\_3rd Plugins\JMO Assets\MatCap Shaders\Shaders\MatCap_Plain_AdditiveZ.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Internal-DeferredReflections.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Templates\Unlit.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_GoldFX.shader" />
     <None Include="Assets\_3rd Plugins\JMO Assets\!JMO Assets Readme.txt" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_DynamicAppendNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_SimpleRemainderNode.shader" />
     <None Include="Assets\shader\Shader-PBR\sf-pbr-water.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_PixelDie.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ComponentMaskNode.shader" />
     <None Include="Assets\_3rd Plugins\DynamicShadowProjector\Shaders\Projector\Dynamic\LightxShadowWithoutFalloff.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Mobile\Mobile-BumpSpec-1DirectionalLight.shader" />
-    <None Include="Assets\InkPainter\Shader\Paint\PaintNormal.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\ChromaticAberrationShader.shader" />
     <None Include="Assets\BuildInShader\CGIncludes\SpeedTreeVertex.cginc" />
-    <None Include="Assets\SoftMask\Shaders\SoftMaskTemplate.cginc" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\StencilExample\Portals\Portal01\StencilMask01.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_WaterAndBackgroundDeluxe.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\UISpriteFX\UISpriteFX.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\TemplateExamples\PostProcess\FilmGrain\Credits.txt" />
     <None Include="Assets\_3rd Plugins\DynamicShadowProjector\Shaders\Projector\LightWithoutFalloff.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_RelayNode.shader" />
     <None Include="Assets\BuildInShader\CGIncludes\NewUnlitShader.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_PlasmaRainbow.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Hologram2.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\TerrainSnowCoverage\TerrainSnowCoverageFirstPass.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />
     <None Include="Assets\shader\Shader-PBR\CartoonPbrWater.shader" />
-    <None Include="Assets\shader\quan.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Particle AddSmooth.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Particle AddMultiply.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ToonShading\Shaders\ToonLitOutline.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\Dithering\DitheringFade.shader" />
     <None Include="Assets\Shader-Water\SeaWave.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Skybox-Cubed.shader" />
     <None Include="Assets\Resources\Shader\Resources\Shader-PostEffect\SSAO\Resources\SSAO.shader" />
@@ -982,35 +499,17 @@
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ToonShading\Shaders\ToonLit.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\UI\UI-Lit-Bumped.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\MK4_Dirt_simple.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Community\SingleChannelMasking\Credits.txt" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_PlasmaShield.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Community\2Sided\Credits.txt" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_PannerNode.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Illumin-Glossy.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\Forward\MK4_Forward_Billboard.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ScaleNode.shader" />
     <None Include="Assets\shader\TrangleMosaic.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionSelective.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_GrassFX.shader" />
     <None Include="Assets\Shader-NPR\ToneBasedShading.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\Bokeh34.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_FireAdditive.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Community\HologramSimple\Credits.txt" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\TerrainShaders\Trees\BillboardTree.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_LogOpNode.shader" />
-    <None Include="Assets\SoftMask\Shaders\SoftMask.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Mystic_Distortion.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_AppendNode.shader" />
     <None Include="Assets\Shader-Toon\ToonBase.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_LightningBolt.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_NoiseAnimated.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TanhOpNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_BreakToComponentsNode.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_4Gradients.shader" />
     <None Include="Assets\Shader-Water\sf-water 1.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Illumin-Parallax.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Illumin-Bumped.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_FlameAdditive.shader" />
     <None Include="Assets\shader\AdvancedShading\AreaLight\QuadAreaLight.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\MK4_Streets.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Nature\SpeedTreeBillboard.shader" />
@@ -1018,98 +517,51 @@
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Mobile\Mobile-VertexLit.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Normal-ParallaxSpec.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\CameraMotionBlurDX11.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Fire.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_GammaToLinearNode.shader" />
     <None Include="Assets\_3rd Plugins\JMO Assets\MatCap Shaders\Shaders\MatCap_Plain.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
     <None Include="Assets\Resources\Shader\Shader-Depth\DiffuseReceivePCFShadow.shader" />
     <None Include="Assets\shader\Shader-Environment\Shader-BaseCubemap.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_WorldReflectionVector.shader" />
     <None Include="Assets\_3rd Plugins\DynamicShadowProjector\Shaders\Projector\LightxShadowWithLinearFalloff.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Nature\TreeCreator\TreeCreatorLeaves.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\TextureArrayInspector.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\SimpleLambert\SimpleLambert.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Slim.shader" />
     <None Include="Assets\SimplePBR.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\ObjectNormalRefraction\ShaderBallInterior.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\Projectors\Shaders\ProjectorLight.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MultiPassHollywoodFlares.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\CustomLightingToon\CustomLightingToon.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Clipping.shader" />
+    <None Include="Assets\_3rd Plugins\ShaderForge\Example Assets\Shaders\VertexColorRounding.shader" />
     <None Include="Assets\Shader-UV\Distorting\Ripple\RippleEffect.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\LinearPreviews.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\TerrainShaders\Splats\Specular-FirstPass.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\SimpleTerrain\SimpleWater.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_WeightedBlendNode.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\BlurEffectConeTaps.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_GrayScale.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Blood.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Additive.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_IndirectDiffuseLight.shader" />
     <None Include="Assets\_3rd Plugins\JMO Assets\MatCap Shaders\Shaders\MatCap_Plain_Additive.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_AbsOpNode.shader" />
     <None Include="Assets\shader\Shader-Core\RebuildCoordinateByDepth.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Community\ForceShield\ForceShield.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_IcedFX.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\CameraMotionBlur.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Pixel8bitsGB.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_OneMinusNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Templates\Legacy\PostProcess.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_EncodeFloatRGHlpNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ACosOpNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_DecodeFloatRGHlpNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TextureCoordinatesNode.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\DLAA.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Ice.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Nature\TreeCreator\TreeCreatorLeavesRendertex.shader" />
     <None Include="Assets\Shader-UV\Distorting\SimpleRipple.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Lightning.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_PlasmaShield.shader" />
+    <None Include="Assets\_3rd Plugins\ShaderForge\Example Assets\Shaders\TessellationDisplacement.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\MK4_Billboard.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Alpha-Bumped.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Internal-PrePassLighting.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\TriplanarProjection\TriplanarProjection.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Nature\TreeCreator\TreeCreatorBark.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Unlit\Unlit-Alpha.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\NoiseAndGrainDX11.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Mobile\Mobile-BumpSpec.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Wave.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_FunctionInputNode.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Reflect-BumpVertexLit.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Normal-Glossy.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Templates\Legacy\Particle Alpha Blend.shader" />
     <None Include="Assets\Shader-UV\Distorting\Sine\SinDistort\SinDistort.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_EdgeColor.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_CosTime.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Nature\SpeedTree.shader" />
     <None Include="Assets\_3rd Plugins\DynamicShadowProjector\Shaders\Projector\ShadowWithLinearFalloff.shader" />
     <None Include="Assets\Shader-NPR\PencilContour.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Nature\SoftOcclusion\TreeSoftOcclusionLeavesRendertex.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Color.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Unlit\Unlit-Normal.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_MetalFX.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\TerrainShaders\Splats\Standard-Base.shader" />
     <None Include="Assets\_3rd Plugins\JMO Assets\MatCap Shaders\Shaders\MatCap_TextureMult.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\Forward\MK4_Forward_Color_Mask.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_SimpleAddOpNode.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter2.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\MK4_Dirt.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_RsqrtOpNode.shader" />
     <None Include="Assets\BuildInShader\CGIncludes\UnityStandardInput.cginc" />
-    <None Include="Assets\InkPainter\Sample\Shader\VTFHeightTransform.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_VertexColorNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TFHCCompareGreater.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Alpha-BumpSpec.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_FresnelNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_HSVToRGBNode.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_HSV.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_SqrtOpNode.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableBlur.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\MotionBlurClear.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\Dithering\DitheringFadeBlueNoise.shader" />
     <None Include="Assets\BuildInShader\DefaultResources\Internal-Colored.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TimeNode.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Hologram3.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Mobile\Mobile-Bumped.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionEffect.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\GrayscaleEffect.shader" />
@@ -1117,484 +569,356 @@
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\TwirlEffect.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\VortexEffect.shader" />
     <None Include="Assets\BuildInShader\DefaultResources\Internal-ErrorShader.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_DecodeViewNormalStereoHlpNode.shader" />
     <None Include="Assets\_3rd Plugins\DynamicShadowProjector\Shaders\Blit\EraseShadow.shader" />
-    <None Include="Assets\Shader-UV\UVCoord\UVTilingAndOffset.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Normal-BumpSpec.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ObjectScaleNode.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Offset.shader" />
+    <None Include="Assets\_3rd Plugins\ShaderForge\Example Assets\Shaders\Tiles.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Adaptation.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\MK4_Garbage_Alpha.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Ghost.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_Texture2D.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_CrossProductOpNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_NormalVertexDataNode.shader" />
     <None Include="Assets\Third Party\DissolveShader\Readme.txt" />
     <None Include="Assets\shader\RectMosaic.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Jelly.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TFHCCompareEqual.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\Tessellation\Tessellation.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\Smear\Smear.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\ParallaxMapping\ParallaxMappingIterations.shader" />
     <None Include="Assets\_3rd Plugins\DynamicShadowProjector\Shaders\Projector\LightxShadowWithoutFalloff.shader" />
-    <None Include="Assets\InkPainter\Shader\Effective\TextureMorphing.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_ColorRGB.shader" />
     <None Include="Assets\shader\Shader-PBR\sf-BasePBR.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\NoiseAndGrain.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_BlurHQX.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Pixel.shader" />
     <None Include="Assets\shader\Shader-Reflact&amp;Refract\SimpleGlass.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Skybox-Procedural.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\WorldPosSLices\WorldPosSlices.shader" />
     <None Include="Assets\shader\Shader-Fresnel\Fresnel.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Jelly.shader" />
     <None Include="Assets\Shader-Cloth\Cloth.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Waterfall.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Nature\TreeCreator\TreeCreatorBarkOptimized.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ColorNode.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\Projectors\Shaders\ProjectorMultiply.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Particle Blend.shader" />
     <None Include="Assets\Shader-Dissolve\DissolveTwoColorLessDistance.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Cubemaps\CubeCopy.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\VignettingShader.shader" />
     <None Include="Assets\shader\Shader-PBR\PBR-Metallic.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\DownloadSamplesInstructions.txt" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Community\Melting\Credits.txt" />
     <None Include="Assets\BuildInShader\CGIncludes\Tessellation.cginc" />
     <None Include="Assets\Shader-CoordCal\DrawCircle.shader" />
     <None Include="Assets\BuildInShader\DefaultResources\Internal-GUITextureClip.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_GrassMultiFX.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\Tonemapper.shader" />
     <None Include="Assets\Shader-Dissolve\DissolveInScreenPos.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_PlasmaRainbow_Color.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Color.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\StencilExample\Portals\Portal02\StencilMask02.shader" />
     <None Include="Assets\OutlineWithViewDirAndNormal.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\UI\UI-Unlit-Detail.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
     <None Include="Assets\BuildInShader\CGIncludes\UnityCG.cginc" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_SubstanceSamplerNode.shader" />
     <None Include="Assets\_3rd Plugins\DynamicShadowProjector\Readme.txt" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Cubemaps\CubeBlur.shader" />
     <None Include="Assets\BuildInShader\DefaultResources\Internal-GUITexture.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Flame.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Clipping.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA2.shader" />
     <None Include="Assets\shader\shader-PostEffect\Night Vision.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_BlurHQ.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ScaleAndOffsetNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\CustomOutlineToon\CustomOutlineToon.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_DdxOpNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TextureArrayNode.shader" />
     <None Include="Assets\Resources\Shader\Shader-Depth\DiffuseReceiveShadow.shader" />
-    <None Include="Assets\SoftMask\Samples\Materials\WaveWithSoftMask.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Outline.shader" />
     <None Include="Assets\BuildInShader\CGIncludes\UnityStandardShadow.cginc" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Noise.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\TemplateExamples\UI\MaskedUI\MaskedUI.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Frozen.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Alpha-Glossy.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Blur.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_SimpleTimeNode.shader" />
     <None Include="Assets\BuildInShader\CGIncludes\UnityStandardUtils.cginc" />
     <None Include="Assets\_3rd Plugins\DynamicShadowProjector\Shaders\Shadow\ShadowOpaque.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\Forward\MK4_Forward_Car_1_Paint.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ToggleSwitchNode.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Distortion_Additive.shader" />
+    <None Include="Assets\_3rd Plugins\ShaderForge\Example Assets\Shaders\PixelRotator.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrection3DLut.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_ColorRGB.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Particle Alpha Blend.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Hologram3.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Sharpen.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\StencilExample\Portals\Portal02\StencilDiffuse02.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\TemplateExamples\PostProcess\Sobel\Credits.txt" />
+    <None Include="Assets\_3rd Plugins\ShaderForge\Example Assets\Shaders\CustomLighting.shader" />
     <None Include="Assets\_3rd Plugins\JMO Assets\MatCap Shaders\Shaders\MatCap_TextureAdd.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\EdgeDetectNormals.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\UI\UI-Default.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_LerpOp.shader" />
     <None Include="Assets\Scripts\behaviac\runtime\license.txt" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_IcedFX.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Mobile\Mobile-Lightmap-Unlit.shader" />
     <None Include="Assets\Shader-NPR\SilhouetteExtraction.shader" />
     <None Include="Assets\JCDeferredShading\Resources\JCDeferredShading.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Reflect-Bumped.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_StepOpNode.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\PrepareSunShaftsBlur.shader" />
     <None Include="Assets\_3rd Plugins\DynamicShadowProjector\Shaders\Blit\DownsampleFallback.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Negative.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_PlasmaRainbow.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\MK4_Garbage.shader" />
     <None Include="Assets\Mesh\leeperrysmith\LeePerrySmith_License.txt" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\AnimatedFire-ShaderFunction\AnimatedFire-ShaderFunction.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Normal-DiffuseDetail.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\Blend.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\UISpriteFX\UISpriteFX 3.shader" />
     <None Include="Assets\shader\Shader-Outline\SimpleOutline.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_Vector2Node.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Lightmap-Diffuse.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Distortion.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_SimpleMultiplyOpNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\ReflectRefractSoapBubble\ReflectRefractSoapBubble.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_RegisterLocalVarNode.shader" />
     <None Include="Assets\BuildInShader\DefaultResources\Internal-PrePassCollectShadows.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TFHCCompareWithRange.shader" />
     <None Include="Assets\Resources\Shader\Shader-Depth\DepthNormalTexture.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_UnpackScaleNormalNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TriplanarNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_WorldSpaceLightDirHlpNode.shader" />
     <None Include="Assets\Shader-Water\CoastFoam.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Lightning.shader" />
     <None Include="Assets\Shader-Water\CoastFoam - 副本.shader" />
     <None Include="Assets\shader\Shader-Environment\Shader-DetailCubemap.shader" />
     <None Include="Assets\shader\Projector.shader" />
     <None Include="Assets\Shader-Rim\RimSword.shader" />
     <None Include="Assets\Resources\Shader\Shader-Depth\DepthCompare.shader" />
-    <None Include="Assets\InkPainter\Shader\Paint\PaintMain.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\Substance\Readme.txt" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Sepia.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_NodeMasking.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_PosterizeNode.shader" />
-    <None Include="Assets\InkPainter\Shader\Paint\PaintHeight.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_SinTimeNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_RadiansOpNode.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\SimpleClear.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\Substance\SubstanceExample.shader" />
     <None Include="Assets\BuildInShader\CGIncludes\UnityMetaPass.cginc" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\DoubleLayerCustomSurface\DoubleLayerCustomSurface.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TFHCFlipBookUVAnimation.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Illumin-Diffuse.shader" />
     <None Include="Assets\_3rd Plugins\DynamicShadowProjector\Shaders\Blit\Downsample.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TFHCRemap.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\OrientationBasedSprite\OrientationBasedSprite.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Lightmap-VertexLit.shader" />
     <None Include="Assets\_3rd Plugins\JMO Assets\MatCap Shaders\Textures\MaCrea\MaCrea.txt" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularDisplacement.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Community\Dissolve Burn\Credits.txt" />
     <None Include="Assets\_3rd Plugins\DynamicShadowProjector\Shaders\Blit\Blit.shader" />
-    <None Include="Assets\InkPainter\readme_jp.txt" />
     <None Include="Assets\Shader-ZTest\TestB.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\Water\Ground.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\Transparency\Transparency.shader" />
     <None Include="Assets\BuildInShader\DefaultResources\Camera-DepthNormalTexture.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Readme.txt" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\TerrainSnowCoverage\TerrainBase.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\SimpleTerrain\SimpleTerrainFirstPass.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\Forward\MK4_Forward_Dirt_simple.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_SwitchNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_SwitchByFaceNode.shader" />
     <None Include="Assets\PhotoshopLevel.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Sprites-Diffuse.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_BlendNormalsNode.shader" />
     <None Include="Assets\_3rd Plugins\DynamicShadowProjector\Shaders\Projector\Dynamic\ShadowWithLinearFalloff.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_SkyCloud.shader" />
     <None Include="Assets\BuildInShader\DefaultResources\Font.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_FWidthOpNode.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Alpha-VertexLit.shader" />
     <None Include="Assets\Shader-NPR\AntialiasedCelShading.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\Forward\MK4_Forward_Building_Toon.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Nature\TreeCreator\TreeCreatorLeavesFast.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\TerrainShaders\Splats\Standard-FirstPass.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_LayeredBlendNode.shader" />
     <None Include="Assets\_3rd Plugins\DynamicShadowProjector\Shaders\Blit\Blur.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA3Console.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Templates\Legacy\UIDefault.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_GrassFX.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_LODFadeNode.shader" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Sepia.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Particle Premultiply Blend.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_Twist.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Community\HighlightAnimated\Credits.txt" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Pixel8bitsBW.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Community\EnvironmentGradient\MourEnvironmentGradient.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Lightmap-Bumped.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_SimplifiedFModOpNode.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_CompressionFX.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\AlphaTest-Diffuse.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_DdyOpNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_Vector3Node.shader" />
     <None Include="Assets\_3rd Plugins\JMO Assets\MatCap Shaders\Textures\BenSimonds\_Textures Readme.txt" />
-    <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Normal.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\MK4_Dirt2.shader" />
     <None Include="Assets\Shader-UV\UVCoord\DrawCircleByUVCoordWithAspect.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\Transmission\Transmission.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\StencilExample\Portals\Portal01\StencilDiffuse01.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_FaceVariableNode.shader" />
     <None Include="Assets\BuildInShader\CGIncludes\UnityShaderVariables.cginc" />
-    <None Include="Assets\AmplifyShaderEditor\CreatingTerrainsWithASE.txt" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Unlit\Unlit-Color.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Examples\Official\ReadFromAtlasTiled\ReadFromAtlasTiled.shader" />
     <None Include="Assets\Resources\Shader\Deferred\TestGBufferOutput.shader" />
     <None Include="Assets\Shader-Dissolve\DissolveTwoColor.shader" />
     <None Include="Assets\BuildInShader\DefaultResources\Internal-SplashShadowReceiver.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_EncodeFloatRGBAHlpNode.shader" />
     <None Include="Assets\Shader-NPR\PencilSketchShading.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\MK4_Color_Mask.shader" />
     <None Include="Assets\BuildInShader\DefaultResources\Internal-Flare.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset2.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_WaterAndBackground.shader" />
     <None Include="Assets\BuildInShader\CGIncludes\SpeedTreeCommon.cginc" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_NormalizeNode.shader" />
     <None Include="Assets\_3rd Plugins\JMO Assets\MatCap Shaders\_MatCap Shaders Readme.txt" />
-    <None Include="Assets\2DxFX\Resources\_2dxFX_DesintegrationFX.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_NoiseGeneratorNode.shader" />
-    <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_DesaturateNode.shader" />
     <None Include="Assets\BuildInShader\DefaultResourcesExtra\Cubemaps\CubeBlurOdd.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendForBloom.shader" />
     <None Include="Assets\_3rd Plugins\DynamicShadowProjector\Shaders\Blit\Downsample.cginc" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>E:/Repository/ShaderStudy/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/GithubRepository/ShaderStudy/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>E:/Repository/ShaderStudy/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>E:/Repository/ShaderStudy/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/GithubRepository/ShaderStudy/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>E:/Repository/ShaderStudy/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>E:/Repository/ShaderStudy/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>D:/GithubRepository/ShaderStudy/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ARModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AccessibilityModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AnimationModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AssetBundleModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AudioModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.BaselibModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.BaselibModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.BaselibModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ClothModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ClusterInputModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ClusterRendererModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CrashReportingModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.DirectorModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.FileSystemHttpModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.FileSystemHttpModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.FileSystemHttpModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.GameCenterModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.GridModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.HotReloadModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.HotReloadModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.HotReloadModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.IMGUIModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ImageConversionModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.InputModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.JSONSerializeModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.LocalizationModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.LocalizationModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.LocalizationModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ParticleSystemModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.PerformanceReportingModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.PhysicsModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Physics2DModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ProfilerModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ProfilerModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ProfilerModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ScreenCaptureModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SharedInternalsModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpriteMaskModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpriteShapeModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.StreamingModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.StreamingModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.StreamingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.StyleSheetsModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.StyleSheetsModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.StyleSheetsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SubstanceModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SubstanceModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SubstanceModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TLSModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TLSModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TLSModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TerrainModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TerrainPhysicsModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TextCoreModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TextCoreModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TextCoreModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TilemapModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TimelineModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TimelineModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TimelineModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UIModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UIElementsModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UNETModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UmbraModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UmbraModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UmbraModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityAnalyticsModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityConnectModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityTestProtocolModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityTestProtocolModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityTestProtocolModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestAudioModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestTextureModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestWWWModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VFXModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VFXModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VFXModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VRModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VehiclesModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VideoModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.WindModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XRModule">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Locator">
-      <HintPath>D:/Softwares/Unity/Editor/Data/Managed/Unity.Locator.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/Managed/Unity.Locator.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/Softwares/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
-      <HintPath>D:/Softwares/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>D:/Softwares/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Timeline">
-      <HintPath>D:/Softwares/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Networking">
-      <HintPath>D:/Softwares/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.GoogleAudioSpatializer">
-      <HintPath>D:/Softwares/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
-      <HintPath>D:/Softwares/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Analytics.Editor">
-      <HintPath>E:/Repository/ShaderStudy/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>E:/Repository/ShaderStudy/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>E:/Repository/ShaderStudy/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
-      <HintPath>D:/Softwares/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
     </Reference>
     <Reference Include="System">
-      <HintPath>D:/Softwares/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.dll</HintPath>
     </Reference>
     <Reference Include="System.Core">
-      <HintPath>D:/Softwares/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Core.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Core.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization">
-      <HintPath>D:/Softwares/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Runtime.Serialization.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Runtime.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml">
-      <HintPath>D:/Softwares/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Xml.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Xml.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq">
-      <HintPath>D:/Softwares/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Xml.Linq.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Xml.Linq.dll</HintPath>
     </Reference>
     <Reference Include="UnityScript">
-      <HintPath>D:/Softwares/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/UnityScript.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/UnityScript.dll</HintPath>
     </Reference>
     <Reference Include="UnityScript.Lang">
-      <HintPath>D:/Softwares/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/UnityScript.Lang.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/UnityScript.Lang.dll</HintPath>
     </Reference>
     <Reference Include="Boo.Lang">
-      <HintPath>D:/Softwares/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
+      <HintPath>H:/Softwares/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
