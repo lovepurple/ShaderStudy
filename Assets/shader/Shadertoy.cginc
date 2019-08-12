@@ -1,6 +1,0 @@
-﻿#ifndef SHADERTOY_INCLUDE
-#define SHADERTOY_INCLUDE
-
-
-
-#endif
