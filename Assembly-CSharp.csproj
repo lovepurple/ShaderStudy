@@ -368,19 +368,6 @@
     <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EditorLabel.cs" />
     <Compile Include="Assets\ShaderForge\Example Assets\Scripts\EnableCameraDepthInForward.cs" />
     <Compile Include="Assets\ShaderForge\Example Assets\Scripts\SoftNormalsToVertexColor.cs" />
-    <Compile Include="Assets\SoftMask\Samples\Scripts\Draggable.cs" />
-    <Compile Include="Assets\SoftMask\Samples\Scripts\HorizontalFovSetter.cs" />
-    <Compile Include="Assets\SoftMask\Samples\Scripts\Item.cs" />
-    <Compile Include="Assets\SoftMask\Samples\Scripts\ItemsGenerator.cs" />
-    <Compile Include="Assets\SoftMask\Samples\Scripts\Minimap.cs" />
-    <Compile Include="Assets\SoftMask\Samples\Scripts\SoftMaskSampleChooser.cs" />
-    <Compile Include="Assets\SoftMask\Samples\Scripts\SoftMaskToggler.cs" />
-    <Compile Include="Assets\SoftMask\Samples\Scripts\Tooltip.cs" />
-    <Compile Include="Assets\SoftMask\Scripts\ISoftMask.cs" />
-    <Compile Include="Assets\SoftMask\Scripts\MaterialOps.cs" />
-    <Compile Include="Assets\SoftMask\Scripts\MaterialReplacements.cs" />
-    <Compile Include="Assets\SoftMask\Scripts\SoftMask.cs" />
-    <Compile Include="Assets\SoftMask\Scripts\SoftMaskable.cs" />
     <Compile Include="Assets\TestMeshClip.cs" />
     <Compile Include="Assets\Third Party\DissolveShader\DemoSzene\Timed.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\AutoBlink.cs" />
@@ -479,7 +466,6 @@
     <None Include="Assets\Resources\Shader\Deferred\ViewDepth.shader" />
     <None Include="Assets\2DxFX\Resources\_2dxFX_Posterize.shader" />
     <None Include="Assets\AmplifyShaderEditor\Examples\Official\ObjectNormalRefraction\ObjectNormalRefraction.shader" />
-    <None Include="Assets\SoftMask\Samples\Fonts\OpenSans License.txt" />
     <None Include="Assets\AmplifyShaderEditor\Examples\Official\UVLightReveal\UV light.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\MK4_Car_1_Paint.shader" />
     <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Liquify.shader" />
@@ -567,7 +553,6 @@
     <None Include="Assets\_3rd Plugins\DynamicShadowProjector\Shaders\Caps\glslCheck.shader" />
     <None Include="Assets\AmplifyShaderEditor\Examples\Community\Skybox Cubemap Extended\Shaders\Skybox Cubemap Extended.shader" />
     <None Include="Assets\AmplifyShaderEditor\Examples\Official\Projectors\ProjectorShadow.shader" />
-    <None Include="Assets\SoftMask\Shaders\SoftMaskETC1.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_VertexTangentNode.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_RoundOpNode.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_WorldSpaceLightPosNode.shader" />
@@ -617,7 +602,6 @@
     <None Include="Assets\InkPainter\Shader\Lib\InkPainterFoundation.cginc" />
     <None Include="Assets\AmplifyShaderEditor\Examples\Credits.txt" />
     <None Include="Assets\Shader-Water\CartoonWater.shader" />
-    <None Include="Assets\SoftMask\Shaders\SoftMask.cginc" />
     <None Include="Assets\Resources\Shader\Other\TextureArray.shader" />
     <None Include="Assets\SilhouetteDiffuse.shader" />
     <None Include="Assets\Shader-Toon\ToonOnePass.shader" />
@@ -680,6 +664,7 @@
     <None Include="Assets\AmplifyShaderEditor\Examples\Official\Extrusion\NormalExtrusion.shader" />
     <None Include="Assets\InkPainter\Sample\Shader\TessellateHeightTransform.shader" />
     <None Include="Assets\2DxFX\Resources\_2dxFX_CircleFade.shader" />
+    <None Include="Assets\New AmplifyShader.shader" />
     <None Include="Assets\AmplifyShaderEditor\Examples\Official\Burn\BurnEffect.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_SummedBlendNode.shader" />
     <None Include="Assets\2DxFX\Resources\_2dxFX_NewTeleportation2.shader" />
@@ -812,7 +797,6 @@
     <None Include="Assets\_3rd Plugins\DynamicShadowProjector\Shaders\Projector\Dynamic\LightxShadowWithoutFalloff.shader" />
     <None Include="Assets\InkPainter\Shader\Paint\PaintNormal.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\ChromaticAberrationShader.shader" />
-    <None Include="Assets\SoftMask\Shaders\SoftMaskTemplate.cginc" />
     <None Include="Assets\AmplifyShaderEditor\Examples\Official\StencilExample\Portals\Portal01\StencilMask01.shader" />
     <None Include="Assets\2DxFX\Resources\_2dxFX_WaterAndBackgroundDeluxe.shader" />
     <None Include="Assets\AmplifyShaderEditor\Examples\Official\UISpriteFX\UISpriteFX.shader" />
@@ -848,7 +832,6 @@
     <None Include="Assets\2DxFX\Resources\_2dxFX_FireAdditive.shader" />
     <None Include="Assets\AmplifyShaderEditor\Examples\Community\HologramSimple\Credits.txt" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_LogOpNode.shader" />
-    <None Include="Assets\SoftMask\Shaders\SoftMask.shader" />
     <None Include="Assets\unity-chan!\Unity-chan! Model\Art\Stage\Shader\AlphaMask.shader" />
     <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Mystic_Distortion.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_AppendNode.shader" />
@@ -1010,7 +993,6 @@
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_DdxOpNode.shader" />
     <None Include="Assets\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TextureArrayNode.shader" />
     <None Include="Assets\Resources\Shader\Shader-Depth\DiffuseReceiveShadow.shader" />
-    <None Include="Assets\SoftMask\Samples\Materials\WaveWithSoftMask.shader" />
     <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_Outline.shader" />
     <None Include="Assets\2DxFX\Resources\_2dxFX_Noise.shader" />
     <None Include="Assets\AmplifyShaderEditor\Examples\Official\TemplateExamples\UI\MaskedUI\MaskedUI.shader" />
