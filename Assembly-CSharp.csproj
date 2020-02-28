@@ -844,6 +844,7 @@
     <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_4Gradients.shader" />
     <None Include="Assets\Shader-Water\sf-water 1.shader" />
     <None Include="Assets\2DxFX\Resources\_2dxFX_FlameAdditive.shader" />
+    <None Include="Assets\Rainbow.shader" />
     <None Include="Assets\shader\AdvancedShading\AreaLight\QuadAreaLight.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Shader\MK4_Streets.shader" />
     <None Include="Assets\Res\Scene\Postapo Cartoon\Standard Assets\Effects\ImageEffects\Shaders\CameraMotionBlurDX11.shader" />
