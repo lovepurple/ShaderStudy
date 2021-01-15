@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(GUITexture))]
+//[RequireComponent(typeof(GUITexture))]
 public class MC_SwitchTexture : MonoBehaviour
 {
 	public Material linkedMat;
@@ -10,19 +10,19 @@ public class MC_SwitchTexture : MonoBehaviour
 	
 	void Update ()
 	{
-		if(GetComponent<GUITexture>().GetScreenRect().Contains(Input.mousePosition))
-		{
-			GetComponent<GUITexture>().color = new Color(0.65f,0.65f,0.65f,0.5f);
+		//if(GetComponent<GUITexture>().GetScreenRect().Contains(Input.mousePosition))
+		//{
+		//	GetComponent<GUITexture>().color = new Color(0.65f,0.65f,0.65f,0.5f);
 			
-			if(Input.GetMouseButtonDown(0))
-				NextTexture();
-			else if(Input.GetMouseButtonDown(2))
-				PrevTexture();
-		}
-		else
-		{
-			GetComponent<GUITexture>().color = Color.gray;
-		}
+		//	if(Input.GetMouseButtonDown(0))
+		//		NextTexture();
+		//	else if(Input.GetMouseButtonDown(2))
+		//		PrevTexture();
+		//}
+		//else
+		//{
+		//	GetComponent<GUITexture>().color = Color.gray;
+		//}
 	}
 	
 	private void NextTexture()
@@ -42,6 +42,6 @@ public class MC_SwitchTexture : MonoBehaviour
 	private void ReloadTexture()
 	{
 		linkedMat.SetTexture("_MatCap", textures[index]);
-		GetComponent<GUITexture>().texture = textures[index];
+		//GetComponent<GUITexture>().texture = textures[index];
 	}
 }

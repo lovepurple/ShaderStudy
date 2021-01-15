@@ -4,3 +4,4 @@ Library/
 Debug/
 /.vs
 /Logs
+*.csproj
