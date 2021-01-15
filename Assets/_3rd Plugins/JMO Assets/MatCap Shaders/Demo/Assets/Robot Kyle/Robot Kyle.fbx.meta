@@ -1,402 +1,417 @@
 fileFormatVersion: 2
 guid: 320b1c2af77554f99a1658df4a6d3d5c
 ModelImporter:
-  fileIDToRecycleName:
-    4300000: Robot2
-  serializedVersion: 10
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      43: 4300000
+    second: Robot2
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      111: 11100000
+    second: //RootNode
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      4: 400092
+    second: Head
+  - first:
+      1: 100092
+    second: Head
+  - first:
+      4: 400018
+    second: Hip
+  - first:
+      1: 100018
+    second: Hip
+  - first:
+      4: 400012
+    second: Left_Ankle_Joint_01
+  - first:
+      1: 100012
+    second: Left_Ankle_Joint_01
+  - first:
+      4: 400086
+    second: Left_Forearm_Joint_01
+  - first:
+      1: 100086
+    second: Left_Forearm_Joint_01
+  - first:
+      4: 400082
+    second: Left_Index_Finger_Joint_01a
+  - first:
+      1: 100082
+    second: Left_Index_Finger_Joint_01a
+  - first:
+      4: 400080
+    second: Left_Index_Finger_Joint_01b
+  - first:
+      1: 100080
+    second: Left_Index_Finger_Joint_01b
+  - first:
+      4: 400078
+    second: Left_Index_Finger_Joint_01c
+  - first:
+      1: 100078
+    second: Left_Index_Finger_Joint_01c
+  - first:
+      4: 400014
+    second: Left_Knee_Joint_01
+  - first:
+      1: 100014
+    second: Left_Knee_Joint_01
+  - first:
+      4: 400076
+    second: Left_Middle_Finger_Joint_01a
+  - first:
+      1: 100076
+    second: Left_Middle_Finger_Joint_01a
+  - first:
+      4: 400074
+    second: Left_Middle_Finger_Joint_01b
+  - first:
+      1: 100074
+    second: Left_Middle_Finger_Joint_01b
+  - first:
+      4: 400072
+    second: Left_Middle_Finger_Joint_01c
+  - first:
+      1: 100072
+    second: Left_Middle_Finger_Joint_01c
+  - first:
+      4: 400064
+    second: Left_Pinky_Finger_Joint_01a
+  - first:
+      1: 100064
+    second: Left_Pinky_Finger_Joint_01a
+  - first:
+      4: 400062
+    second: Left_Pinky_Finger_Joint_01b
+  - first:
+      1: 100062
+    second: Left_Pinky_Finger_Joint_01b
+  - first:
+      4: 400060
+    second: Left_Pinky_Finger_Joint_01c
+  - first:
+      1: 100060
+    second: Left_Pinky_Finger_Joint_01c
+  - first:
+      4: 400070
+    second: Left_Ring_Finger_Joint_01a
+  - first:
+      1: 100070
+    second: Left_Ring_Finger_Joint_01a
+  - first:
+      4: 400068
+    second: Left_Ring_Finger_Joint_01b
+  - first:
+      1: 100068
+    second: Left_Ring_Finger_Joint_01b
+  - first:
+      4: 400066
+    second: Left_Ring_Finger_Joint_01c
+  - first:
+      1: 100066
+    second: Left_Ring_Finger_Joint_01c
+  - first:
+      4: 400090
+    second: Left_Shoulder_Joint_01
+  - first:
+      1: 100090
+    second: Left_Shoulder_Joint_01
+  - first:
+      4: 400016
+    second: Left_Thigh_Joint_01
+  - first:
+      1: 100016
+    second: Left_Thigh_Joint_01
+  - first:
+      4: 400058
+    second: Left_Thumb_Joint_01a
+  - first:
+      1: 100058
+    second: Left_Thumb_Joint_01a
+  - first:
+      4: 400056
+    second: Left_Thumb_Joint_01b
+  - first:
+      1: 100056
+    second: Left_Thumb_Joint_01b
+  - first:
+      4: 400010
+    second: Left_Toe_Joint_01
+  - first:
+      1: 100010
+    second: Left_Toe_Joint_01
+  - first:
+      4: 400088
+    second: Left_Upper_Arm_Joint_01
+  - first:
+      1: 100088
+    second: Left_Upper_Arm_Joint_01
+  - first:
+      4: 400084
+    second: Left_Wrist_Joint_01
+  - first:
+      1: 100084
+    second: Left_Wrist_Joint_01
+  - first:
+      4: 400094
+    second: Neck
+  - first:
+      1: 100094
+    second: Neck
+  - first:
+      4: 400096
+    second: Ribs
+  - first:
+      1: 100096
+    second: Ribs
+  - first:
+      4: 400004
+    second: Right_Ankle_Joint_01
+  - first:
+      1: 100004
+    second: Right_Ankle_Joint_01
+  - first:
+      4: 400050
+    second: Right_Forearm_Joint_01
+  - first:
+      1: 100050
+    second: Right_Forearm_Joint_01
+  - first:
+      4: 400046
+    second: Right_Index_Finger_Joint_01a
+  - first:
+      1: 100046
+    second: Right_Index_Finger_Joint_01a
+  - first:
+      4: 400044
+    second: Right_Index_Finger_Joint_01b
+  - first:
+      1: 100044
+    second: Right_Index_Finger_Joint_01b
+  - first:
+      4: 400042
+    second: Right_Index_Finger_Joint_01c
+  - first:
+      1: 100042
+    second: Right_Index_Finger_Joint_01c
+  - first:
+      4: 400006
+    second: Right_Knee_Joint_01
+  - first:
+      1: 100006
+    second: Right_Knee_Joint_01
+  - first:
+      4: 400040
+    second: Right_Middle_Finger_Joint_01a
+  - first:
+      1: 100040
+    second: Right_Middle_Finger_Joint_01a
+  - first:
+      4: 400038
+    second: Right_Middle_Finger_Joint_01b
+  - first:
+      1: 100038
+    second: Right_Middle_Finger_Joint_01b
+  - first:
+      4: 400036
+    second: Right_Middle_Finger_Joint_01c
+  - first:
+      1: 100036
+    second: Right_Middle_Finger_Joint_01c
+  - first:
+      4: 400028
+    second: Right_Pinky_Finger_Joint_01a
+  - first:
+      1: 100028
+    second: Right_Pinky_Finger_Joint_01a
+  - first:
+      4: 400026
+    second: Right_Pinky_Finger_Joint_01b
+  - first:
+      1: 100026
+    second: Right_Pinky_Finger_Joint_01b
+  - first:
+      4: 400024
+    second: Right_Pinky_Finger_Joint_01c
+  - first:
+      1: 100024
+    second: Right_Pinky_Finger_Joint_01c
+  - first:
+      4: 400034
+    second: Right_Ring_Finger_Joint_01a
+  - first:
+      1: 100034
+    second: Right_Ring_Finger_Joint_01a
+  - first:
+      4: 400032
+    second: Right_Ring_Finger_Joint_01b
+  - first:
+      1: 100032
+    second: Right_Ring_Finger_Joint_01b
+  - first:
+      4: 400030
+    second: Right_Ring_Finger_Joint_01c
+  - first:
+      1: 100030
+    second: Right_Ring_Finger_Joint_01c
+  - first:
+      4: 400054
+    second: Right_Shoulder_Joint_01
+  - first:
+      1: 100054
+    second: Right_Shoulder_Joint_01
+  - first:
+      4: 400008
+    second: Right_Thigh_Joint_01
+  - first:
+      1: 100008
+    second: Right_Thigh_Joint_01
+  - first:
+      4: 400022
+    second: Right_Thumb_Joint_01a
+  - first:
+      1: 100022
+    second: Right_Thumb_Joint_01a
+  - first:
+      4: 400020
+    second: Right_Thumb_Joint_01b
+  - first:
+      1: 100020
+    second: Right_Thumb_Joint_01b
+  - first:
+      4: 400002
+    second: Right_Toe_Joint_01
+  - first:
+      1: 100002
+    second: Right_Toe_Joint_01
+  - first:
+      4: 400052
+    second: Right_Upper_Arm_Joint_01
+  - first:
+      1: 100052
+    second: Right_Upper_Arm_Joint_01
+  - first:
+      4: 400048
+    second: Right_Wrist_Joint_01
+  - first:
+      1: 100048
+    second: Right_Wrist_Joint_01
+  - first:
+      4: 400100
+    second: Robot2
+  - first:
+      137: 13700000
+    second: Robot2
+  - first:
+      1: 100100
+    second: Robot2
+  - first:
+      4: 400098
+    second: Root
+  - first:
+      1: 100098
+    second: Root
+  externalObjects: {}
   materials:
-    importMaterials: 0
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
-    generateAnimations: 3
+    legacyGenerateAnimations: 3
     bakeSimulation: 0
-    splitAnimations: 1
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
-    animationRotationError: .5
-    animationPositionError: .5
-    animationScaleError: .5
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
     animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations: []
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: .00999999978
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMesh: 0
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
+    useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
-    splitTangentsAcrossUV: 1
     normalImportMode: 0
-    tangentImportMode: 1
-  textMetaNamesToFileIDs:
-    //RootNode:
-      data:
-        first: 1
-        second: a0860100
-      data:
-        first: 4
-        second: 801a0600
-      data:
-        first: 111
-        second: 605fa900
-    Head:
-      data:
-        first: 1
-        second: fc860100
-      data:
-        first: 4
-        second: dc1a0600
-    Hip:
-      data:
-        first: 1
-        second: b2860100
-      data:
-        first: 4
-        second: 921a0600
-    Left_Ankle_Joint_01:
-      data:
-        first: 1
-        second: ac860100
-      data:
-        first: 4
-        second: 8c1a0600
-    Left_Forearm_Joint_01:
-      data:
-        first: 1
-        second: f6860100
-      data:
-        first: 4
-        second: d61a0600
-    Left_Index_Finger_Joint_01a:
-      data:
-        first: 1
-        second: f2860100
-      data:
-        first: 4
-        second: d21a0600
-    Left_Index_Finger_Joint_01b:
-      data:
-        first: 1
-        second: f0860100
-      data:
-        first: 4
-        second: d01a0600
-    Left_Index_Finger_Joint_01c:
-      data:
-        first: 1
-        second: ee860100
-      data:
-        first: 4
-        second: ce1a0600
-    Left_Knee_Joint_01:
-      data:
-        first: 1
-        second: ae860100
-      data:
-        first: 4
-        second: 8e1a0600
-    Left_Middle_Finger_Joint_01a:
-      data:
-        first: 1
-        second: ec860100
-      data:
-        first: 4
-        second: cc1a0600
-    Left_Middle_Finger_Joint_01b:
-      data:
-        first: 1
-        second: ea860100
-      data:
-        first: 4
-        second: ca1a0600
-    Left_Middle_Finger_Joint_01c:
-      data:
-        first: 1
-        second: e8860100
-      data:
-        first: 4
-        second: c81a0600
-    Left_Pinky_Finger_Joint_01a:
-      data:
-        first: 1
-        second: e0860100
-      data:
-        first: 4
-        second: c01a0600
-    Left_Pinky_Finger_Joint_01b:
-      data:
-        first: 1
-        second: de860100
-      data:
-        first: 4
-        second: be1a0600
-    Left_Pinky_Finger_Joint_01c:
-      data:
-        first: 1
-        second: dc860100
-      data:
-        first: 4
-        second: bc1a0600
-    Left_Ring_Finger_Joint_01a:
-      data:
-        first: 1
-        second: e6860100
-      data:
-        first: 4
-        second: c61a0600
-    Left_Ring_Finger_Joint_01b:
-      data:
-        first: 1
-        second: e4860100
-      data:
-        first: 4
-        second: c41a0600
-    Left_Ring_Finger_Joint_01c:
-      data:
-        first: 1
-        second: e2860100
-      data:
-        first: 4
-        second: c21a0600
-    Left_Shoulder_Joint_01:
-      data:
-        first: 1
-        second: fa860100
-      data:
-        first: 4
-        second: da1a0600
-    Left_Thigh_Joint_01:
-      data:
-        first: 1
-        second: b0860100
-      data:
-        first: 4
-        second: 901a0600
-    Left_Thumb_Joint_01a:
-      data:
-        first: 1
-        second: da860100
-      data:
-        first: 4
-        second: ba1a0600
-    Left_Thumb_Joint_01b:
-      data:
-        first: 1
-        second: d8860100
-      data:
-        first: 4
-        second: b81a0600
-    Left_Toe_Joint_01:
-      data:
-        first: 1
-        second: aa860100
-      data:
-        first: 4
-        second: 8a1a0600
-    Left_Upper_Arm_Joint_01:
-      data:
-        first: 1
-        second: f8860100
-      data:
-        first: 4
-        second: d81a0600
-    Left_Wrist_Joint_01:
-      data:
-        first: 1
-        second: f4860100
-      data:
-        first: 4
-        second: d41a0600
-    Neck:
-      data:
-        first: 1
-        second: fe860100
-      data:
-        first: 4
-        second: de1a0600
-    Ribs:
-      data:
-        first: 1
-        second: 00870100
-      data:
-        first: 4
-        second: e01a0600
-    Right_Ankle_Joint_01:
-      data:
-        first: 1
-        second: a4860100
-      data:
-        first: 4
-        second: 841a0600
-    Right_Forearm_Joint_01:
-      data:
-        first: 1
-        second: d2860100
-      data:
-        first: 4
-        second: b21a0600
-    Right_Index_Finger_Joint_01a:
-      data:
-        first: 1
-        second: ce860100
-      data:
-        first: 4
-        second: ae1a0600
-    Right_Index_Finger_Joint_01b:
-      data:
-        first: 1
-        second: cc860100
-      data:
-        first: 4
-        second: ac1a0600
-    Right_Index_Finger_Joint_01c:
-      data:
-        first: 1
-        second: ca860100
-      data:
-        first: 4
-        second: aa1a0600
-    Right_Knee_Joint_01:
-      data:
-        first: 1
-        second: a6860100
-      data:
-        first: 4
-        second: 861a0600
-    Right_Middle_Finger_Joint_01a:
-      data:
-        first: 1
-        second: c8860100
-      data:
-        first: 4
-        second: a81a0600
-    Right_Middle_Finger_Joint_01b:
-      data:
-        first: 1
-        second: c6860100
-      data:
-        first: 4
-        second: a61a0600
-    Right_Middle_Finger_Joint_01c:
-      data:
-        first: 1
-        second: c4860100
-      data:
-        first: 4
-        second: a41a0600
-    Right_Pinky_Finger_Joint_01a:
-      data:
-        first: 1
-        second: bc860100
-      data:
-        first: 4
-        second: 9c1a0600
-    Right_Pinky_Finger_Joint_01b:
-      data:
-        first: 1
-        second: ba860100
-      data:
-        first: 4
-        second: 9a1a0600
-    Right_Pinky_Finger_Joint_01c:
-      data:
-        first: 1
-        second: b8860100
-      data:
-        first: 4
-        second: 981a0600
-    Right_Ring_Finger_Joint_01a:
-      data:
-        first: 1
-        second: c2860100
-      data:
-        first: 4
-        second: a21a0600
-    Right_Ring_Finger_Joint_01b:
-      data:
-        first: 1
-        second: c0860100
-      data:
-        first: 4
-        second: a01a0600
-    Right_Ring_Finger_Joint_01c:
-      data:
-        first: 1
-        second: be860100
-      data:
-        first: 4
-        second: 9e1a0600
-    Right_Shoulder_Joint_01:
-      data:
-        first: 1
-        second: d6860100
-      data:
-        first: 4
-        second: b61a0600
-    Right_Thigh_Joint_01:
-      data:
-        first: 1
-        second: a8860100
-      data:
-        first: 4
-        second: 881a0600
-    Right_Thumb_Joint_01a:
-      data:
-        first: 1
-        second: b6860100
-      data:
-        first: 4
-        second: 961a0600
-    Right_Thumb_Joint_01b:
-      data:
-        first: 1
-        second: b4860100
-      data:
-        first: 4
-        second: 941a0600
-    Right_Toe_Joint_01:
-      data:
-        first: 1
-        second: a2860100
-      data:
-        first: 4
-        second: 821a0600
-    Right_Upper_Arm_Joint_01:
-      data:
-        first: 1
-        second: d4860100
-      data:
-        first: 4
-        second: b41a0600
-    Right_Wrist_Joint_01:
-      data:
-        first: 1
-        second: d0860100
-      data:
-        first: 4
-        second: b01a0600
-    Robot2:
-      data:
-        first: 1
-        second: 04870100
-      data:
-        first: 4
-        second: e41a0600
-      data:
-        first: 137
-        second: a00bd100
-    Root:
-      data:
-        first: 1
-        second: 02870100
-      data:
-        first: 4
-        second: e21a0600
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 1
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
