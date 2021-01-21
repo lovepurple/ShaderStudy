@@ -6,8 +6,8 @@ Shader "URP/URP_BlinnPhong"
 		_BaseColor("_BaseColor",Color) = (1,1,1,1)
 		_NormalTex("_NormalTex",2D)="bump"{}
 
-		_SpecColor("Specular Color",Color) = (0,0,0,1);
-		_SpecRange("Specular Range",Range(0,1)) = 1
+		_SpecColor("Specular Color",Color) = (0,0,0,1)
+		_SpecRange("Specular Range",Float) = 1
 		_SpecPower("Specular Power",Float) = 1
 	}
 
@@ -42,7 +42,11 @@ Shader "URP/URP_BlinnPhong"
 			float4 _BaseColor;
 			float4 _BaseMap_ST;
 			float4 _NormalTex_ST;
+			float _SpecRange;
+			float _SpecPower;
+			float4 _SpecColor;
 			CBUFFER_END
+			
 			struct a2v
 			{
 				float2 uv:TEXCOORD0;
@@ -69,7 +73,7 @@ Shader "URP/URP_BlinnPhong"
 				output.uv.zw = TRANSFORM_TEX(v.uv,_NormalTex);
 				output.normalWS = TransformObjectToWorldNormal(v.normalOS,true);
 				output.tangentWS = TransformObjectToWorldDir(v.tangentOS.xyz,true) * v.tangentOS.w;
-				output.positonWS = vertexOutput.positionWS;
+				output.positionWS =vertexOutput.positionWS;
 				
 				return output;
 			}
@@ -82,22 +86,26 @@ Shader "URP/URP_BlinnPhong"
 				float3(i.tangentWS.y,bitangentWS.y,i.normalWS.y),
 				float3(i.tangentWS.z,bitangentWS.z,i.normalWS.z)
 				);
-				float3 normalTex = UnpackNormal(SAMPLE_TEXTURE2D(_NormalTex,sampler_NormalTex,i.uv));
 
-				float3 normalDir = normalize(mul(tbnMatrix,normalTex));
-
-				float4 texColor = SAMPLE_TEXTURE2D(_BaseMap,sampler_BaseMap,i.uv);
-				float3 color = texColor.rgb * _BaseColor.rgb;
 				Light mainLightInfo = GetMainLight();
+
+				float3 normalTex = UnpackNormal(SAMPLE_TEXTURE2D(_NormalTex,sampler_NormalTex,i.uv.zw));
+				float3 normalDir = normalize(mul(tbnMatrix,normalTex));
+				
+				float3 viewDirWS =normalize( GetWorldSpaceViewDir(i.positionWS.xyz));
+
 				float3 mainLightDirWS = normalize(mainLightInfo.direction).rgb;
+				float3 halfVec = normalize(viewDirWS + mainLightDirWS);
+				float NDH = saturate(dot(normalDir,halfVec));
+
+				float4 texColor = SAMPLE_TEXTURE2D(_BaseMap,sampler_BaseMap,i.uv.xy);
 
 				float NDL = saturate(dot(normalDir,mainLightDirWS));
-				float3 outColor = color;
-				
-				outColor = outColor * mainLightInfo.color ;
-				outColor *= (NDL * 0.5f +0.5f);			//Half Lambert
-				
-				return float4(outColor.rgb,1.0f);
+				float3 diffuseColor = texColor.rgb * _BaseColor.rgb * mainLightInfo.color * saturate(NDL * 0.5f +0.5f);
+				float3 specColor = pow(NDH * _SpecRange,_SpecPower) * _SpecColor;		//todo: _Range的物理意义的解释？
+
+				// return float4(specColor.rgb,1.0);
+				return float4(diffuseColor.rgb + specColor.rgb,1.0f);
 				
 			}
 			ENDHLSL
