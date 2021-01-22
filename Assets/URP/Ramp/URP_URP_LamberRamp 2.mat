@@ -19,6 +19,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _BaseTex:
+        m_Texture: {fileID: 2800000, guid: 030eda1a93bbb8946bc574890f27fa80, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _CorneaBump:
         m_Texture: {fileID: 2800000, guid: fb64935e844038c40a4780f4ef1a7693, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -47,6 +51,14 @@ Material:
         m_Texture: {fileID: 2800000, guid: 4f47073b006bcef44bc62e532cafc4fb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _NormalTex:
+        m_Texture: {fileID: 2800000, guid: 8a4309f3e5f130841bd4a46785e5813a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RampTex:
+        m_Texture: {fileID: 2800000, guid: c9b73a734864e344a8eae25b51db7068, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _ShadeIrisTex:
         m_Texture: {fileID: 2800000, guid: b444eddaee4f4e84b82d5448a713adc1, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -72,6 +84,7 @@ Material:
     - _smoothness: 0.403
     - _specsize: 0.91
     m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _illumColor: {r: 0.754717, g: 0.64435744, b: 0.64435744, a: 0}
     - _irisColor: {r: 1, g: 1, b: 1, a: 1}
