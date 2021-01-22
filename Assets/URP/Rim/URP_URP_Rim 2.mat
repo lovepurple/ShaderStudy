@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Specular_NDLTest
-  m_Shader: {fileID: 4800000, guid: c1fdf993d57091c4fa151dd1b3100e0c, type: 3}
+  m_Name: URP_URP_Rim 2
+  m_Shader: {fileID: 4800000, guid: 992320861efba984b96a415c98ecdfef, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -19,11 +19,23 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _BaseTex:
+        m_Texture: {fileID: 2800000, guid: 030eda1a93bbb8946bc574890f27fa80, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Floats: []
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: 8a4309f3e5f130841bd4a46785e5813a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _RimPower: 1.33
+    - _RimRange: 1.09
     m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _MainColor: {r: 1, g: 1, b: 1, a: 1}
+    - _RimColor: {r: 0.35402152, g: 0.25098038, b: 1, a: 1}
   m_BuildTextureStacks: []

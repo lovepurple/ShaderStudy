@@ -7,8 +7,9 @@ Shader "URP/URP_RimNormal"
 		
 		_NormalMap("Normal Tex",2D) ="bump"{}
 
-		_RimRange("Rim Range",Range(0,1)) = 0
+		_RimPower("Rim Power",Float) = 0
 		_RimColor("Rim Color",Color) = (0,0,0,1)
+		_RimRange("Rim Range",Range(0,2)) = 0
 	}
 
 	SubShader
@@ -46,6 +47,7 @@ Shader "URP/URP_RimNormal"
 			float4 _BaseColor;
 			float4 _RimColor;
 			float _RimRange;
+			float _RimPower;
 			CBUFFER_END
 
 			struct a2v
@@ -77,27 +79,30 @@ Shader "URP/URP_RimNormal"
 				return o;
 			}
 
-			float4 frag(v2f i)
+			float4 frag(v2f i):SV_Target
 			{
 				float3 bitangentWS = cross(i.normalWS,i.tangentWS);
 				float3x3 tbn =float3x3(
-				float3(i.tangentWS.x,i.bitangentWS.x,i.normalWS.x),
-				float3(i.tangentWS.y,i.bitangentWS.y,i.normalWS.y),
-				float3(i.tangentWS.z,i.bitangentWS.z,i.normalWS.z)
+				float3(i.tangentWS.x,bitangentWS.x,i.normalWS.x),
+				float3(i.tangentWS.y,bitangentWS.y,i.normalWS.y),
+				float3(i.tangentWS.z,bitangentWS.z,i.normalWS.z)
 				);
+				Light mainLightInfo = GetMainLight();
+				
+				float3 normalTex = UnpackNormal(SAMPLE_TEXTURE2D(_NormalMap,sampler_NormalMap,i.uv));
+				float3 normalWS =normalize(mul(tbn,normalTex));
 
 				float3 viewDirWS =normalize(GetWorldSpaceViewDir(i.positionWS.xyz));
-				float NDotV = saturate(dot(viewDirWS,i.normalWS));
+				float NDotV = saturate(dot(viewDirWS,normalWS));
 
-				float3 rimColor = _RimColor * (1 - NDotV);
+				float3 rimColor = _RimColor *pow((1 - NDotV)*_RimRange,_RimPower);
 
-				return float4(rimColor,1.0);
-				
+				half3 lightDirWS = normalize(mainLightInfo.direction);
+				float NDL = saturate(dot(normalWS,lightDirWS));
+				float3 baseColor = SAMPLE_TEXTURE2D(_BaseTex,sampler_BaseTex,i.uv);
+				float3 diffuseColor = baseColor * _BaseColor * mainLightInfo.color * (NDL * 0.5f +0.5f);
 
-				// Light mainLightInfo = GetMainLight();
-
-
-
+				return float4(diffuseColor + rimColor,1.0);
 			}
 
 
