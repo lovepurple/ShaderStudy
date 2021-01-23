@@ -70,8 +70,8 @@ Shader "URP/URP_RimNormal"
 			v2f vert(a2v i)
 			{
 				v2f o = (v2f)0;
-				o.positionCS = TransformObjectToHClip(i.positionOS);
-				o.positionWS = TransformObjectToWorld(i.positionOS);
+				o.positionCS = TransformObjectToHClip(i.positionOS.xyz);
+				o.positionWS = TransformObjectToWorld(i.positionOS.xyz);
 				o.normalWS = TransformObjectToWorldNormal(i.normalOS);
 				o.uv = TRANSFORM_TEX(i.uv,_BaseTex);
 				o.tangentWS = TransformObjectToWorldDir(i.tangentOS.xyz) * i.tangentOS.w;
