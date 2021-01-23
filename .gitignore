@@ -5,3 +5,4 @@ Debug/
 /.vs
 /Logs
 *.csproj
+*.sln

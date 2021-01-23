@@ -7,10 +7,10 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Toxic_2
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
+  m_Name: URP_Transparent 1
+  m_Shader: {fileID: 4800000, guid: 5f369f6ad3570b745802dfdeda280171, type: 3}
+  m_ShaderKeywords: _EMISSION
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 8de3f9d917ef6524c9a31b2d24649c2d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2476bb8affbc74a47acfe03c4a0020d8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -40,15 +40,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: b15f12a57b412cd4382c5a873d2cbcda, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3ac9cf0f80db90c47a5349bfbe5ba62b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 1b0960e376efaa44ebebba6058a0da13, type: 3}
+        m_Texture: {fileID: 2800000, guid: 604305d650a6f674caa02d0e81b42731, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: 954ba383be7aaaa4f969ca8c970c65be, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3746816154b27db449d7e924b966b322, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
