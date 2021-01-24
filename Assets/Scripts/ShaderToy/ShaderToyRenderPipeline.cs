@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using JCDeferredShading;
 using UnityEngine.Experimental.Rendering;
 using UnityEditor;
 using System.IO;
