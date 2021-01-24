@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SpotlightWithShadow
-  m_Shader: {fileID: 4800000, guid: b0715ea47448240c29716f8c7e30f363, type: 3}
-  m_ShaderKeywords: 
+  m_Name: URP_MultiLight 0
+  m_Shader: {fileID: 4800000, guid: c1fdf993d57091c4fa151dd1b3100e0c, type: 3}
+  m_ShaderKeywords: _ALLOWMULTILIGHT_ON
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -19,13 +19,18 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _LightTex:
-        m_Texture: {fileID: 2800000, guid: 62c3a592c1cd448bb8f78abfc0ac2708, type: 3}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 91c91526e8597bf42bb43b0310abbb41, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Alpha: 1
+    - _AllowMultiLight: 0
+    - _Alpha: 0.647
+    - _Ambient: 0.3
     - _ClipScale: 100
     - _Offset: -1
-    m_Colors: []
+    - _SpecPower: 20.47
+    m_Colors:
+    - _MainColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SpecColor: {r: 0.6415094, g: 0.16642934, b: 0.61815745, a: 1}
   m_BuildTextureStacks: []

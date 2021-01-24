@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Spotlight
-  m_Shader: {fileID: 4800000, guid: 1368355a509c14d819e12dde9d87a84a, type: 3}
-  m_ShaderKeywords: 
+  m_Name: URP_MultiLight 1
+  m_Shader: {fileID: 4800000, guid: c1fdf993d57091c4fa151dd1b3100e0c, type: 3}
+  m_ShaderKeywords: _ALLOWMULTILIGHT_ON
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -44,7 +44,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: dd5062fd91f9b134a8947b801ac52217, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -60,6 +60,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _AllowMultiLight: 0
     - _Alpha: 1
     - _BumpScale: 1
     - _ClipScale: 100
@@ -72,6 +73,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _SpecPower: 20.47
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
@@ -79,4 +81,6 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColorUI: {r: 1, g: 1, b: 1, a: 1}
+    - _MainColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SpecColor: {r: 0.6415094, g: 0.16642934, b: 0.61815745, a: 1}
   m_BuildTextureStacks: []

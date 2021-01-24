@@ -5,7 +5,7 @@ Shader "URP/URP_Dissolve"
         _BaseTex ("Base Texture", 2D) = "white" {}
         _BaseColor ("Base Color", Color) = (1,1,1,1)
         _DissolveNoiseTex ("Dissolve Texture",2D) = "white"{}
-        _DissolveEdgeColor ("Dissolve Edge Color", Color) = (0,0.8,0,1)
+        [HDR]_DissolveEdgeColor ("Dissolve Edge Color", Color) = (0,0.8,0,1)
         _DissolveRange ("Dissolve Range", Range(0,1) ) = 0
         _DissolveEdge("Dissolve Edge",Range(0,1))= 0.1
     }
