@@ -96,13 +96,13 @@ Shader "URP/URP_BlinnPhong"
 
 				float3 mainLightDirWS = normalize(mainLightInfo.direction).rgb;
 				float3 halfVec = normalize(viewDirWS + mainLightDirWS);
-				float NDH = saturate(dot(normalDir,halfVec));
+				float NDH = dot(normalDir,halfVec);
 
 				float4 texColor = SAMPLE_TEXTURE2D(_BaseMap,sampler_BaseMap,i.uv.xy);
 
 				float NDL = saturate(dot(normalDir,mainLightDirWS));
 				float3 diffuseColor = texColor.rgb * _BaseColor.rgb * mainLightInfo.color * saturate(NDL * 0.5f +0.5f);
-				float3 specColor = pow(NDH * _SpecRange,_SpecPower) * _SpecColor;		//todo: _Range的物理意义的解释？
+				float3 specColor = pow(saturate(NDH) * _SpecRange,_SpecPower) * _SpecColor;		//todo: _Range的物理意义的解释？
 
 				// return float4(specColor.rgb,1.0);
 				return float4(diffuseColor.rgb + specColor.rgb,1.0f);

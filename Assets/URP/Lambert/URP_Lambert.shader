@@ -83,7 +83,7 @@ Shader "URP/URP_Lambert"
 				Light mainLightInfo = GetMainLight();
 				float3 mainLightDirWS = normalize(mainLightInfo.direction).rgb;
 
-				float NDL = saturate(dot(normalDir,mainLightDirWS));
+				float NDL = dot(normalDir,mainLightDirWS);
 				float3 outColor = color;
 				
 				outColor = outColor * mainLightInfo.color ;

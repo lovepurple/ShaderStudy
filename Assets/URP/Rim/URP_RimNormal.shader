@@ -98,7 +98,7 @@ Shader "URP/URP_RimNormal"
 				float3 rimColor = _RimColor *pow((1 - NDotV)*_RimRange,_RimPower);
 
 				half3 lightDirWS = normalize(mainLightInfo.direction);
-				float NDL = saturate(dot(normalWS,lightDirWS));
+				float NDL = dot(normalWS,lightDirWS);
 				float3 baseColor = SAMPLE_TEXTURE2D(_BaseTex,sampler_BaseTex,i.uv);
 				float3 diffuseColor = baseColor * _BaseColor * mainLightInfo.color * (NDL * 0.5f +0.5f);
 

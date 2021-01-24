@@ -76,7 +76,7 @@
 				float3 baseColor = SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex,i.uv) * _MainColor.rgb;
 				Light mainLightInfo = GetMainLight();
 				float3 viewDirWS = GetWorldSpaceViewDir(i.positionWS);
-				float NDL = max(0,dot(i.normalWS,mainLightInfo.direction));
+				float NDL = dot(i.normalWS,mainLightInfo.direction);
 				baseColor = baseColor * mainLightInfo.color * (NDL *0.5f +0.5f);
 
 				float3 h = normalize(viewDirWS + mainLightInfo.direction);
