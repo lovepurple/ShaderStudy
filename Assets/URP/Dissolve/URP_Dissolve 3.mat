@@ -97,7 +97,7 @@ Material:
     - _DeepDarkness: 0.3141892
     - _DetailNormalMapScale: 1
     - _DissolveEdge: 0.038
-    - _DissolveRange: 0.369
+    - _DissolveRange: 0.353
     - _DstBlend: 0
     - _ExtraFoamTiling: 1
     - _FresnelPower: 5
@@ -123,7 +123,7 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
-    - _DissolveEdgeColor: {r: 5.278032, g: 0.5795486, b: 0, a: 1}
+    - _DissolveEdgeColor: {r: 2.2264152, g: 0.24478912, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FresnelColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
