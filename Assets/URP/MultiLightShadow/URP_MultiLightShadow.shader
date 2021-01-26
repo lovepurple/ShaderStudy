@@ -45,7 +45,7 @@ Shader "URP/URP_MultiLightShadow"
 			#pragma fragment frag
 
 			TEXTURE2D(_AlbedoTex);
-			SAMPLER(sampler_AbledoTex);
+			SAMPLER(sampler_AlbedoTex);
 
 			TEXTURE2D(_NormalTex);
 			SAMPLER(sampler_NormalTex);
@@ -97,7 +97,29 @@ Shader "URP/URP_MultiLightShadow"
 				float3 normalTex = UnpackNormal(SAMPLE_TEXTURE2D(_NormalTex,sampler_NormalTex,i.uv)).rgb;
 				float3 normalDir = normalize(mul(tbn,normalTex));
 
-				return float4(normalDir,1.0);
+				float3 albedoCol = SAMPLE_TEXTURE2D(_AlbedoTex,sampler_AlbedoTex,i.uv) * _BaseColor;
+				
+				float4 positionShadowCoord = TransformWorldToShadowCoord(i.positionWS);
+				Light mainLightInfo = GetMainLight(positionShadowCoord);
+				float NDL = dot(normalDir,normalize(mainLightInfo.direction));
+				float3 baseColor = albedoCol * mainLightInfo.shadowAttenuation * mainLightInfo.color * (NDL * 0.5f +0.5f);
+
+				int additionLightCount = GetAdditionalLightsCount();
+				float3 additionLightAdditiveColor = float3(0,0,0);
+
+				//URP 中 point light 和 spot light 都不支持shadow
+				#if _USEMULTILIGHT_ON
+				for(int indexAdditionLight = 0 ; indexAdditionLight < additionLightCount;++indexAdditionLight)
+				{
+					Light additionLightInfo = GetAdditionalLight(indexAdditionLight,i.positionWS);
+					float3 additionLightColor = additionLightInfo.color * (dot(normalDir,normalize(additionLightInfo.direction)) * 0.5 + 0.5) * additionLightInfo.shadowAttenuation * albedoCol * additionLightInfo.distanceAttenuation;
+
+					additionLightAdditiveColor += additionLightColor;
+				}
+				#endif
+
+
+				return float4(additionLightAdditiveColor + baseColor,1.0);
 
 			}
 			ENDHLSL

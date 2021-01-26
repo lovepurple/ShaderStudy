@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: URP_MultiLightShadow 3
   m_Shader: {fileID: 4800000, guid: f859a7d9f8fbe324482b3c1eff7ad4bb, type: 3}
-  m_ShaderKeywords: _EMISSION
+  m_ShaderKeywords: _EMISSION _USEMULTILIGHT_ON
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -19,6 +19,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _AlbedoTex:
+        m_Texture: {fileID: 2800000, guid: df704e87379fe314982671b5be80477f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 2800000, guid: 2476bb8affbc74a47acfe03c4a0020d8, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -67,6 +71,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 604305d650a6f674caa02d0e81b42731, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _NormalTex:
+        m_Texture: {fileID: 2800000, guid: 6ebf8cf74861d9b459ce97741371bdd0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 2800000, guid: 3746816154b27db449d7e924b966b322, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -95,6 +103,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
+    - _UseMultiLight: 0
     - _ZWrite: 1
     - _brightShift: 1
     - _irisSize: 2.15
@@ -103,6 +112,7 @@ Material:
     - _scleraSize: 1
     - _smoothness: 0
     m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _illumColor: {r: 1, g: 1, b: 1, a: 1}
