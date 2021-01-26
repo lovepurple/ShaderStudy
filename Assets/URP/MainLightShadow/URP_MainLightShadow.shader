@@ -1,8 +1,8 @@
 ﻿/*
-	基于金属流程的PBR实现
+	主光源的阴影计算流程
 */
 
-Shader "Physical Based Rendering/PBR-Metallic"
+Shader "URP/URP_MainLightShadow"
 {
 	Properties
 	{

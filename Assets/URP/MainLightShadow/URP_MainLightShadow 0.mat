@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pbr_metallic_mat
+  m_Name: URP_MainLightShadow 0
   m_Shader: {fileID: 4800000, guid: 9f6f04dcc48a528439a143dade50b532, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
