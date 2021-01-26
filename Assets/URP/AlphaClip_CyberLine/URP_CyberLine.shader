@@ -71,7 +71,7 @@ Shader "URP\URP_CyberLine"
 				float3 tangentWS:TEXCOORD3;
 				float4 uv:TEXCOORD1;
 				float3 positionWS:TEXCOORD2;
-				float4 positionNDC:TEXCOORD4;
+				float4 positionSS:TEXCOORD4;
 			};
 
 			v2f vert(a2v i)
@@ -83,7 +83,7 @@ Shader "URP\URP_CyberLine"
 				o.uv.zw = TRANSFORM_TEX(i.uv,_CyberTex);
 				o.normalWS = TransformObjectToWorldNormal(i.normalOS);
 				o.tangentWS = TransformObjectToWorldDir(i.tangentOS.xyz) * i.tangentOS.w;
-				o.positionNDC = GetVertexPositionInputs(i.positionOS).positionNDC;
+				o.positionSS = ComputeScreenPos(o.positionCS) / o.positionCS.w;
 				return o;
 			}
 
@@ -96,18 +96,22 @@ Shader "URP\URP_CyberLine"
 				float3(i.tangentWS.z,bitangentWS.z,i.normalWS.z)
 				);
 
-				float3 positionNDC = i.positionCS.xyz / i.positionCS.w;
-
 				//法线缩放算法  可以使用unpackNormalScale 这里自己计算 
 				float3 tangentNormalDir = UnpackNormal(SAMPLE_TEXTURE2D(_NormalTex,sampler_NormalTex,i.uv.xy)).xyz;
 				tangentNormalDir.xy *= _NormalScale;
 				tangentNormalDir.z = sqrt(1 - tangentNormalDir.x * tangentNormalDir.x - tangentNormalDir.y * tangentNormalDir.y);
-
 				float3 normalDir = mul(tbn,tangentNormalDir);
-				// normalDir.xy *= _NormalScale;
-				// normalDir.z = sqrt(1 - normalDir.x * normalDir.x - normalDir.y * normalDir.y);			
 
-				return float4(positionNDC.xy,0,1.0);
+				float3 viewDirWS =normalize(GetWorldSpaceViewDir(i.positionWS));
+				float NDV = 1- saturate(dot(normalDir,viewDirWS));
+				float3 rimColor = _RimColor * pow(NDV,_RimPower);
+
+				float3 cyberlineColor = SAMPLE_TEXTURE2D(_CyberTex,sampler_CyberTex,i.positionSS +float2(0,-(_Time.y *_CyberScrollSpeed))).rgb;
+				clip(cyberlineColor.r - 0.1f);
+
+				float3 baseColor = SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex,i.uv.xy).rgb * _MainColor;
+
+				return float4(baseColor + rimColor,1.0);
 			}
 			ENDHLSL
 		}

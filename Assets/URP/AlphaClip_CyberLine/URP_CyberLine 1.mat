@@ -24,7 +24,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CyberTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 1400661199e89374782bf70c5e8426e4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -44,7 +44,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: dd5062fd91f9b134a8947b801ac52217, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -53,6 +53,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
         m_Texture: {fileID: 2800000, guid: caa85b3e66828384c90a547928136183, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalTex:
+        m_Texture: {fileID: 2800000, guid: 25258345c60376d46b4e410000d7e201, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -67,7 +71,7 @@ Material:
     - COLOR_SYNTHESIS: 0
     - _BumpScale: 1
     - _Cutoff: 0.5
-    - _CyberScrollSpeed: 1
+    - _CyberScrollSpeed: 0.1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
@@ -77,10 +81,11 @@ Material:
     - _InfluenceOfNormal: 1
     - _Metallic: 0
     - _Mode: 0
+    - _NormalScale: 0.83
     - _NormalScaleFactor: 3
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _RimPower: 1
+    - _RimPower: 1.53
     - _ScaleFactor: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
