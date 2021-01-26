@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: URP_MainLightSHadow_Hebe
   m_Shader: {fileID: 4800000, guid: 9f6f04dcc48a528439a143dade50b532, type: 3}
-  m_ShaderKeywords: _ALLOWMULTILIGHT_OFF _ALLOWSHADOW_OFF
+  m_ShaderKeywords: _ALLOWMULTILIGHT_OFF _ALLOWSHADOW_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -65,7 +65,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _AllowMultiLight: 1
-    - _AllowShadow: 1
+    - _AllowShadow: 0
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -77,6 +77,7 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _SpecPower: 1.39
+    - _SpecRange: 1
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1

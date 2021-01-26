@@ -1827,8 +1827,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 173265649}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0.7071068, w: 0}
-  m_LocalPosition: {x: -2.78, y: 0.99, z: -0.109}
-  m_LocalScale: {x: 0.8, y: 10, z: 0.3}
+  m_LocalPosition: {x: -1.66, y: -0.56, z: -0.11}
+  m_LocalScale: {x: 0.8, y: 10, z: 0.65}
   m_Children: []
   m_Father: {fileID: 331351870}
   m_RootOrder: 3
@@ -20107,6 +20107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1757615250}
   - component: {fileID: 1757615249}
+  - component: {fileID: 1757615251}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -20126,7 +20127,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.67
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -20136,9 +20137,9 @@ Light:
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 3.03
+    m_Bias: 10
+    m_NormalBias: 1.27
+    m_NearPlane: 0.1
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -20183,13 +20184,26 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1757615248}
-  m_LocalRotation: {x: 0.2648463, y: 0.09041737, z: 0.024951821, w: 0.959718}
+  m_LocalRotation: {x: 0.39023137, y: -0.18521188, z: -0.024220418, w: 0.90157056}
   m_LocalPosition: {x: 9.19, y: 0.997, z: -1.259}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 30.255, y: 12.487, z: 6.367}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 44.001, y: -29.377, z: -15.169}
+--- !u!114 &1757615251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757615248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UsePipelineSettings: 0
 --- !u!1 &1768314580
 GameObject:
   m_ObjectHideFlags: 0
@@ -25800,7 +25814,7 @@ Transform:
   - {fileID: 5113468165337284154}
   - {fileID: 5113468165337284152}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 191.82, z: 0}
 --- !u!4 &5113468165337284146
 Transform:

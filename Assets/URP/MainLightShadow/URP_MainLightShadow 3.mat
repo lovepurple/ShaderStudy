@@ -86,7 +86,8 @@ Material:
     - _Parallax: 0.02
     - _Roughness: 0.094
     - _Roughtness: 1
-    - _SpecPower: 0.49
+    - _SpecPower: 30
+    - _SpecRange: 2.33
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
@@ -95,5 +96,5 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _MainColor: {r: 1, g: 1, b: 1, a: 1}
-    - _SpecColor: {r: 0.9150943, g: 0.9150943, b: 0.9150943, a: 1}
+    - _SpecColor: {r: 0.9960785, g: 0.3254902, b: 0.9960785, a: 1}
   m_BuildTextureStacks: []
