@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "Library\\PackageCache\\com.unity.render-pipelines.core@10.2.2"
+		},
+		{
+			"path": "Library\\PackageCache\\com.unity.render-pipelines.universal@10.2.2"
+		}
+	],
+	"settings": {}
+}
