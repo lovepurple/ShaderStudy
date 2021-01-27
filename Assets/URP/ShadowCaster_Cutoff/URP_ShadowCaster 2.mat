@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Downsample
-  m_Shader: {fileID: 4800000, guid: 8e120911da58a4745b43ccedfb1f8dfc, type: 3}
+  m_Name: URP_ShadowCaster 2
+  m_Shader: {fileID: 4800000, guid: 4266db2f618adf64ebbe517cacfa85e6, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
