@@ -1,4 +1,4 @@
-﻿/*
+/*
 主光源的阴影计算流程
 
 TransformWorldToShadowCoord(positionWS)
@@ -13,8 +13,6 @@ Shader "URP/URP_MainLightShadow"
 
 		_NormalTex("Normal Texture",2D)="bump"{}
 		
-		_SpecPower("Specular Power",Float) = 1
-		_SpecColor("Specular Color",Color) = (1,1,1,1)
 		[KeywordEnum(ON,OFF)]_AllowShadow("Allow Shadow",Float)=1
 	}
 	SubShader
@@ -41,8 +39,6 @@ Shader "URP/URP_MainLightShadow"
 
 		CBUFFER_START(UnityPerMaterial)
 		float4 _BaseColor;
-		float _SpecPower;
-		float4 _SpecColor;
 		CBUFFER_END
 
 
@@ -113,22 +109,16 @@ Shader "URP/URP_MainLightShadow"
 				float NDL = dot(normalDir,normalize(mainLightWithShadowAttenuation.direction));
 				float3 diffuseCol = SAMPLE_TEXTURE2D(_AlbedoTex,sampler_AlbedoTex,i.uv) * _BaseColor * (NDL * 0.5f + 0.5f) * mainLightWithShadowAttenuation.color;
 				
-				float3 viewDirWS =normalize(GetWorldSpaceViewDir(i.positionWS));
-				float3 H = normalize(normalize(mainLightWithShadowAttenuation.direction) + viewDirWS);
-				float NDH = saturate(dot(H,normalDir));
-				float3 specColor = _SpecColor * pow(NDH,_SpecPower);
-
 				//叠加灯光的衰减，如果上面GetMainLight不传入shadowsCoord shadowAttenuation = 1.0 ， 漫反射和高光都需要叠加灯光衰减
-				float3 finalColor = (diffuseCol + specColor);
+				float3 finalColor = (diffuseCol);
 
 				#if _ALLOWSHADOW_ON
 					finalColor *= mainLightWithShadowAttenuation.shadowAttenuation;
 				#endif
 
-				return float4(finalColor,1.0);
+				return float4(mainLightWithShadowAttenuation.shadowAttenuation,mainLightWithShadowAttenuation.shadowAttenuation,mainLightWithShadowAttenuation.shadowAttenuation,1.0);
 			}
 			ENDHLSL
 		}
-		UsePass "Universal Render Pipeline/Lit/ShadowCaster"
 	}
 }

@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: URP_ShadowCaster 2
   m_Shader: {fileID: 4800000, guid: 4266db2f618adf64ebbe517cacfa85e6, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: _USESHADOW_ON
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -19,10 +19,24 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _AlbedoTex:
+        m_Texture: {fileID: 2800000, guid: 030eda1a93bbb8946bc574890f27fa80, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CutOffTex:
+        m_Texture: {fileID: 2800000, guid: 1400661199e89374782bf70c5e8426e4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors: []
+    - _NormalTex:
+        m_Texture: {fileID: 2800000, guid: 8a4309f3e5f130841bd4a46785e5813a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _UseShadow: 0
+    m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

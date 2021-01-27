@@ -1,190 +1,168 @@
-﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+﻿/**
+实时阴影投射
+*/
 
-Shader "DynamicShadowProjector/Blit/Blur" {
-	Properties {
-		_MainTex ("Base (RGB)", 2D) = "white" {}
+Shader "URP/URP_ShadowCaster" 
+{
+	Properties 
+	{
+		_AlbedoTex("Albedo Texture", 2D) = "white" {}
+		_BaseColor("Base Color",Color) = (1,1,1,1)
+		_NormalTex("Normal Texture",2D)="bump"{}
+		_CutOffTex("CutOff Tex(R)",2D) = "white"{}
+		[KeywordEnum(ON,OFF)] _UseShadow("Use Shadow",Float) = 1
 	}
 
-	CGINCLUDE
-	#include "UnityCG.cginc"
-	sampler2D _MainTex;
-	half4 _MainTex_TexelSize;
-	struct v2f_3tap
+	SubShader 
 	{
-		float4 pos : SV_POSITION;
-		half2  uv0 : TEXCOORD0;
-		half4  uv1 : TEXCOORD1;
-	};
-	struct v2f_5tap
-	{
-		float4 pos : SV_POSITION;
-		half2  uv0 : TEXCOORD0;
-		half4  uv1 : TEXCOORD1;
-		half4  uv2 : TEXCOORD2;
-	};
-	struct v2f_7tap
-	{
-		float4 pos : SV_POSITION;
-		half2  uv0 : TEXCOORD0;
-		half4  uv1 : TEXCOORD1;
-		half4  uv2 : TEXCOORD2;
-		half4  uv3 : TEXCOORD3;
-	};
-	half4  _OffsetH;
-	half4  _OffsetV;
-	fixed4 _WeightH;
-	fixed4 _WeightV;
+		Tags 
+		{ 
+			"RenderType"="Opaque"
+			"RenderPipeline" = "UnversalPipeline"
+			"Queue" = "AlphaTest"
+		}
 
-	v2f_3tap vert_3tap_H(appdata_img v)
-	{
-		v2f_3tap o;
-		o.pos = UnityObjectToClipPos(v.vertex);
-       	o.uv0 = v.texcoord.xy;
-       	o.uv1 = v.texcoord.xyxy + _MainTex_TexelSize.x * half4(_OffsetH.x, 0, -_OffsetH.x, 0);
-       	return o;
-	}
-	v2f_3tap vert_3tap_V(appdata_img v)
-	{
-		v2f_3tap o;
-		o.pos = UnityObjectToClipPos(v.vertex);
-       	o.uv0 = v.texcoord.xy;
-       	o.uv1 = v.texcoord.xyxy + _MainTex_TexelSize.y * half4(0, _OffsetV.x, 0, -_OffsetV.x);
-       	return o;
-	}
-	fixed4 frag_3tap_H(v2f_3tap i) : COLOR
-	{
-		fixed4 color = _WeightH.x*tex2D(_MainTex, i.uv0);
-		color += _WeightH.y*tex2D(_MainTex, i.uv1.xy);
-		color += _WeightH.y*tex2D(_MainTex, i.uv1.zw);
-		return color;
-	}
-	fixed4 frag_3tap_V(v2f_3tap i) : COLOR
-	{
-		fixed4 color = _WeightV.x*tex2D(_MainTex, i.uv0);
-		color += _WeightV.y*tex2D(_MainTex, i.uv1.xy);
-		color += _WeightV.y*tex2D(_MainTex, i.uv1.zw);
-		return color;
-	}
-	v2f_5tap vert_5tap_H(appdata_img v)
-	{
-		v2f_5tap o;
-		o.pos = UnityObjectToClipPos(v.vertex);
-       	o.uv0 = v.texcoord.xy;
-       	o.uv1 = v.texcoord.xyxy + _MainTex_TexelSize.x * half4(_OffsetH.x, 0, -_OffsetH.x, 0);
-       	o.uv2 = v.texcoord.xyxy + _MainTex_TexelSize.x * half4(_OffsetH.y, 0, -_OffsetH.y, 0);
-       	return o;
-	}
-	v2f_5tap vert_5tap_V(appdata_img v)
-	{
-		v2f_5tap o;
-		o.pos = UnityObjectToClipPos(v.vertex);
-       	o.uv0 = v.texcoord.xy;
-       	o.uv1 = v.texcoord.xyxy + _MainTex_TexelSize.y * half4(0, _OffsetV.x, 0, -_OffsetV.x);
-       	o.uv2 = v.texcoord.xyxy + _MainTex_TexelSize.y * half4(0, _OffsetV.y, 0, -_OffsetV.y);
-       	return o;
-	}
-	fixed4 frag_5tap_H(v2f_5tap i) : COLOR
-	{
-		fixed4 color = _WeightH.x*tex2D(_MainTex, i.uv0);
-		color += _WeightH.y*tex2D(_MainTex, i.uv1.xy);
-		color += _WeightH.y*tex2D(_MainTex, i.uv1.zw);
-		color += _WeightH.z*tex2D(_MainTex, i.uv2.xy);
-		color += _WeightH.z*tex2D(_MainTex, i.uv2.zw);
-		return color;
-	}
-	fixed4 frag_5tap_V(v2f_5tap i) : COLOR
-	{
-		fixed4 color = _WeightV.x*tex2D(_MainTex, i.uv0);
-		color += _WeightV.y*tex2D(_MainTex, i.uv1.xy);
-		color += _WeightV.y*tex2D(_MainTex, i.uv1.zw);
-		color += _WeightV.z*tex2D(_MainTex, i.uv2.xy);
-		color += _WeightV.z*tex2D(_MainTex, i.uv2.zw);
-		return color;
-	}
-	v2f_7tap vert_7tap_H(appdata_img v)
-	{
-		v2f_7tap o;
-		o.pos = UnityObjectToClipPos(v.vertex);
-       	o.uv0 = v.texcoord.xy;
-       	o.uv1 = v.texcoord.xyxy + _MainTex_TexelSize.x * half4(_OffsetH.x, 0, -_OffsetH.x, 0);
-       	o.uv2 = v.texcoord.xyxy + _MainTex_TexelSize.x * half4(_OffsetH.y, 0, -_OffsetH.y, 0);
-       	o.uv3 = v.texcoord.xyxy + _MainTex_TexelSize.x * half4(_OffsetH.z, 0, -_OffsetH.z, 0);
-       	return o;
-	}
-	v2f_7tap vert_7tap_V(appdata_img v)
-	{
-		v2f_7tap o;
-		o.pos = UnityObjectToClipPos(v.vertex);
-       	o.uv0 = v.texcoord.xy;
-       	o.uv1 = v.texcoord.xyxy + _MainTex_TexelSize.y * half4(0, _OffsetV.x, 0, -_OffsetV.x);
-       	o.uv2 = v.texcoord.xyxy + _MainTex_TexelSize.y * half4(0, _OffsetV.y, 0, -_OffsetV.y);
-       	o.uv3 = v.texcoord.xyxy + _MainTex_TexelSize.y * half4(0, _OffsetV.z, 0, -_OffsetV.z);
-       	return o;
-	}
-	fixed4 frag_7tap_H(v2f_7tap i) : COLOR
-	{
-		fixed4 color = _WeightH.x*tex2D(_MainTex, i.uv0);
-		color += _WeightH.y*tex2D(_MainTex, i.uv1.xy);
-		color += _WeightH.y*tex2D(_MainTex, i.uv1.zw);
-		color += _WeightH.z*tex2D(_MainTex, i.uv2.xy);
-		color += _WeightH.z*tex2D(_MainTex, i.uv2.zw);
-		color += _WeightH.w*tex2D(_MainTex, i.uv3.xy);
-		color += _WeightH.w*tex2D(_MainTex, i.uv3.zw);
-		return color;
-	}
-	fixed4 frag_7tap_V(v2f_7tap i) : COLOR
-	{
-		fixed4 color = _WeightV.x*tex2D(_MainTex, i.uv0);
-		color += _WeightV.y*tex2D(_MainTex, i.uv1.xy);
-		color += _WeightV.y*tex2D(_MainTex, i.uv1.zw);
-		color += _WeightV.z*tex2D(_MainTex, i.uv2.xy);
-		color += _WeightV.z*tex2D(_MainTex, i.uv2.zw);
-		color += _WeightV.w*tex2D(_MainTex, i.uv3.xy);
-		color += _WeightV.w*tex2D(_MainTex, i.uv3.zw);
-		return color;
-	}
-	
-	ENDCG
+		HLSLINCLUDE
+		#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+		#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
+		#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Shadows.hlsl"
+		#include "Packages/com.unity.render-pipelines.core/ShaderLibrary/SpaceTransforms.hlsl"
+		#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/ShaderVariablesFunctions.hlsl"
 
-	SubShader {
-		ZTest Always Cull Off ZWrite Off
-		Fog { Mode Off }
+		#pragma multi_compile _ _MAIN_LIGHT_SHADOWS
+		#pragma multi_compile _ _MAIN_LIGHT_SHADOWS_CASCADE
+		#pragma multi_compile _ _SHADOWS_SOFT
+		#pragma shader_feature _USESHADOW_ON _USESHADOW_OFF
 
-		Pass {		
-			CGPROGRAM
-			#pragma vertex vert_3tap_H
-			#pragma fragment frag_3tap_H
-			ENDCG
+		TEXTURE2D(_AlbedoTex);
+		SAMPLER(sampler_AlbedoTex);
+
+		TEXTURE2D(_NormalTex);
+		SAMPLER(sampler_NormalTex);
+
+		TEXTURE2D(_CutOffTex);
+		SAMPLER(sampler_CutOffTex);
+
+		CBUFFER_START(UnityPerMaterial)
+		float4 _BaseColor;
+		CBUFFER_END
+
+		struct a2v
+		{
+			float4 positionOS:POSITION;
+			float3 normalOS:NORMAL;
+			float4 tangentOS:TANGENT;
+			float2 uv:TEXCOORD0;
+		};
+
+		struct v2f
+		{
+			float4 positionCS:SV_POSITION;
+			float3 positionWS:TEXCOORD0;
+			float3 tangentWS:TEXCOORD1;
+			float3 bitangentWS:TEXCOORD2;
+			float3 normalWS:TEXCOORD3;
+			float2 uv:TEXCOORD4;
+		};
+
+		ENDHLSL
+		
+		//第一个Pass 正常渲染物体上色
+		Pass
+		{
+			Tags
+			{
+				"LightMode" = "UniversalForward"
+			}
+
+			HLSLPROGRAM
+			#pragma vertex vert
+			#pragma fragment frag
+
+
+			v2f vert(a2v a)
+			{
+				v2f o = (v2f)0;
+				o.uv = a.uv;
+				o.positionCS = TransformObjectToHClip(a.positionOS.xyz);
+				o.positionWS = TransformObjectToWorld(a.positionOS.xyz);
+				o.normalWS = TransformObjectToWorldNormal(a.normalOS);
+				o.tangentWS = normalize(TransformObjectToWorldDir(a.tangentOS.xyz) * a.tangentOS.w);
+				o.bitangentWS = normalize(cross(o.normalWS,o.tangentWS));
+
+				return o;
+			}
+
+
+			float4 frag(v2f i):SV_TARGET
+			{
+				float2 positionSS = i.positionCS.xy / _ScreenParams.xy;
+				float cutOffFactor = SAMPLE_TEXTURE2D(_CutOffTex,sampler_CutOffTex,positionSS).r;
+				clip(cutOffFactor - 0.01f);
+
+				float4 positionShadowCoord = TransformWorldToShadowCoord(i.positionWS);
+				float3x3 tbn = float3x3(
+				float3(i.tangentWS.x,i.bitangentWS.x,i.normalWS.x),
+				float3(i.tangentWS.y,i.bitangentWS.y,i.normalWS.y),
+				float3(i.tangentWS.z,i.bitangentWS.z,i.normalWS.z)
+				);
+
+				float3 normalTex = UnpackNormal(SAMPLE_TEXTURE2D(_NormalTex,sampler_NormalTex,i.uv)).rgb;
+				float3 normalWS = normalize(mul(tbn,normalTex));
+				Light mainLightInfo = GetMainLight(positionShadowCoord);
+				float3 baseCol = SAMPLE_TEXTURE2D(_AlbedoTex,sampler_AlbedoTex,i.uv) * _BaseColor;
+				float NDL = dot(normalWS,normalize(mainLightInfo.direction));
+
+				float3 col = baseCol * (NDL * 0.5 +0.5) * mainLightInfo.color;
+				#if _USESHADOW_ON
+					col *= mainLightInfo.shadowAttenuation;
+				#endif
+
+				return float4(col,1.0);
+			}
+			ENDHLSL
 		}
-		Pass {		
-			CGPROGRAM
-			#pragma vertex vert_3tap_V
-			#pragma fragment frag_3tap_V
-			ENDCG
+
+		//第二个Pass阴影投射（写入当前物体的阴影信息到ShadowMap）
+		Pass 
+		{		
+			Tags
+			{
+				"LightMode" = "ShadowCaster"
+			}
+
+			HLSLPROGRAM
+			#pragma vertex vertShadowCaster
+			#pragma fragment fragShadowCaster
+
+
+			//positionCSShadowCaster 在灯光坐标系下的裁剪坐标系
+
+			v2f vertShadowCaster(a2v a)
+			{
+				float3 positionWS = TransformObjectToWorld(a.positionOS.xyz);
+				float3 normalWS = TransformObjectToWorldNormal(a.normalOS);
+				Light mainLightInfo = GetMainLight();
+				float3 lightDirWS = normalize(mainLightInfo.direction);
+				float3 shadowCasterBiasWS = ApplyShadowBias(positionWS,normalWS,lightDirWS);		//返回的坐标已经加上了原始的positionWS
+				//转换到正常的clip space 传入fragment
+				v2f o = (v2f)0;
+				o.positionCS = TransformWorldToHClip(shadowCasterBiasWS);
+				o.uv = a.uv;
+
+				return o;
+			}
+
+			float4 fragShadowCaster(v2f i):SV_TARGET
+			{
+				float2 positionSS = i.positionCS.xy / _ScreenParams.xy;
+				float cutOffFactor = SAMPLE_TEXTURE2D(_CutOffTex,sampler_CutOffTex,positionSS).r;
+				clip(cutOffFactor - 0.01f);
+				return 0;
+
+			}
+			ENDHLSL
 		}
-		Pass {		
-			CGPROGRAM
-			#pragma vertex vert_5tap_H
-			#pragma fragment frag_5tap_H
-			ENDCG
-		}
-		Pass {		
-			CGPROGRAM
-			#pragma vertex vert_5tap_V
-			#pragma fragment frag_5tap_V
-			ENDCG
-		}
-		Pass {		
-			CGPROGRAM
-			#pragma vertex vert_7tap_H
-			#pragma fragment frag_7tap_H
-			ENDCG
-		}
-		Pass {		
-			CGPROGRAM
-			#pragma vertex vert_7tap_V
-			#pragma fragment frag_7tap_V
-			ENDCG
-		}
-	}
+
+	}	
 }
