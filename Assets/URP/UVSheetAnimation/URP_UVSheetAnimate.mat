@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: EraseShadow
-  m_Shader: {fileID: 4800000, guid: 7a72d66ed7a4c4297a155be5f62366b5, type: 3}
+  m_Name: URP_UVSheetAnimate
+  m_Shader: {fileID: 4800000, guid: ba3752edc9a79cf41bbc5811c7d03799, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
@@ -18,7 +18,14 @@ Material:
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: []
-    m_Floats: []
-    m_Colors: []
+    m_TexEnvs:
+    - _SheetTex:
+        m_Texture: {fileID: 2800000, guid: 81e27c0a510cf6c4e97daec46fedeab8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _FPS: 3
+    - _Speed: 1
+    m_Colors:
+    - _SheetSize: {r: 4, g: 6, b: 1, a: 1}
   m_BuildTextureStacks: []

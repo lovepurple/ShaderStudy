@@ -12,6 +12,7 @@ Shader "URP\URP_CyberLine"
 		_RimColor("Rim Color",Color) = (0.54,0.17,0.89,1.0)		
 		_RimPower("Rim Power",Float) = 1
 
+		
 		_CyberTex("Cyber Line Texture",2D) = "white"{}
 		_CyberScrollSpeed("Cyber line Speed",Float) = 1
 	}
