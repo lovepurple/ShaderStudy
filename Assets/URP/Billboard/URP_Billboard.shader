@@ -9,15 +9,15 @@ Shader "URP/URP_Billboard" {
 	{
 		Tags
 		{
-			"RenderType" = "TransparentCutOff"
-			"Queue" = "AlphaTest"
+			"RenderType" = "Transparent"
+			"Queue" = "Transparent"
 			"RenderPipeline" = "UniversalPipeline"
 		}
 
 		HLSLINCLUDE
 		#include "Packages\com.unity.render-pipelines.universal\ShaderLibrary\Core.hlsl"
 		#include "Packages\com.unity.render-pipelines.core\ShaderLibrary\SpaceTransforms.hlsl"
-
+		
 		TEXTURE2D(_MainTex);
 		SAMPLER(sampler_MainTex);
 
@@ -37,7 +37,10 @@ Shader "URP/URP_Billboard" {
 
 		Pass 
 		{
-			HLSLINCLUDE
+			Blend SrcAlpha OneMinusSrcAlpha
+			ZWrite Off
+
+			HLSLPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
 

@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CopyMipmap
-  m_Shader: {fileID: 4800000, guid: 895f2eedd4ef1455b8b3380b122531bc, type: 3}
+  m_Name: URP_Billboard
+  m_Shader: {fileID: 4800000, guid: bef97bce280b13c4ca85d1739e7733d2, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 18ce091a3122ca34389ac3bdc5c9b959, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
