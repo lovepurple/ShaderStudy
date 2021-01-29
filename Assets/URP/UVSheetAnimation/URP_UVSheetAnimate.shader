@@ -1,4 +1,13 @@
-﻿Shader "URP/UVSheetAnimate" {
+﻿/**
+UV 序列帧动画
+算法
+frameIndex = _Time.y * FPS % SheetTileCount 
+offsetX  = frameIndex % _SheetSize.x
+offsetY = fromIndex / _SheetSize.x 
+
+采样是从左下角开始，一般序列帧都是以左上为第一个 采样时，需要 uv.y = 1 - deltaUV.y 取反
+*/
+Shader "URP/UVSheetAnimate" {
 	Properties 
 	{
 		_SheetTex ("Sheet Texture", 2D) = "white" {}
@@ -65,20 +74,15 @@
 			float4 frag(v2f i):SV_TARGET
 			{
 				float2 sheetUV = (i.uv / _SheetSize.xy);
-				int frameIndex = floor(frac(_Time.y * _FPS));
+				int frameIndex = floor(_Time.y * _FPS) % floor( _SheetSize.x * _SheetSize.y);
 
-				int uvOffsetX =frameIndex- floor(frameIndex / _SheetSize.x) * _SheetSize.x;
-				int uvOffsetY = float(frameIndex/ _SheetSize.x);
+				int uvOffsetY = floor(frameIndex / _SheetSize.x);
+				int uvOffsetX = floor(frameIndex % _SheetSize.x);
 				
 				float deltaU = (1 / _SheetSize.x) * floor(uvOffsetX);
 				float deltaV = (1/ _SheetSize.y) * floor(uvOffsetY);
 
-				// _Time.y / 1/FPS
-
-				// sheetUV.x = i.uv.x / floor(_SheetSize.x) + frac((floor(_Time.y) / 25) / _SheetSize.x);
-				// sheetUV.y = i.uv.y / floor(_SheetSize.y);
-
-				float4 col = SAMPLE_TEXTURE2D(_SheetTex,sampler_SheetTex, sheetUV + float2(deltaU,deltaV));
+				float4 col = SAMPLE_TEXTURE2D(_SheetTex,sampler_SheetTex, float2(deltaU +sheetUV.x,1- sheetUV.y -deltaV));
 				
 
 				return col;
