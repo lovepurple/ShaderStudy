@@ -43,11 +43,22 @@ Shader "URP/URP_Billboard" {
 			HLSLPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
+			/**
+			面始终面向摄像机
+			
+			*/
 
 			v2f vert(a2v a)
 			{
 				v2f o = (v2f)0;
-				o.positionCS = TransformObjectToHClip(a.positionOS.xyz);
+				
+				//摄像机在模型坐标系下的方向为 新的模型坐标系的Z轴   _WorldSpaceCameraPos - 0,0,0
+				float3 cameraPositonOS =TransformWorldToObject( _WorldSpaceCameraPos);
+				// _cameraPostionOS - (0,0,0)
+				float3 zAxis = normalize(cameraPositonOS); 
+
+				
+
 				o.uv = a.uv;
 
 				return o;
