@@ -95,11 +95,12 @@
 				#ifdef _USENORMAL_ON
 					//使用法线的方向对UV叠加扰动，
 					//也可以使用普通的NoiseTex,但像素密度需要足够大
-					float3 normalTex = UnpackNormal(SAMPLE_TEXTURE2D(_DistortNormal,sampler_DistortNormal,i.uv)).rgb;
+					float3 normalTex =  UnpackNormal(SAMPLE_TEXTURE2D(_DistortNormal,sampler_DistortNormal,i.uv)).rgb;
 					normalTex.xy *= _DistortStrength;
 					normalTex.z =sqrt(1 - normalTex.x * normalTex.x - normalTex.y * normalTex.y);
 					float3 normalWS = normalize(mul(tbn,normalTex));
 					distortUV  = normalWS.xy * _DistortStrength;
+					// distortUV = normalTex.xy *_DistortStrength;		直接使用tangent normal
 				#else
 
 					float3 noiseCol = SAMPLE_TEXTURE2D(_NoiseTex,sampler_NoiseTex,i.uv.zw).rgb;
@@ -108,7 +109,7 @@
 					distortUV = noiseCol.rg * _DistortStrength;
 				#endif
 
-				float3 cameraCol = SAMPLE_TEXTURE2D(_CameraOpaqueTexture,sampler_CameraOpaqueTexture,i.positionSS.xy + distortUV).rgb;
+				float3 cameraCol = SAMPLE_TEXTURE2D(_CameraOpaqueTexture,sampler_CameraOpaqueTexture,i.positionSS.xy + distortUV.xy).rgb;
 
 				return float4(cameraCol,1.0);
 			}
