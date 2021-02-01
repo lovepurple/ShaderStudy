@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: URP_Billboard
   m_Shader: {fileID: 4800000, guid: bef97bce280b13c4ca85d1739e7733d2, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: _CALCULATEVIAVIEWCOORD_ON
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -23,6 +23,9 @@ Material:
         m_Texture: {fileID: 2800000, guid: 18ce091a3122ca34389ac3bdc5c9b959, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Floats: []
+    m_Floats:
+    - _CalculateViaViewCoord: 0
+    - _ScaleX: 5
+    - _ScaleY: 2
     m_Colors: []
   m_BuildTextureStacks: []
