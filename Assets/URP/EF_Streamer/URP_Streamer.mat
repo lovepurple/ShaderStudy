@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PBR
-  m_Shader: {fileID: 4800000, guid: f0b6deb659a185746b2f32cc726f25b7, type: 3}
+  m_Name: URP_Streamer
+  m_Shader: {fileID: 4800000, guid: d30ac0c2340de314e9a3bff2e99e434d, type: 3}
   m_ShaderKeywords: _EMISSION _METALLICGLOSSMAP _Z_STAGE_LOCK_Z
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
@@ -71,12 +71,13 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _StreamSpeed: 0.2
     - _UVSec: 0
     - _ZWrite: 1
     - _Z_STAGE: 0
     m_Colors:
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 1, g: 0.29094285, b: 0, a: 1}
     - _Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColor: {r: 2, g: 0.8156863, b: 0, a: 0.8666667}
     - _Sheet: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

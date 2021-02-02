@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 /// <summary>
 /// 渲染深度图或法线图
@@ -30,6 +30,7 @@ public class RenderDepthTexture : MonoBehaviour
     {
         if (!m_currentCamera)
             return;
+
 
         if (IsRenderDepthTexture)
             m_currentCamera.depthTextureMode |= DepthTextureMode.Depth;

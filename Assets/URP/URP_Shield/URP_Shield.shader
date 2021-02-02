@@ -1,28 +1,23 @@
 /*
-主光源的阴影计算流程
-
-TransformWorldToShadowCoord(positionWS)
+深度的使用 及 屏幕空间 
 */
 
-Shader "URP/URP_MainLightShadow"
+Shader "URP/URP_Shield"
 {
 	Properties
 	{
-		_AlbedoTex("Albedo Texture ", 2D) = "white" {}		//baseTex
+		_MainTex("Main Texture ", 2D) = "white" {}
 		_BaseColor("Base Color",Color) = (1,1,1,1)
 
-		_NormalTex("Normal Texture",2D)="bump"{}
-		
-		[KeywordEnum(ON,OFF)]_AllowShadow("Allow Shadow",Float)=1
 	}
 	SubShader
 	{
 		Tags 
 		{ 
-			"RenderType"="Opaque"
+			"RenderType"="Transparent"
 			"RenderPipeline" = "UnversalPipeline"
 			"LightMode" = "UniversalForward"
-			"Queue" = "Geometry"
+			"Queue" = "Transparent"
 		}
 
 		HLSLINCLUDE
@@ -32,15 +27,12 @@ Shader "URP/URP_MainLightShadow"
 		#include "Packages\com.unity.render-pipelines.core\ShaderLibrary\SpaceTransforms.hlsl"
 		#include "Packages\com.unity.render-pipelines.universal\ShaderLibrary\Shadows.hlsl"
 
-		TEXTURE2D(_AlbedoTex);
-		SAMPLER(sampler_AlbedoTex);
-		TEXTURE2D(_NormalTex);
-		SAMPLER(sampler_NormalTex);
+		TEXTURE2D(_MainTex);
+		SAMPLER(sampler_MainTex);
 
 		CBUFFER_START(UnityPerMaterial)
 		float4 _BaseColor;
 		CBUFFER_END
-
 
 		struct a2v
 		{
@@ -70,13 +62,6 @@ Shader "URP/URP_MainLightShadow"
 			#pragma vertex vert
 			#pragma fragment frag
 
-			#pragma shader_feature _ALLOWSHADOW_ON _ALLOWSHADOW_OFF
-
-			//需要宏支持
-			#pragma multi_compile _ _MAIN_LIGHT_SHADOWS
-			#pragma multi_compile _ _MAIN_LIGHT_SHADOWS_CASCADE
-			#pragma multi_compile _ _SHADOWS_SOFT
-
 
 			v2f vert (a2v a)
 			{
@@ -98,25 +83,12 @@ Shader "URP/URP_MainLightShadow"
 				float3(i.tangentWS.y,i.bitangentWS.y,i.normalWS.y),
 				float3(i.tangentWS.z,i.bitangentWS.z,i.normalWS.z)
 				);
-
-				//获取阴影坐标系中的位置,并获取灯光参数
-				float4 positionShadowCoord = TransformWorldToShadowCoord(i.positionWS);
-				Light mainLightWithShadowAttenuation = GetMainLight(positionShadowCoord);
-
-				float3 normalTex = UnpackNormal(SAMPLE_TEXTURE2D(_NormalTex,sampler_NormalTex,i.uv)).xyz;
-				float3 normalDir = normalize(mul(tbn,normalTex));
-
-				float NDL = dot(normalDir,normalize(mainLightWithShadowAttenuation.direction));
-				float3 diffuseCol = SAMPLE_TEXTURE2D(_AlbedoTex,sampler_AlbedoTex,i.uv) * _BaseColor * (NDL * 0.5f + 0.5f) * mainLightWithShadowAttenuation.color;
 				
-				//叠加灯光的衰减，如果上面GetMainLight不传入shadowsCoord shadowAttenuation = 1.0 ， 漫反射和高光都需要叠加灯光衰减
-				float3 finalColor = (diffuseCol);
+				float2 screenUV = i.positionCS.xy / _ScreenParams.xy;
 
-				#if _ALLOWSHADOW_ON
-					finalColor *= mainLightWithShadowAttenuation.shadowAttenuation;
-				#endif
-
-				return float4(mainLightWithShadowAttenuation.shadowAttenuation,mainLightWithShadowAttenuation.shadowAttenuation,mainLightWithShadowAttenuation.shadowAttenuation,1.0);
+				return float4(screenUV,0,1.0);
+				
+				
 			}
 			ENDHLSL
 		}
