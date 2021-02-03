@@ -60,6 +60,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _FlowSpeed: 0.2
     - _FrameRate: 25.28
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -72,6 +73,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _StreamSpeed: 0.2
+    - _StreamerWidth: 10
     - _UVSec: 0
     - _ZWrite: 1
     - _Z_STAGE: 0
