@@ -72,6 +72,7 @@ Shader "URP/Streamer"
 				//使用worldPosition.y 而不是用uv.v 可以保证严格的从下到上
 				//中间亮 两边暗的渐变过渡
 				// abs  减去 0.5 用于控制后面的过渡区
+				// i.positionWS.y * 0.2   常量用于控制 同时出现的数量
 				float flow = saturate(pow(1-abs(frac(i.positionWS.y * 0.2 - _Time.y * _FlowSpeed)-0.5),_StreamerWidth));
 
 				return flow * _EmissionColor;
