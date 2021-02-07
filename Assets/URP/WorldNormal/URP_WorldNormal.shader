@@ -79,19 +79,8 @@
 				float3 normalTex = UnpackNormal(float4(normalCol.r,normalCol.g, 1- normalCol.b,normalCol.a));
 
 				float3 normalDir = normalize(mul(tbnMatrix,normalTex));
-
-				// float4 texColor = SAMPLE_TEXTURE2D(_BaseMap,sampler_BaseMap,i.uv);
-				// float3 color = texColor.rgb * _BaseColor.rgb;
-				Light mainLightInfo = GetMainLight();
-				float3 mainLightDirWS = normalize(mainLightInfo.direction).rgb;
-
-				float NDL = dot(normalDir,mainLightDirWS);
-				// float3 outColor = color;
 				
-				// outColor = outColor * mainLightInfo.color ;
-				// outColor *= (NDL * 0.5f +0.5f);			//Half Lambert
-				
-				return float4(NDL,NDL,NDL,1.0f);
+				return float4(normalDir,1.0f);
 				
 			}
 			ENDHLSL
