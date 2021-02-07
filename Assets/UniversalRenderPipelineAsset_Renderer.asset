@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-2162445474795875037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d64b54d9c6579f448a9daf9770b2aa34, type: 3}
+  m_Name: Constrast
+  m_EditorClassIdentifier: 
+  m_Active: 0
+  m_renderShader: {fileID: 4800000, guid: 4d0de0f3dee37b243a681f2253726712, type: 3}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12,8 +26,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de640fe3d0db1804a85f9fc8f5cadab6, type: 3}
   m_Name: UniversalRenderPipelineAsset_Renderer
   m_EditorClassIdentifier: 
-  m_RendererFeatures: []
-  m_RendererFeatureMap: 
+  m_RendererFeatures:
+  - {fileID: -2162445474795875037}
+  m_RendererFeatureMap: 2315a43c4c73fde1
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
   shaders:
