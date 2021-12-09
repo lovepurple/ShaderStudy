@@ -7,10 +7,10 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: URP_ExpolsionRipple
-  m_Shader: {fileID: 4800000, guid: dc93cbcbac82502408703db18a792e7e, type: 3}
-  m_ShaderKeywords: _GLOSSYREFLECTIONS_OFF _SPECULARHIGHLIGHTS_OFF
-  m_LightmapFlags: 4
+  m_Name: urp_ssdecal_mat
+  m_Shader: {fileID: 4800000, guid: e466fe15b3f966047a262150b5705fba, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -19,8 +19,16 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _AlphaTexture:
+        m_Texture: {fileID: 2800000, guid: 7dfde8a3603e4e841959807325f5b547, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DecalTex:
+        m_Texture: {fileID: 2800000, guid: b8702b5a8624a114f82a6d09bc3ce746, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -47,39 +55,46 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _NormalTex:
+        m_Texture: {fileID: 2800000, guid: b2fcd7e9ca7fb2746b01b22191b6c70e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OpaqueTex:
+        m_Texture: {fileID: 2800000, guid: 7dfde8a3603e4e841959807325f5b547, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _RippleNormalMap:
-        m_Texture: {fileID: 2800000, guid: ced40d6cfeb3b5f4b9cf8276cf5ccf2d, type: 3}
+    - _WaterNormal:
+        m_Texture: {fileID: 2800000, guid: b2fcd7e9ca7fb2746b01b22191b6c70e, type: 3}
         m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+        m_Offset: {x: 6.86, y: 0}
     m_Floats:
+    - _BumpIntensity: 0.28
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _ExpolsionSpeed: 1
-    - _GlossMapScale: 1
+    - _Gloss: 0.37
     - _Glossiness: 0.5
-    - _GlossyReflections: 0
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _ParallaxScale: 1
-    - _RippleNormalScale: 0.2
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 0
+    - _Shininess: 1
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
+    - _test: 1
     m_Colors:
-    - _Color: {r: 0.588, g: 0.588, b: 0.588, a: 1}
+    - _Color: {r: 0.27205884, g: 0.27205884, b: 0.27205884, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _MainColor: {r: 0.34050602, g: 0.85188955, b: 0.9852941, a: 1}
+    - _SpecColor: {r: 1, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

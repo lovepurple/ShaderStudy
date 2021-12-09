@@ -55,6 +55,7 @@ Shader "URP/URP_Unlit"
                 float4 texColor = SAMPLE_TEXTURE2D(_BaseMap,sampler_BaseMap,i.uv);
                 float3 color = texColor.rgb * _BaseColor.rgb;
 
+
                 clip(_BaseColor.a - _CutOff);
 
                 return float4(color.rgb,1.0f);
