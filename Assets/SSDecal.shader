@@ -229,7 +229,7 @@ Shader "Universal Render Pipeline/NiloCat Extension/Screen Space Decal/Unlit"
 
                 // convert unity cube's [-0.5,0.5] vertex pos range to [0,1] uv. Only works if you use a unity cube in mesh filter!
                 float2 decalSpaceUV = decalSpaceScenePos.xy + 0.5;
-
+                return float4(decalSpaceUV,0,1);
                 // discard logic
                 //===================================================
                 // discard "out of cube volume" pixels
@@ -248,6 +248,7 @@ Shader "Universal Render Pipeline/NiloCat Extension/Screen Space Decal/Unlit"
 
                 // sample the decal texture
                 float2 uv = decalSpaceUV.xy * _MainTex_ST.xy + _MainTex_ST.zw;//Texture tiling & offset
+                
 #if _FracUVEnable
                 uv = frac(uv);// add frac to ignore texture wrap setting
 #endif

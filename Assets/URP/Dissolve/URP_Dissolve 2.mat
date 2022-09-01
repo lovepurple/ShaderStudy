@@ -96,8 +96,8 @@ Material:
     - _Cutoff: 0.5
     - _DeepDarkness: 0.3141892
     - _DetailNormalMapScale: 1
-    - _DissolveEdge: 0.04
-    - _DissolveRange: 0.219
+    - _DissolveEdge: 0.03
+    - _DissolveRange: 0
     - _DstBlend: 0
     - _ExtraFoamTiling: 1
     - _FresnelPower: 5
